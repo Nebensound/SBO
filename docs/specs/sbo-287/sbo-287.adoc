@@ -52,6 +52,10 @@ include::00_parameter.adoc[leveloffset=+2]
 |===
 | Version | Datum | Änderung
 
+| 0.1.1
+| 2025-12-28
+| Aktualisierung der Geschwindigkeitsklassen-Parameter (V_max, φ) und Ergänzung der Parameter-Übersicht
+
 | 0.1.0
 | 2025-12-28
 | Initiale Version mit Parametern für Lastklassen, Geschwindigkeitsklassen und Mindestradien

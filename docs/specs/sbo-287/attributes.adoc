@@ -2,7 +2,7 @@
 // Diese Datei definiert alle spurweitenspezifischen Zahlenwerte für 287 mm Spurweite
 
 // === Versions-Information ===
-:spec-version: 0.1.0
+:spec-version: 0.1.1
 :spec-revdate: 2025-12-28
 :spec-status: Draft
 
@@ -29,11 +29,11 @@
 
 // === Geschwindigkeitsklassen ===
 :v3-max: 5
-:v3-phi: 1.15
-:v2-max: 12
-:v2-phi: 1.40
-:v1-max: 20
-:v1-phi: 1.70
+:v3-phi: 1.10
+:v2-max: 15
+:v2-phi: 1.25
+:v1-max: 30
+:v1-phi: 1.50
 
 // === Mindestradien (mm) ===
 // Achsstand bis 400 mm

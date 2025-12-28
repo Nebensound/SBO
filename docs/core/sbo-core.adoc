@@ -6,7 +6,7 @@
 :sectnumlevels: 3
 :source-highlighter: rouge
 :icons: font
-:core-version: 0.1.0
+:core-version: 0.1.1
 :core-revdate: 2025-12-28
 :core-status: Draft
 :stem:
@@ -51,12 +51,11 @@ _Orientierung an:_
 |===
 | Version | Datum | Änderung
 
-| 0.1.0
+| 0.1.1
 | 2025-12-28
-| Initiale Version: Einleitung, Begriffe, Klassensysteme, Lastmodell
-|===
+| Präzisierung der Geschwindigkeitsklassen (V): normativer Grundsatz, Spec-getriebene Grenzwerte/φ mit Default-Fallback
 
-| 0.1
+| 0.1.0
 | 2025-12-28
 | Initiale Version: Einleitung, Begriffe, Klassensysteme, Lastmodell
 |===
