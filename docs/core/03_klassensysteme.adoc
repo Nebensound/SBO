@@ -23,9 +23,7 @@ Die Lastklasse ist die **zentrale Bemessungsgröße** der SBO-{spurweite}. Alle 
 
 === Leitgröße: Radlast
 
-Maßgebend für die Auslegung ist die <<02_begriffe.adoc#radlast,Radlast>>, nicht die Fahrzeugmasse.
-
-**Begründung:**
+Maßgebend für die Auslegung ist die <<02_begriffe.adoc#radlast,Radlast>>, nicht die Fahrzeugmasse, da:
 
 * Radlast wirkt direkt auf Schiene, Schwelle und Unterbau
 * Punktuelle Überlasten entstehen immer auf Radebene
@@ -35,14 +33,13 @@ Maßgebend für die Auslegung ist die <<02_begriffe.adoc#radlast,Radlast>>, nich
 
 Die SBO-{spurweite} definiert drei Lastklassen mit folgenden Grenzwerten:
 
-* stem:[R_max] – Maximale statische <<02_begriffe.adoc#radlast,Radlast>>
-* stem:[A_max] – Maximale statische <<02_begriffe.adoc#achslast,Achslast>>
-* stem:[R_("single",max)] – Maximale Einrad-Überlast (lokale Unregelmäßigkeiten)
+* stem:[R_"max"] – Maximale statische <<02_begriffe.adoc#radlast,Radlast>>
+* stem:[A_"max"] – Maximale statische <<02_begriffe.adoc#achslast,Achslast>>
+* stem:[R_("single max")] – Maximale Einrad-Überlast (lokale Unregelmäßigkeiten)
 
 [cols="1,2,2,2,3"]
 |===
-| Klasse | stem:[R_max] | stem:[A_max] | stem:[R_("single",max)] | Typische Nutzung
-
+| Klasse | stem:[R_max] | stem:[A_max] | stem:[R_("single max")] | Typische Nutzung
 | *L3*
 | {l3-radlast-max}
 | {l3-achslast-max}
@@ -205,9 +202,6 @@ Sie MUSS als Minimum mehrerer Begrenzungen bestimmt werden (siehe <<streckenklas
 * `V_Betrieb` – Begrenzung aus Betriebsart (BG/BA/BP) und betrieblicher Regelung
 * `V_Zustand` – zustandsabhängige Begrenzung (z. B. Nässe, Baustelle, unbekannter Gleiszustand)
 
-Alle Geschwindigkeiten `V_*` MÜSSEN in derselben Einheit angegeben werden.
-Sofern nicht anders in der Spec festgelegt, SOLLTE die Einheit km/h verwendet werden.
-
 Die Geschwindigkeitsklasse definiert ausschließlich die obere Grenze `V_Strecke` für einen Streckenabschnitt.
 
 === Klassifizierung
@@ -229,14 +223,63 @@ Die Geschwindigkeitsklasse definiert ausschließlich die obere Grenze `V_Strecke
 | ≤ {v1-max} km/h
 |===
 
-=== Klassenbeschreibung
+==== *V3* (Rangier-/Baustellenbetrieb)
+* maximale Geschwindigkeit: *≤ {v3-max} km/h*
 
-*V3* (Rangier-/Baustellenbetrieb) SOLLTE für Rangieren, provisorische Gleise und Betriebszustände mit erhöhter Unsicherheit (wechselnder Untergrund, eingeschränkte Gleislagequalität) angesetzt werden.
+Typische Anwendung:
 
-*V2* (Regelbetrieb) SOLLTE als Standard-Geschwindigkeitsklasse für regulären Betrieb angesetzt werden.
+* Rangieren
+* Baustellenbetrieb
+* provisorische Gleise
+* enge Radien
+* unsicherer oder wechselnder Untergrund
 
-*V1* (Schnellbetrieb) DARF NICHT als Standard angenommen werden.
-V1 KANN nur angewendet werden, wenn der Streckenabschnitt, die Fahrzeuge und der Betriebszustand dafür explizit freigegeben sind.
+Eigenschaften:
+
+* geringe dynamische Zusatzlasten
+* geringe Anforderungen an die Gleisgeometrie
+* jederzeit zulässig, sofern keine weiteren Einschränkungen bestehen
+
+==== *V2* (Regelbetrieb)
+* maximale Geschwindigkeit: *≤ {v2-max} km/h*
+
+Typische Anwendung:
+
+* regulärer Güterverkehr
+* Arbeits- und Transportfahrten
+* Standardbetrieb der SBO-287
+
+Eigenschaften:
+
+* moderate dynamische Zusatzlasten
+* definierte Mindestanforderungen an:
+** Gleislage
+** Radien
+** Unterbau
+* begrenzte Eignung für Personenverkehr (siehe Klasse P)
+
+V2 stellt die *Regel-Geschwindigkeitsklasse* der SBO-{spurweite} dar.
+==== *V1* (Schnellbetrieb)
+* maximale Geschwindigkeit: *≤ {v1-max} km/h*
+
+Typische Anwendung:
+
+* kurze, gut ausgebaute Streckenabschnitte
+* gleichmäßiger und tragfähiger Unterbau
+* große Kurvenradien
+* sehr gute Gleislage
+
+Eigenschaften:
+
+* hohe dynamische Zusatzlasten
+* erhöhte Anforderungen an:
+** Gleisgeometrie
+** Radprofile
+** Bremsvermögen
+** Wartungszustand
+
+V1 ist nicht automatisch zulässig und erfordert eine
+bewusste Freigabe des Streckenabschnitts.
 
 === Auswirkungen höherer Geschwindigkeit
 
