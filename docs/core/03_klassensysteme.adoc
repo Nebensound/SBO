@@ -290,36 +290,13 @@ Mit steigender Geschwindigkeit erhöhen sich:
 * Bremsanforderungen
 * Anforderungen an Gleisqualität
 
-=== Dynamikfaktor
+=== Dynamische Zusatzlasten
 
-Der Dynamikfaktor MUSS in Abhängigkeit der Geschwindigkeit definiert werden:
+Mit steigender Geschwindigkeit nehmen die dynamischen Beanspruchungen
+von Gleis, Unterbau und Fahrzeugen zu.
 
-[stem]
-++++
-phi(V) = 1 + k_1 * V + k_2 * V^2
-++++
-
-Dabei gilt:
-
-* stem:[phi(V)] ist der dimensionslose Dynamikfaktor.
-* stem:[V] ist die Fahrgeschwindigkeit.
-* stem:[k_1] und stem:[k_2] sind Koeffizienten, die von Gleisqualität, Schwellenabstand und Spurweite abhängen.
-
-Einheitenkonsistenz:
-
-* Wenn stem:[V] in km/h eingesetzt wird (empfohlen), MÜSSEN stem:[k_1] die Einheit 1/(km/h) und stem:[k_2] die Einheit 1/(km/h)^2 haben.
-* Wenn stem:[V] in m/s eingesetzt wird, MÜSSEN die Koeffizienten entsprechend in 1/(m/s) bzw. 1/(m/s)^2 angegeben werden.
-
-Die Spec MUSS festlegen, in welcher Einheit stem:[V] für die Bestimmung von stem:[phi(V)] einzusetzen ist.
-
-[IMPORTANT]
-====
-Für Personenverkehr (BP) SOLLTE φ(V) konservativ angesetzt werden.
-====
-
-=== Dynamische Zusatzlasten (vereinfachter Ansatz)
-
-Sofern die Spec einen klassenweisen Dynamikfaktor definiert, MUSS dieser für Nachweise der dynamischen Radlast wie folgt angesetzt werden:
+Für die Ermittlung der dynamischen Radlasten sind folgende Faktoren
+anzusetzen:
 
 [cols="2,1"]
 |===
