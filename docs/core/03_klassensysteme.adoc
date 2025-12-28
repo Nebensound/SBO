@@ -1,7 +1,7 @@
 = Klassensysteme
 :toc:
 :sectnums:
-:stem:
+:stem: latexmath
 
 == Übersicht
 
@@ -19,7 +19,7 @@ Beispiel: `L2/V2/BG`
 
 Die Lastklassen (L) definieren die **zulässige mechanische Beanspruchung** von Gleis, Unterbau und Fahrzeugen durch <<02_begriffe.adoc#radlast,Rad>>- und <<02_begriffe.adoc#achslast,Achslasten>>.
 
-Die Lastklasse ist die **zentrale Bemessungsgröße** der SBO-{spec-id}. Alle weiteren Anforderungen (Geometrie, Geschwindigkeit, Betrieb) leiten sich daraus ab oder werden dadurch begrenzt.
+Die Lastklasse ist die **zentrale Bemessungsgröße** der SBO-{spurweite}. Alle weiteren Anforderungen (Geometrie, Geschwindigkeit, Betrieb) leiten sich daraus ab oder werden dadurch begrenzt.
 
 === Leitgröße: Radlast
 
@@ -33,28 +33,32 @@ Maßgebend für die Auslegung ist die <<02_begriffe.adoc#radlast,Radlast>>, nich
 
 === Klassifizierung
 
-Die SBO-{spec-id} definiert drei Lastklassen mit folgenden Grenzwerten:
+Die SBO-{spurweite} definiert drei Lastklassen mit folgenden Grenzwerten:
 
 * stem:[R_{max}] – Maximale statische <<02_begriffe.adoc#radlast,Radlast>>
 * stem:[A_{max}] – Maximale statische <<02_begriffe.adoc#achslast,Achslast>>
+* stem:[R_{\mathrm{single},max}] – Maximale Einrad-Überlast (lokale Unregelmäßigkeiten)
 
-[cols="1,2,2,3"]
+[cols="1,2,2,2,3"]
 |===
-| Klasse | stem:[R_{max}] | stem:[A_{max}] | Typische Nutzung
+| Klasse | stem:[R_{max}] | stem:[A_{max}] | stem:[R_{\mathrm{single},max}] | Typische Nutzung
 
 | *L3*
-| {l3-r-max}
-| {l3-a-max}
+| {l3-radlast-max}
+| {l3-achslast-max}
+| {l3-radlast-single}
 | Leichte Loren, Handbetrieb, Schau-/Parkverkehr
 
 | *L2*
-| {l2-r-max}
-| {l2-a-max}
+| {l2-radlast-max}
+| {l2-achslast-max}
+| {l2-radlast-single}
 | Standard-Güterbetrieb, regulärer Personenverkehr
 
 | *L1*
-| {l1-r-max}
-| {l1-a-max}
+| {l1-radlast-max}
+| {l1-achslast-max}
+| {l1-radlast-single}
 | Schwerbetrieb, Reservekapazität
 |===
 
@@ -101,21 +105,24 @@ Der <<02_begriffe.adoc#dynamikfaktor,Dynamikfaktor>> ist abhängig von der Gesch
 
 ==== Einrad-Überlast (Unregelmäßigkeiten)
 
-Für kurzfristige Unregelmäßigkeiten ist anzunehmen, dass ein einzelnes Rad temporär eine deutlich erhöhte Last trägt (z. B. durch Setzung, Stein, Schotterverdichtung, Übergang).
+Eine Einrad-Überlast ist eine **kurzzeitige, lokale** Überhöhung der Radlast auf *einem* Rad infolge betrieblicher Unregelmäßigkeiten (z. B. lokale Setzung, Stein/Schmutz, Schienenstoß, Verdichtungsunterschiede).
 
-Diese Einrad-Überlast MUSS bei der Auslegung berücksichtigt werden für:
+Für lokale Nachweise (Schiene, Schwelle, Unterbau) MUSS die anzusetzende Radlast stem:[R_{lok}] wie folgt bestimmt werden:
 
-* Schiene
-* Schwelle
-* Unterbau
+[stem]
++++
+R_{lok} = \max\left(R_{bem},\; R_{\mathrm{single},max}\right)
++++
 
-=== Bemessungsgrößen
+Dabei gilt:
 
-Für jede Lastklasse MÜSSEN in der spurweitenspezifischen Spec definiert werden:
+* stem:[R_{bem}] ist die Bemessungsradlast aus Dynamikfaktor (siehe Abschnitt "Dynamische Zusatzlasten").
+* stem:[R_{\mathrm{single},max}] ist die maximal zulässige Einrad-Überlast als **Einzellast** auf ein Rad.
 
-* `R_max` – Maximale statische Radlast
-* `A_max` – Maximale statische Achslast
-* `R_single_max` – Maximale Einrad-Überlast (Setzung, Stoß)
+[IMPORTANT]
+====
+stem:[R_{\mathrm{single},max}] MUSS als konzentrierte Einzellast am ungünstigsten Ort angesetzt werden. Eine gleichzeitige Erhöhung der übrigen Räder derselben Achse ist NICHT anzunehmen.
+====
 
 === Zuordnung von Strecken und Fahrzeugen
 

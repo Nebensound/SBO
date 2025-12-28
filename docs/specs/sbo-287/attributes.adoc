@@ -13,19 +13,19 @@
 :spurweite-max-v1: 288
 
 // === Lastklasse L3 (leicht) ===
-:l3-radlast-max: 150
-:l3-achslast-max: 300
-:l3-radlast-single: 250
+:l3-radlast-max: 150 kg
+:l3-achslast-max: 300 kg
+:l3-radlast-single: 250 kg
 
 // === Lastklasse L2 (mittel) ===
-:l2-radlast-max: 250
-:l2-achslast-max: 500
-:l2-radlast-single: 400
+:l2-radlast-max: 250 kg
+:l2-achslast-max: 500 kg
+:l2-radlast-single: 400 kg
 
 // === Lastklasse L1 (schwer) ===
-:l1-radlast-max: 400
-:l1-achslast-max: 800
-:l1-radlast-single: 600
+:l1-radlast-max: 400 kg
+:l1-achslast-max: 800 kg
+:l1-radlast-single: 600 kg
 
 // === Geschwindigkeitsklassen ===
 :v3-max: 5
