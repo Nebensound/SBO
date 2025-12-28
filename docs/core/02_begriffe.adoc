@@ -1,16 +1,13 @@
 = Begriffe und Definitionen
 :toc:
 :sectnums:
+:stem:
 
 == Grundbegriffe
 
 === Spurweite
 
-Die Spurweite ist der lichte Abstand zwischen den Innenkanten der Schienenköpfe, gemessen 14 mm unterhalb der Schienenoberkante.
-
-=== Nennspur
-
-Die Nennspur ist die nominale Spurweite einer Spurgruppe (z. B. 287 mm für SBO-287).
+Die Spurweite ist der minimale lichte Abstand zwischen den Innenkanten der Schienenköpfe.
 
 === Radlast
 
@@ -23,16 +20,16 @@ Die Radlast ist die Leitgröße für die Klassifizierung, nicht die Fahrzeuggesa
 
 === Achslast
 
-Die Achslast ist die Summe der Radlasten aller Räder einer Achse.
+Die Achslast ist die Summe der Radlasten der Räder einer Achse.
 
 === Bemessungsradlast
 
-Die Bemessungsradlast ist das Produkt aus statischer Radlast und Dynamikfaktor:
+Die Bemessungsradlast ist die dynamisch erhöhte Radlast zur Auslegung von Gleis und Fahrzeug.
 
-[stem]
-++++
-R_{bem} = R_{stat} \times \varphi(V)
-++++
+[NOTE]
+====
+Berechnung und Anwendung siehe <<04_lastmodell.adoc#,Lastmodell>>.
+====
 
 == Fahrzeugbegriffe
 
@@ -57,7 +54,7 @@ Die Schwerpunkthöhe ist der vertikale Abstand des Gesamtschwerpunkts zur Schien
 
 === Mindestradius
 
-Der Mindestradius ist der kleinste zulässige Gleisbogenradius für eine gegebene Fahrzeug-/Strecken-Kombination.
+Der Mindestradius ist der kleinste zulässige Gleisbogenradius, gemessen als Gleisachsradius (Mitte zwischen den Schienen), für eine gegebene Fahrzeug-/Strecken-Kombination.
 
 === Überhöhung
 
@@ -65,7 +62,7 @@ Die Überhöhung ist die vertikale Differenz zwischen äußerer und innerer Schi
 
 === Längsneigung
 
-Die Längsneigung ist die Steigung oder das Gefälle der Gleistrasse in Fahrtrichtung, angegeben in Promille (‰).
+Die Längsneigung ist die Steigung oder das Gefälle der Gleistrasse in Fahrtrichtung, angegeben in Prozent (%).
 
 === Unterbau
 
@@ -75,9 +72,12 @@ Der Unterbau umfasst alle tragenden Schichten unterhalb der Schwellen (Bettung, 
 
 === Streckenklasse
 
-Die Streckenklasse ist die Kombination aus Lastklasse (L), Geschwindigkeitsklasse (V) und Betriebsart (B).
+Die Streckenklasse ist die Kombination aus Lastklasse, Geschwindigkeitsklasse und Betriebsart.
 
-Beispiel: `L2/V2/BG`
+[NOTE]
+====
+Definition und Klassifikation siehe <<03_klassensysteme.adoc#,Klassensysteme>>.
+====
 
 === Zulässige Geschwindigkeit
 
@@ -85,7 +85,12 @@ Die zulässige Geschwindigkeit ist die maximale Fahrgeschwindigkeit an einem bes
 
 === Dynamikfaktor
 
-Der Dynamikfaktor φ(V) ist ein geschwindigkeitsabhängiger Multiplikator, der die dynamische Erhöhung der Radlast erfasst.
+Der Dynamikfaktor stem:[\varphi(V)] ist ein geschwindigkeitsabhängiger Multiplikator zur Berechnung der dynamischen Lasterhöhung.
+
+[NOTE]
+====
+Definition und Werte siehe <<04_lastmodell.adoc#,Lastmodell>>.
+====
 
 == Sicherheitsbegriffe
 
@@ -100,35 +105,26 @@ Optimale oder ideale Bedingungen sind *kein* Designfall.
 
 === Haftreibungszahl
 
-Die Haftreibungszahl μ_design ist der für die Auslegung anzusetzende Wert der Reibung zwischen Rad und Schiene.
+Die Haftreibungszahl stem:[\mu_{design}] ist der für die Auslegung anzusetzende Wert der Reibung zwischen Rad und Schiene.
 
 == Klassenbegriffe
 
+[[lastklasse]]
 === Lastklasse (L)
 
-Definiert die zulässigen Rad- und Achslasten:
+Kategorisierung nach zulässigen Rad- und Achslasten.
 
-* *L3* – leicht
-* *L2* – mittel
-* *L1* – schwer
-
+[[geschwindigkeitsklasse]]
 === Geschwindigkeitsklasse (V)
 
-Definiert die dynamische Beanspruchung:
+Kategorisierung nach zulässiger Geschwindigkeit und dynamischer Beanspruchung.
 
-* *V3* – Rangier / Baustelle
-* *V2* – Regelbetrieb
-* *V1* – Schnellfahrt
-
+[[betriebsart]]
 === Betriebsart (B)
 
-Definiert das Sicherheitsniveau:
+Kategorisierung nach Sicherheitsniveau und Nutzungsart.
 
-* *BG* – Güterverkehr
-* *BA* – Arbeits- / Betriebsfahrten
-* *BP* – Personenverkehr
-
-[IMPORTANT]
+[NOTE]
 ====
-BP ist immer restriktiver als BG oder BA.
+Klassenwerte und Anforderungen siehe <<03_klassensysteme.adoc#,Klassensysteme>>.
 ====

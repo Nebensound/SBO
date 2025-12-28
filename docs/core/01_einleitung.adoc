@@ -24,11 +24,6 @@ Das SBO-Ordnungswerk folgt https://semver.org/lang/de/[Semantic Versioning] (MAJ
 * *MINOR*: Abwärtskompatible neue Funktionalität (z.B. neue Kapitel)
 * *PATCH*: Abwärtskompatible Korrekturen
 
-Änderungen werden dokumentiert:
-
-* *Spurweiten-übergreifende Änderungen* (Core): Im Appendix von sbo-core.adoc
-* *Spurweiten-spezifische Änderungen* (z.B. SBO-287): Im Appendix der jeweiligen Spec
-
 [NOTE]
 ====
 Die vollständige Änderungshistorie dieser Spezifikation finden Sie im Appendix.
@@ -36,12 +31,12 @@ Die vollständige Änderungshistorie dieser Spezifikation finden Sie im Appendix
 
 === Zielsetzung
 
-Das Ordnungswerk verfolgt folgende Ziele:
+Dieses Ordnungswerk definiert technische Anforderungen für Schmalspur-Bahnen, einschließlich:
 
-* Konsistente Auslegung von Schmalspur-Bahnanlagen
-* Frühzeitige Klärung von Grenzfällen
-* Vermeidung späterer Sackgassen in Gleis-, Fahrzeug- und Betriebsführung
-* Nachvollziehbare Entscheidungsgrundlagen für alle Projektphasen
+* Grenzwerte für Gleisbau, Fahrzeuge und Betrieb
+* Berechnungsmethoden für Lasten, Radien und Bremsen
+* Sicherheitsanforderungen für Personen- und Gütertransport
+* Praktische Auslegungsrichtlinien
 
 === Zentrales Prinzip
 
@@ -58,29 +53,14 @@ Kein einzelner Parameter kann isoliert betrachtet werden.
 
 Dieses Ordnungswerk nutzt folgende Schlüsselwörter:
 
-MUSS / MUST:: Verpflichtende Anforderung
-SOLLTE / SHOULD:: Empfohlene Anforderung
-KANN / MAY:: Optionale Möglichkeit
+MUSS:: Verpflichtende Anforderung
+SOLLTE:: Empfohlene Anforderung
+KANN:: Optionale Möglichkeit
 
 == Sicherheitsphilosophie
 
-[IMPORTANT]
-====
-* Im Zweifel konservativ auslegen
-* Personenverkehr (Klasse BP) niemals „nebenbei" behandeln
-* Sicherheit vor Optimierung
-====
+Bei der Auslegung von Anlagen und Fahrzeugen nach diesem Ordnungswerk gelten folgende Grundsätze:
 
-== Anwendung
-
-Das Ordnungswerk richtet sich an:
-
-* Planer von Schmalspur-Bahnanlagen
-* Betreiber von Park- und Gartenbahnen
-* Konstrukteure von Fahrzeugen
-* Projektverantwortliche
-
-[NOTE]
-====
-Bei Abweichungen von diesem Ordnungswerk MÜSSEN Begründung, Risikoanalyse und Kompensationsmaßnahmen dokumentiert werden.
-====
+* Unsicherheiten in Berechnungen oder Annahmen MÜSSEN konservativ (sicherheitsseitig) behandelt werden
+* Personenverkehr (Klasse BP) unterliegt verschärften Anforderungen gegenüber reinem Güterverkehr
+* Sicherheitsrelevante Parameter DÜRFEN NICHT durch Optimierung anderer Faktoren geschwächt werden

@@ -1,15 +1,17 @@
 = Klassensysteme
 :toc:
 :sectnums:
+:stem:
 
 == Übersicht
 
 Das SBO-Klassensystem ist das zentrale Rückgrat der Spezifikation. Jede Strecke und jedes Fahrzeug wird durch Kombination dreier Klassen charakterisiert:
 
-[stem]
-++++
-\text{Streckenklasse} = L_x / V_x / B_x
-++++
+----
+Streckenklasse = Lx/Vx/Bx
+----
+
+Beispiel: `L2/V2/BG`
 
 == Lastklassen (L)
 
