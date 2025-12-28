@@ -15,30 +15,99 @@ Beispiel: `L2/V2/BG`
 
 == Lastklassen (L)
 
-=== Zweck
+=== Zweck und Anwendungsbereich
 
-Lastklassen definieren die zulässigen Rad- und Achslasten einer Strecke oder eines Fahrzeugs.
+Die Lastklassen (L) definieren die **zulässige mechanische Beanspruchung** von Gleis, Unterbau und Fahrzeugen durch <<02_begriffe.adoc#radlast,Rad>>- und <<02_begriffe.adoc#achslast,Achslasten>>.
 
-[NOTE]
-====
-Leitgröße ist die *Radlast*, nicht die Fahrzeuggesamtmasse.
-====
+Die Lastklasse ist die **zentrale Bemessungsgröße** der SBO-{spec-id}. Alle weiteren Anforderungen (Geometrie, Geschwindigkeit, Betrieb) leiten sich daraus ab oder werden dadurch begrenzt.
+
+=== Leitgröße: Radlast
+
+Maßgebend für die Auslegung ist die <<02_begriffe.adoc#radlast,Radlast>>, nicht die Fahrzeugmasse.
+
+**Begründung:**
+
+* Radlast wirkt direkt auf Schiene, Schwelle und Unterbau
+* Punktuelle Überlasten entstehen immer auf Radebene
+* Fahrzeugmassen sind ohne Aussagekraft über Lastverteilung
 
 === Klassifizierung
 
-[cols="1,3"]
+Die SBO-{spec-id} definiert drei Lastklassen mit folgenden Grenzwerten:
+
+* stem:[R_{max}] – Maximale statische <<02_begriffe.adoc#radlast,Radlast>>
+* stem:[A_{max}] – Maximale statische <<02_begriffe.adoc#achslast,Achslast>>
+
+[cols="1,2,2,3"]
 |===
-| Klasse | Beschreibung
+| Klasse | stem:[R_{max}] | stem:[A_{max}] | Typische Nutzung
 
 | *L3*
-| Leichte Lasten (Schmalspur-Parkbahnen, Kinderbahnen)
+| {l3-r-max}
+| {l3-a-max}
+| Leichte Loren, Handbetrieb, Schau-/Parkverkehr
 
 | *L2*
-| Mittlere Lasten (Standard-Gartenbahnen)
+| {l2-r-max}
+| {l2-a-max}
+| Standard-Güterbetrieb, regulärer Personenverkehr
 
 | *L1*
-| Schwere Lasten (Großanlagen, Gütertransport)
+| {l1-r-max}
+| {l1-a-max}
+| Schwerbetrieb, Reservekapazität
 |===
+
+[IMPORTANT]
+====
+Die Klassen sind **aufsteigend** geordnet: L1 stellt höhere Anforderungen als L2, L2 höhere als L3.
+====
+
+Jede Strecke, jedes Fahrzeug und jeder Betriebsvorgang MUSS mindestens einer Lastklasse zugeordnet sein.
+
+=== Statische und dynamische Lasten
+
+==== Statische Radlast
+
+Die statische Radlast ergibt sich aus:
+
+* Fahrzeugmasse
+* Nutzlast
+* Lastverteilung
+* Anzahl der Räder
+
+Die statische Radlast ist die **Ausgangsgröße** für alle weiteren Nachweise.
+
+==== Dynamische Zusatzlasten
+
+Im Betrieb treten zusätzliche Lasten auf durch:
+
+* Unebenheiten der Gleislage
+* Schienenstöße
+* Setzungen des Unterbaus
+* Unrundlauf der Räder
+* Brems- und Anfahrvorgänge
+
+Zur Berücksichtigung dieser Effekte wird ein **geschwindigkeitsabhängiger Dynamikfaktor** stem:[\varphi(V)] angewendet.
+
+Grundformel zur Berechnung der <<02_begriffe.adoc#bemessungsradlast,Bemessungsradlast>>:
+
+[stem]
+++++
+R_{bem} = R_{stat} \times \varphi(V)
+++++
+
+Der <<02_begriffe.adoc#dynamikfaktor,Dynamikfaktor>> ist abhängig von der Geschwindigkeitsklasse und wird in den spurweitenspezifischen Spezifikationen festgelegt.
+
+==== Einrad-Überlast (Unregelmäßigkeiten)
+
+Für kurzfristige Unregelmäßigkeiten ist anzunehmen, dass ein einzelnes Rad temporär eine deutlich erhöhte Last trägt (z. B. durch Setzung, Stein, Schotterverdichtung, Übergang).
+
+Diese Einrad-Überlast MUSS bei der Auslegung berücksichtigt werden für:
+
+* Schiene
+* Schwelle
+* Unterbau
 
 === Bemessungsgrößen
 
@@ -48,16 +117,75 @@ Für jede Lastklasse MÜSSEN in der spurweitenspezifischen Spec definiert werden
 * `A_max` – Maximale statische Achslast
 * `R_single_max` – Maximale Einrad-Überlast (Setzung, Stoß)
 
-=== Dynamische Beaufschlagung
+=== Zuordnung von Strecken und Fahrzeugen
 
-Die tatsächliche Beanspruchung ergibt sich aus:
+==== Strecke
 
-[stem]
-++++
-R_{bem} = R_{stat} \times \varphi(V)
-++++
+Jeder Streckenabschnitt ist einer Lastklasse zuzuordnen.
 
-Wobei `φ(V)` der geschwindigkeitsabhängige Dynamikfaktor ist (siehe <<Geschwindigkeitsklassen>>).
+Die Zuordnung erfolgt nach der **schwächsten Komponente**:
+
+* Unterbau
+* Schwellen
+* Schiene
+* Bauzustand
+
+Die Lastklasse der Strecke begrenzt:
+
+* zulässige Fahrzeuge
+* zulässige Nutzlast
+* ggf. zulässige Geschwindigkeit
+
+==== Fahrzeuge
+
+Jedes Fahrzeug ist einer Lastklasse zuzuordnen, basierend auf seiner **maximalen statischen Radlast**.
+
+Die Fahrzeug-Lastklasse DARF die Strecken-Lastklasse nicht überschreiten.
+
+=== Lastklassen und Betrieb
+
+Die Lastklasse beeinflusst:
+
+* zulässige Geschwindigkeit
+* zulässige Beschleunigung und Verzögerung
+* Mindestanforderungen an Gleisqualität
+* Wartungs- und Prüfintervalle
+
+Für Personenverkehr gelten zusätzliche Einschränkungen, unabhängig von der Lastklasse (siehe <<betriebsart,Betriebsart BP>>).
+
+=== Sonderfälle
+
+==== Punktlastige Ladung
+
+Bei Ladung mit stark konzentrierter Masse (z. B. Maschinen, Steine, Aggregate) ist eine gesonderte Betrachtung der Radlast erforderlich.
+
+[WARNING]
+====
+Eine geringe Gesamtmasse kann dennoch zu einer hohen Radlast führen.
+====
+
+==== Sondertransporte
+
+Lasten oberhalb der regulären Fahrzeugklasse dürfen nur als Sondertransport erfolgen.
+
+Sondertransporte erfordern mindestens:
+
+* reduzierte Geschwindigkeit
+* definierte Strecke
+* gesonderte Freigabe
+
+=== Grundsatz
+
+[IMPORTANT]
+====
+Die Lastklasse ist nicht verhandelbar im Betrieb.
+
+Wenn Zweifel bestehen, ist stets die **höhere Lastklasse** oder eine **niedrigere Geschwindigkeit** anzusetzen.
+====
+
+=== Abgrenzung
+
+Konkrete Zahlenwerte (z. B. zulässige Radlasten in kg) sind **nicht Bestandteil dieses Kapitels** und werden ausschließlich in den jeweiligen spurweitenspezifischen Spezifikationen definiert.
 
 == Geschwindigkeitsklassen (V)
 
@@ -93,7 +221,7 @@ Die konkreten Geschwindigkeitsgrenzen MÜSSEN in der Spec definiert werden.
 
 Mit steigender Geschwindigkeit erhöhen sich:
 
-* Dynamischer Radlastfaktor `φ(V)`
+* Dynamischer Radlastfaktor stem:[\varphi(V)]
 * Seitenkräfte in Kurven
 * Bremsanforderungen
 * Anforderungen an Gleisqualität
