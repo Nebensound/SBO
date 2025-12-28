@@ -1,0 +1,39 @@
+# AsciiDoc Build-Ausgaben
+*.html
+*.pdf
+*.epub
+*.mobi
+*.xml
+
+# Verzeichnisse mit generierten Dateien
+/build/
+/dist/
+/output/
+/target/
+
+# Temporäre Dateien
+*.tmp
+*.bak
+*.swp
+*~
+
+# Editor-spezifische Dateien
+.vscode/
+.idea/
+*.iml
+.DS_Store
+
+# Node modules (falls du asciidoctor.js verwendest)
+node_modules/
+package-lock.json
+
+# Ruby gems (falls du asciidoctor gem verwendest)
+.bundle/
+vendor/
+
+# Log-Dateien
+*.log
+
+# Caches
+.cache/
+.asciidoctor/

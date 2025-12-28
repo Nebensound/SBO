@@ -1,0 +1,93 @@
+// SBO-287 Parameter-Attribute
+// Diese Datei definiert alle spurweitenspezifischen Zahlenwerte für 287 mm Spurweite
+
+// === Versions-Information ===
+:spec-version: 0.1.0
+:spec-revdate: 2025-12-28
+:spec-status: Draft
+
+// === Spurweite ===
+:spurweite: 287
+:spurweite-min: 285
+:spurweite-max: 290
+:spurweite-max-v1: 288
+
+// === Lastklasse L3 (leicht) ===
+:l3-radlast-max: 150
+:l3-achslast-max: 300
+:l3-radlast-single: 250
+
+// === Lastklasse L2 (mittel) ===
+:l2-radlast-max: 250
+:l2-achslast-max: 500
+:l2-radlast-single: 400
+
+// === Lastklasse L1 (schwer) ===
+:l1-radlast-max: 400
+:l1-achslast-max: 800
+:l1-radlast-single: 600
+
+// === Geschwindigkeitsklassen ===
+:v3-max: 5
+:v3-phi: 1.15
+:v2-max: 12
+:v2-phi: 1.40
+:v1-max: 20
+:v1-phi: 1.70
+
+// === Mindestradien (mm) ===
+// Achsstand bis 400 mm
+:radius-400-v3: 3000
+:radius-400-v2: 4000
+:radius-400-v1: 6000
+// Achsstand bis 600 mm
+:radius-600-v3: 4000
+:radius-600-v2: 5500
+:radius-600-v1: 8000
+// Achsstand bis 800 mm
+:radius-800-v3: 5000
+:radius-800-v2: 7000
+:radius-800-v1: 10000
+
+// === Überhöhung (mm) ===
+:ueberhoehung-bg-max: 10
+:ueberhoehung-bp-max: 0
+
+// === Längsneigung (Promille) ===
+// Güterverkehr
+:bg-gefaelle-dauer: 50
+:bg-gefaelle-kurz: 80
+:bg-gefaelle-kurve: 30
+// Personenverkehr
+:bp-gefaelle-dauer: 30
+:bp-gefaelle-kurz: 50
+:bp-gefaelle-kurve: 20
+
+// === Haftreibung ===
+:mu-ideal: 0.25
+:mu-design: 0.12
+:mu-extrem: 0.08
+
+// === Bremsen ===
+// Güterverkehr
+:bg-brems-verzoegerung: 0.5
+:bg-bremsweg-v2: 15
+// Personenverkehr
+:bp-brems-verzoegerung: 0.8
+:bp-bremsweg-v2: 10
+
+// === Fahrzeuge ===
+:min-achsen: 2
+:min-raddurchmesser: 80
+:spurkranz-hoehe-min: 6
+:spurkranz-hoehe-max: 8
+
+// === Oberbau ===
+:schwellenabstand-max-l2: 300
+:schwellenbreite-min-l2: 60
+:schwellendicke-min: 20
+
+// === Prüfintervalle (Tage) ===
+:pruefung-sicht-bp: 30
+:pruefung-spurweite: 90
+:pruefung-schwellen: 365

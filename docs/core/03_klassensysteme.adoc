@@ -1,0 +1,221 @@
+= Klassensysteme
+:toc:
+:sectnums:
+
+== Übersicht
+
+Das SBO-Klassensystem ist das zentrale Rückgrat der Spezifikation. Jede Strecke und jedes Fahrzeug wird durch Kombination dreier Klassen charakterisiert:
+
+[stem]
+++++
+\text{Streckenklasse} = L_x / V_x / B_x
+++++
+
+== Lastklassen (L)
+
+=== Zweck
+
+Lastklassen definieren die zulässigen Rad- und Achslasten einer Strecke oder eines Fahrzeugs.
+
+[NOTE]
+====
+Leitgröße ist die *Radlast*, nicht die Fahrzeuggesamtmasse.
+====
+
+=== Klassifizierung
+
+[cols="1,3"]
+|===
+| Klasse | Beschreibung
+
+| *L3*
+| Leichte Lasten (Schmalspur-Parkbahnen, Kinderbahnen)
+
+| *L2*
+| Mittlere Lasten (Standard-Gartenbahnen)
+
+| *L1*
+| Schwere Lasten (Großanlagen, Gütertransport)
+|===
+
+=== Bemessungsgrößen
+
+Für jede Lastklasse MÜSSEN in der spurweitenspezifischen Spec definiert werden:
+
+* `R_max` – Maximale statische Radlast
+* `A_max` – Maximale statische Achslast
+* `R_single_max` – Maximale Einrad-Überlast (Setzung, Stoß)
+
+=== Dynamische Beaufschlagung
+
+Die tatsächliche Beanspruchung ergibt sich aus:
+
+[stem]
+++++
+R_{bem} = R_{stat} \times \varphi(V)
+++++
+
+Wobei `φ(V)` der geschwindigkeitsabhängige Dynamikfaktor ist (siehe <<Geschwindigkeitsklassen>>).
+
+== Geschwindigkeitsklassen (V)
+
+=== Zweck
+
+Geschwindigkeitsklassen definieren die dynamische Beanspruchung durch Fahrbewegung.
+
+=== Klassifizierung
+
+[cols="1,3,2"]
+|===
+| Klasse | Beschreibung | Typischer Bereich
+
+| *V3*
+| Rangier / Baustelle
+| < 5 km/h
+
+| *V2*
+| Regelbetrieb
+| 5–15 km/h
+
+| *V1*
+| Schnellfahrt
+| > 15 km/h
+|===
+
+[NOTE]
+====
+Die konkreten Geschwindigkeitsgrenzen MÜSSEN in der Spec definiert werden.
+====
+
+=== Auswirkungen höherer Geschwindigkeit
+
+Mit steigender Geschwindigkeit erhöhen sich:
+
+* Dynamischer Radlastfaktor `φ(V)`
+* Seitenkräfte in Kurven
+* Bremsanforderungen
+* Anforderungen an Gleisqualität
+
+=== Dynamikfaktor
+
+Der Dynamikfaktor MUSS in Abhängigkeit der Geschwindigkeit definiert werden:
+
+[stem]
+++++
+\varphi(V) = 1 + k_1 \cdot V + k_2 \cdot V^2
+++++
+
+Wobei `k₁` und `k₂` von Gleisqualität, Schwellenabstand und Spurweite abhängen.
+
+[IMPORTANT]
+====
+Für Personenverkehr (BP) SOLLTE φ(V) konservativ angesetzt werden.
+====
+
+== Betriebsarten (B)
+
+=== Zweck
+
+Betriebsarten definieren das erforderliche Sicherheitsniveau.
+
+=== Klassifizierung
+
+[cols="1,3,2"]
+|===
+| Klasse | Beschreibung | Personen
+
+| *BG*
+| Güterverkehr
+| Keine
+
+| *BA*
+| Arbeits-/Betriebsfahrten
+| Geschultes Personal
+
+| *BP*
+| Personenverkehr
+| Fahrgäste
+|===
+
+=== Hierarchie
+
+[stem]
+++++
+\text{BP} > \text{BA} > \text{BG}
+++++
+
+[IMPORTANT]
+====
+BP ist immer die restriktivste Betriebsart. Eine für BP zugelassene Strecke erfüllt automatisch BG und BA.
+====
+
+=== Zusatzanforderungen für BP
+
+Bei Personenverkehr gelten strengere Anforderungen:
+
+* Höhere Bremsverzögerung
+* Geringere Maximalgeschwindigkeit
+* Strengere Gefälle-Limits
+* Redundante Sicherheitseinrichtungen
+* Definierte Freigabeprozesse
+* Regelmäßige Prüfungen
+
+== Streckenklassifizierung
+
+=== Definition
+
+Jeder Streckenabschnitt MUSS klassifiziert werden:
+
+[source]
+----
+Beispiel: L2 / V2 / BG
+----
+
+Diese Klassifizierung definiert:
+
+* Welche Fahrzeuge zugelassen sind
+* Welche Geschwindigkeit zulässig ist
+* Welche Betriebsart erlaubt ist
+
+=== Fahrzeugzulassung
+
+Ein Fahrzeug ist zulässig, wenn:
+
+[stem]
+++++
+L_{Fzg} \leq L_{Strecke} \land V_{Fzg} \leq V_{Strecke} \land B_{Fzg} \leq B_{Strecke}
+++++
+
+=== Verschärfung
+
+Eine Strecke KANN abschnittsweise verschärft werden (z. B. Kurve, Gefälle, Bauwerk).
+
+Die zulässige Geschwindigkeit ergibt sich immer aus:
+
+[stem]
+++++
+V_{zul} = \min(V_{Strecke}, V_{Kurve}, V_{Gefälle}, V_{Fahrzeug}, V_{Betrieb}, V_{Zustand})
+++++
+
+== Anwendung
+
+=== Neubau
+
+Bei Planung einer neuen Anlage:
+
+1. Betriebsart festlegen (BG/BA/BP)
+2. Erwartete Lasten ermitteln → Lastklasse
+3. Gewünschte Geschwindigkeit → V-Klasse
+4. Streckenparameter entsprechend auslegen
+
+=== Bestand
+
+Bei Übernahme einer bestehenden Anlage:
+
+1. Vermessung und Bewertung
+2. Klassifizierung auf Basis der Ist-Zustände
+3. Fahrzeuge entsprechend zulassen oder anpassen
+
+=== Änderungen
+
+Änderungen einer Klassifizierung MÜSSEN dokumentiert und begründet werden.

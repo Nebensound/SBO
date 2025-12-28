@@ -1,0 +1,86 @@
+= Einleitung
+:toc:
+:sectnums:
+
+== Ziel und Geltungsbereich
+
+Das SBO (Smallspurbahn Bau- und Betriebsordnung) ist eine private, technische Spezifikation für Planung, Bau und Betrieb von Schmalspur-Bahnen.
+
+[NOTE]
+====
+SBO ist kein Gesetz, keine amtliche Norm, sondern eine strukturierte Engineering-Spezifikation.
+====
+
+[NOTE]
+====
+Diese Spezifikation ist für die Spurweite *{spurweite} mm* ausgelegt. Analoge Spezifikationen für andere Spurweiten finden Sie unter: https://nebensound.github.io/SBO/
+====
+
+=== Versionierung und Änderungshistorie
+
+Das SBO-Ordnungswerk folgt https://semver.org/lang/de/[Semantic Versioning] (MAJOR.MINOR.PATCH):
+
+* *MAJOR*: Inkompatible Änderungen (z.B. Verschärfung von Grenzwerten)
+* *MINOR*: Abwärtskompatible neue Funktionalität (z.B. neue Kapitel)
+* *PATCH*: Abwärtskompatible Korrekturen
+
+Änderungen werden dokumentiert:
+
+* *Spurweiten-übergreifende Änderungen* (Core): Im Appendix von sbo-core.adoc
+* *Spurweiten-spezifische Änderungen* (z.B. SBO-287): Im Appendix der jeweiligen Spec
+
+[NOTE]
+====
+Die vollständige Änderungshistorie dieser Spezifikation finden Sie im Appendix.
+====
+
+=== Zielsetzung
+
+Das Ordnungswerk verfolgt folgende Ziele:
+
+* Konsistente Auslegung von Schmalspur-Bahnanlagen
+* Frühzeitige Klärung von Grenzfällen
+* Vermeidung späterer Sackgassen in Gleis-, Fahrzeug- und Betriebsführung
+* Nachvollziehbare Entscheidungsgrundlagen für alle Projektphasen
+
+=== Zentrales Prinzip
+
+Die Zulässigkeit einer Konfiguration ergibt sich immer aus dem *Minimum mehrerer Grenzen*:
+
+[source]
+----
+Zulässigkeit = min(Last, Geometrie, Geschwindigkeit, Betrieb, Sicherheit)
+----
+
+Kein einzelner Parameter kann isoliert betrachtet werden.
+
+== Normativer Sprachgebrauch
+
+Dieses Ordnungswerk nutzt folgende Schlüsselwörter:
+
+MUSS / MUST:: Verpflichtende Anforderung
+SOLLTE / SHOULD:: Empfohlene Anforderung
+KANN / MAY:: Optionale Möglichkeit
+
+== Sicherheitsphilosophie
+
+[IMPORTANT]
+====
+* Im Zweifel konservativ auslegen
+* Personenverkehr (Klasse BP) niemals „nebenbei" behandeln
+* Sicherheit vor Optimierung
+====
+
+== Anwendung
+
+Das Ordnungswerk richtet sich an:
+
+* Planer von Schmalspur-Bahnanlagen
+* Betreiber von Park- und Gartenbahnen
+* Konstrukteure von Fahrzeugen
+* Projektverantwortliche
+
+[NOTE]
+====
+Bei Abweichungen von diesem Ordnungswerk MÜSSEN Begründung, Risikoanalyse und Kompensationsmaßnahmen dokumentiert werden.
+====

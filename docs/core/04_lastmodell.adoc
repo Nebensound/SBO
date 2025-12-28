@@ -1,0 +1,227 @@
+= Lastmodell und Dynamik
+:toc:
+:sectnums:
+
+== Grundprinzip
+
+Die Bemessung von Schiene, Schwelle und Unterbau erfolgt nicht auf Basis statischer Lasten, sondern unter Berücksichtigung dynamischer Effekte.
+
+[stem]
+++++
+R_{bem} = R_{stat} \times \varphi(V)
+++++
+
+== Statische Radlast
+
+=== Definition
+
+Die statische Radlast ist die auf ein Rad wirkende Vertikalkraft im Stillstand auf ebenem Gleis.
+
+=== Ermittlung
+
+Für ein symmetrisch beladenes Fahrzeug mit gleichmäßiger Achslastverteilung:
+
+[stem]
+++++
+R_{stat} = \frac{m_{Fzg} \cdot g}{n_{Räder}}
+++++
+
+Wobei:
+
+* `m_Fzg` – Fahrzeugmasse [kg]
+* `g` – Erdbeschleunigung (9,81 m/s²)
+* `n_Räder` – Anzahl der Räder
+
+[NOTE]
+====
+Bei ungleichmäßiger Lastverteilung (z. B. Tender, Drehgestelle) MUSS die maximale Radlast ermittelt werden.
+====
+
+== Dynamischer Lastfaktor φ(V)
+
+=== Zweck
+
+Der Dynamikfaktor erfasst die Erhöhung der Radlast durch:
+
+* Geschwindigkeit
+* Gleisunruhe
+* Stöße an Schienenstößen
+* Schwellendurchbiegung
+* Fahrzeugschwingungen
+
+=== Grundform
+
+[stem]
+++++
+\varphi(V) = 1 + k_1 \cdot V + k_2 \cdot V^2
+++++
+
+Wobei `k₁` und `k₂` von folgenden Faktoren abhängen:
+
+* Schwellenabstand
+* Gleissteifigkeit
+* Spurweite
+* Fahrzeugfederung
+
+[IMPORTANT]
+====
+Die konkreten Koeffizienten MÜSSEN in der spurweitenspezifischen Spec definiert werden.
+====
+
+=== Typische Werte
+
+Als Orientierung (nicht normativ):
+
+[cols="2,1,3"]
+|===
+| Geschwindigkeitsklasse | φ(V) | Anmerkung
+
+| V3 (< 5 km/h)
+| 1,1–1,2
+| Quasi-statisch
+
+| V2 (5–15 km/h)
+| 1,3–1,6
+| Regelbetrieb
+
+| V1 (> 15 km/h)
+| 1,6–2,0
+| Hohe dynamische Beanspruchung
+|===
+
+== Einrad-Überlast
+
+=== Ursachen
+
+Kurzzeitig kann ein einzelnes Rad deutlich höher belastet werden als die mittlere Radlast:
+
+* Lokale Setzung einer Schwelle
+* Gleisunruhe / Höhenfehler
+* Punktuelle Aufhärtung
+* Fahrzeugfederung ungleichmäßig
+
+=== Bemessungsansatz
+
+Zusätzlich zur mittleren Bemessungsradlast MUSS eine Einrad-Überlast berücksichtigt werden:
+
+[stem]
+++++
+R_{single} = R_{bem} \times \psi
+++++
+
+Wobei `ψ` ein Überlastfaktor (typisch 1,2–1,5) ist.
+
+[IMPORTANT]
+====
+Die Einrad-Überlast ist maßgebend für:
+
+* Schwellendimensionierung
+* Unterbaubemessung
+* Schienenbruchrisiko
+====
+
+== Seitenkräfte
+
+=== Entstehung
+
+In Kurven wirken Seitenkräfte auf Schiene und Unterbau:
+
+[stem]
+++++
+F_{Seite} = \frac{m \cdot v^2}{r}
+++++
+
+Wobei:
+
+* `m` – Fahrzeugmasse
+* `v` – Geschwindigkeit
+* `r` – Kurvenradius
+
+=== Berücksichtigung
+
+Seitenkräfte erhöhen die Belastung der äußeren Schiene und begrenzen:
+
+* Zulässige Geschwindigkeit in Kurven
+* Mindestradius für gegebene Geschwindigkeit
+* Stabilität schmaler Unterbauten
+
+[NOTE]
+====
+Für Personenverkehr (BP) MUSS die Querbeschleunigung begrenzt werden (Komfort, Kippgefahr).
+====
+
+== Längskräfte
+
+=== Anfahren
+
+Beim Anfahren wirken Zugkräfte:
+
+[stem]
+++++
+F_{Zug} = m \cdot a + m \cdot g \cdot s + F_{Roll}
+++++
+
+Wobei:
+
+* `a` – Beschleunigung
+* `s` – Längsneigung [‰]
+* `F_Roll` – Rollwiderstand
+
+=== Bremsen
+
+Beim Bremsen wirken Bremskräfte auf Schiene und Schwellen.
+
+[IMPORTANT]
+====
+Die Bremskraft ist durch die Haftreibung begrenzt:
+
+[stem]
+++++
+F_{Brems,max} = \mu \cdot m \cdot g
+++++
+====
+
+== Stoßlasten
+
+=== Kuppelstoß
+
+Beim Rangieren oder Ankuppeln entstehen kurzzeitige Stoßlasten.
+
+[NOTE]
+====
+Kuppelstöße sind für die Gleisbemessung in der Regel nicht maßgebend, wohl aber für Fahrzeugkonstruktion.
+====
+
+=== Entgleisung (Grenzfall)
+
+Im Fall einer Entgleisung KANN ein Rad auf die Schwelle aufsetzen.
+
+[IMPORTANT]
+====
+Schwellen MÜSSEN diese Punktlast ohne Bruch aufnehmen können (Rückfallsicherheit).
+====
+
+== Anwendung in der Bemessung
+
+=== Schienenbemessung
+
+[stem]
+++++
+\sigma_{Schiene} = f(R_{bem}, Schwellenabstand, Schienenträgheitsmoment)
+++++
+
+=== Schwellenbemessung
+
+[stem]
+++++
+\sigma_{Schwelle} = f(R_{single}, Schwellenbreite, Bettungsmodul)
+++++
+
+=== Unterbaubemessung
+
+[stem]
+++++
+p_{Unterbau} = \frac{R_{single}}{A_{Lastverteilung}}
+++++
+
+Die Lastverteilung erfolgt unter 45°-Winkel durch die Bettung.

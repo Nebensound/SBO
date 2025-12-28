@@ -1,0 +1,58 @@
+= SBO-287 – Spezifikation für Spurweite 287 mm
+:doctype: book
+:toc: left
+:toclevels: 3
+:sectnums:
+:sectnumlevels: 3
+:source-highlighter: rouge
+:icons: font
+:stem:
+
+// Lade Parameter für diese Spurweite
+include::attributes.adoc[]
+
+[abstract]
+== Zusammenfassung
+
+Diese Spezifikation definiert alle technischen Anforderungen für Planung, Bau und Betrieb von Schmalspur-Bahnen der Nennspur *{spurweite} mm*.
+
+**Version:** {spec-version} | **Status:** {spec-status} | **Stand:** {spec-revdate}
+
+[NOTE]
+====
+Analoge Spezifikationen existieren für andere Spurweiten. Eine Übersicht aller verfügbaren SBO-Spezifikationen finden Sie unter: https://nebensound.github.io/SBO/
+====
+
+// Inhaltliche Kapitel
+include::../../core/01_einleitung.adoc[leveloffset=+1]
+
+include::../../core/02_begriffe.adoc[leveloffset=+1]
+
+include::../../core/03_klassensysteme.adoc[leveloffset=+1]
+
+include::../../core/04_lastmodell.adoc[leveloffset=+1]
+
+// TODO: Weitere Core-Kapitel
+// include::../../core/05_geometrie.adoc[leveloffset=+1]
+// include::../../core/06_laengsneigung.adoc[leveloffset=+1]
+// include::../../core/07_bremsen.adoc[leveloffset=+1]
+// include::../../core/08_fahrzeuge.adoc[leveloffset=+1]
+// include::../../core/09_oberbau.adoc[leveloffset=+1]
+// include::../../core/10_betrieb.adoc[leveloffset=+1]
+
+[appendix]
+== Parameter-Übersicht
+
+include::00_parameter.adoc[leveloffset=+2]
+
+[appendix]
+== Änderungshistorie
+
+[cols="1,2,6"]
+|===
+| Version | Datum | Änderung
+
+| 0.1.0
+| 2025-12-28
+| Initiale Version mit Parametern für Lastklassen, Geschwindigkeitsklassen und Mindestradien
+|===

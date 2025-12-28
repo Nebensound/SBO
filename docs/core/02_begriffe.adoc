@@ -1,0 +1,134 @@
+= Begriffe und Definitionen
+:toc:
+:sectnums:
+
+== Grundbegriffe
+
+=== Spurweite
+
+Die Spurweite ist der lichte Abstand zwischen den Innenkanten der Schienenköpfe, gemessen 14 mm unterhalb der Schienenoberkante.
+
+=== Nennspur
+
+Die Nennspur ist die nominale Spurweite einer Spurgruppe (z. B. 287 mm für SBO-287).
+
+=== Radlast
+
+Die Radlast ist die auf ein einzelnes Rad wirkende statische Vertikalkraft.
+
+[NOTE]
+====
+Die Radlast ist die Leitgröße für die Klassifizierung, nicht die Fahrzeuggesamtmasse.
+====
+
+=== Achslast
+
+Die Achslast ist die Summe der Radlasten aller Räder einer Achse.
+
+=== Bemessungsradlast
+
+Die Bemessungsradlast ist das Produkt aus statischer Radlast und Dynamikfaktor:
+
+[stem]
+++++
+R_{bem} = R_{stat} \times \varphi(V)
+++++
+
+== Fahrzeugbegriffe
+
+=== Fester Achsstand
+
+Der feste Achsstand ist der Abstand zwischen dem äußersten Radsatz am vorderen und hinteren Ende eines starren Fahrwerks.
+
+[IMPORTANT]
+====
+Der feste Achsstand begrenzt direkt den befahrbaren Mindestradius.
+====
+
+=== Adhäsionsmasse
+
+Die Adhäsionsmasse ist jener Teil der Lokomotivmasse, der auf angetriebenen Achsen lastet und für die Kraftübertragung verfügbar ist.
+
+=== Schwerpunkthöhe
+
+Die Schwerpunkthöhe ist der vertikale Abstand des Gesamtschwerpunkts zur Schienenoberkante.
+
+== Gleisbegriffe
+
+=== Mindestradius
+
+Der Mindestradius ist der kleinste zulässige Gleisbogenradius für eine gegebene Fahrzeug-/Strecken-Kombination.
+
+=== Überhöhung
+
+Die Überhöhung ist die vertikale Differenz zwischen äußerer und innerer Schiene im Gleisbogen.
+
+=== Längsneigung
+
+Die Längsneigung ist die Steigung oder das Gefälle der Gleistrasse in Fahrtrichtung, angegeben in Promille (‰).
+
+=== Unterbau
+
+Der Unterbau umfasst alle tragenden Schichten unterhalb der Schwellen (Bettung, Tragschicht, Planum).
+
+== Betriebsbegriffe
+
+=== Streckenklasse
+
+Die Streckenklasse ist die Kombination aus Lastklasse (L), Geschwindigkeitsklasse (V) und Betriebsart (B).
+
+Beispiel: `L2/V2/BG`
+
+=== Zulässige Geschwindigkeit
+
+Die zulässige Geschwindigkeit ist die maximale Fahrgeschwindigkeit an einem bestimmten Streckenabschnitt unter Berücksichtigung aller limitierenden Faktoren.
+
+=== Dynamikfaktor
+
+Der Dynamikfaktor φ(V) ist ein geschwindigkeitsabhängiger Multiplikator, der die dynamische Erhöhung der Radlast erfasst.
+
+== Sicherheitsbegriffe
+
+=== Designfall
+
+Der Designfall ist das ungünstigste, aber betrieblich zu erwartende Szenario (z. B. nasse Schienen, maximale Last, volle Geschwindigkeit).
+
+[NOTE]
+====
+Optimale oder ideale Bedingungen sind *kein* Designfall.
+====
+
+=== Haftreibungszahl
+
+Die Haftreibungszahl μ_design ist der für die Auslegung anzusetzende Wert der Reibung zwischen Rad und Schiene.
+
+== Klassenbegriffe
+
+=== Lastklasse (L)
+
+Definiert die zulässigen Rad- und Achslasten:
+
+* *L3* – leicht
+* *L2* – mittel
+* *L1* – schwer
+
+=== Geschwindigkeitsklasse (V)
+
+Definiert die dynamische Beanspruchung:
+
+* *V3* – Rangier / Baustelle
+* *V2* – Regelbetrieb
+* *V1* – Schnellfahrt
+
+=== Betriebsart (B)
+
+Definiert das Sicherheitsniveau:
+
+* *BG* – Güterverkehr
+* *BA* – Arbeits- / Betriebsfahrten
+* *BP* – Personenverkehr
+
+[IMPORTANT]
+====
+BP ist immer restriktiver als BG oder BA.
+====
