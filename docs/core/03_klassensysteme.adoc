@@ -300,7 +300,7 @@ anzusetzen:
 
 [cols="2,1"]
 |===
-| Geschwindigkeitsklasse | φ
+| Geschwindigkeitsklasse | Dynamikfaktor φ
 
 | V3 (≤ {v3-max} km/h)
 | {v3-phi}
