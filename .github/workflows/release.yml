@@ -1,0 +1,33 @@
+name: Release and Publish
+
+on:
+  release:
+    types: [published]
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build and Deploy to GitHub Pages
+        uses: manoelcampos/asciidoctor-ghpages-action@v2
+        with:
+          source_dir: docs/specs/sbo-287/
+          pdf_build: true
+          ebook_main_adoc_file: sbo-287.adoc
+
+      - name: Upload PDF to Release (on release only)
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ebook.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
