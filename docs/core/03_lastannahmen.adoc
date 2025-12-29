@@ -86,6 +86,15 @@ Bei bekannter Schwerpunktlage und Achsabständen:
 Q_"max" = (m_"Fzg" * g * l_"Hebel") / (n_"Achsen" * l_"Achsabstand" * n_"Räder/Achse")
 ++++
 
+Wobei:
+
+* stem:[m_"Fzg"] – Fahrzeugmasse [kg]
+* stem:[g] – Erdbeschleunigung (9,81 m/s²)
+* stem:[l_"Hebel"] – Hebelarm des Schwerpunkts zur nächsten Achse [mm]
+* stem:[n_"Achsen"] – Anzahl der Achsen
+* stem:[l_"Achsabstand"] – Achsabstand [mm]
+* stem:[n_"Räder/Achse"] – Anzahl der Räder pro Achse (typisch 2)
+
 *Methode 2: Worst-Case-Annahme*
 
 Wenn die tatsächliche Lastverteilung unbekannt ist, MUSS angenommen werden:
@@ -95,7 +104,12 @@ Wenn die tatsächliche Lastverteilung unbekannt ist, MUSS angenommen werden:
 Q_"max" = (m_"Fzg" * g * f_"Ungl") / n_"Räder"
 ++++
 
-Wobei stem:[f_"Ungl"] ein Ungleichverteilungsfaktor ist (typisch 1,3–1,5).
+Wobei:
+
+* stem:[m_"Fzg"] – Fahrzeugmasse [kg]
+* stem:[g] – Erdbeschleunigung (9,81 m/s²)
+* stem:[f_"Ungl"] – Ungleichverteilungsfaktor (typisch 1,3–1,5)
+* stem:[n_"Räder"] – Anzahl der Räder
 
 == Dynamische Zusatzlasten
 
@@ -258,9 +272,12 @@ F_"Zug" = m * a + m * g * s + F_"Roll"
 
 Wobei:
 
-* stem:[a] – Beschleunigung
+* stem:[F_"Zug"] – erforderliche Zugkraft [N]
+* stem:[m] – Fahrzeugmasse [kg]
+* stem:[a] – Beschleunigung [m/s²]
+* stem:[g] – Erdbeschleunigung (9,81 m/s²)
 * stem:[s] – Längsneigung [‰]
-* stem:[F_"Roll"] – Rollwiderstand
+* stem:[F_"Roll"] – Rollwiderstand [N]
 
 === Bremsen
 
@@ -272,8 +289,15 @@ Die Bremskraft ist durch die Haftreibung begrenzt:
 
 [stem]
 ++++
-F_("Brems,max") = mu * m * g
+F_("Brems max") = mu * m * g
 ++++
+
+Wobei:
+
+* stem:[F_("Brems max")] – maximal übertragbare Bremskraft [N]
+* stem:[mu] – Haftreibungskoeffizient zwischen Rad und Schiene (siehe Kapitel <<05_laengsneigung.adoc#,Längsneigung und Haftung>>)
+* stem:[m] – Fahrzeugmasse [kg]
+* stem:[g] – Erdbeschleunigung (9,81 m/s²)
 ====
 
 Die tatsächlich verfügbare Bremskraft KANN unterhalb dieses Grenzwertes liegen.
@@ -329,6 +353,12 @@ sigma_"Schwelle" = f(Q_"lokal", "Schwellenbreite", "Bettungsmodul")
 ++++
 p_"Unterbau" = (Q_"lokal") / (A_"Lastverteilung")
 ++++
+
+Wobei:
+
+* stem:[p_"Unterbau"] – Flächenpressung auf den Untergrund [kN/m²]
+* stem:[Q_"lokal"] – maßgebende lokale Radlast [kg]
+* stem:[A_"Lastverteilung"] – Lastverteilungsfläche im Untergrund [mm²]
 
 Die Lastverteilung erfolgt unter 45°-Winkel durch die Bettung.
 
