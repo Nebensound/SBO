@@ -274,7 +274,7 @@ Eigenschaften:
 ** Wartungszustand
 
 V1 ist nicht automatisch zulässig und erfordert eine
-bewusste Freigabe des Streckenabschnitts.
+bewusste Festlegung und Nachweis der Eignung des Streckenabschnitts.
 
 === Auswirkungen höherer Geschwindigkeit
 
