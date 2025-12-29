@@ -107,7 +107,7 @@ Dabei ist:
 * stem:[R_"stat"] die statische Radlast
 * stem:[phi(V)] der geschwindigkeitsabhängige Dynamikfaktor
 
-Die anzusetzenden Faktoren stem:[phi(V)] sind im Abschnitt <<Geschwindigkeitsklassen (V)>> definiert.
+Die anzusetzenden Faktoren stem:[phi(V)] sind im Abschnitt <<geschwindigkeitsklassen_v,Geschwindigkeitsklassen (V)>> definiert.
 
 ==== Einrad-Überlast (Unregelmäßigkeiten)
 
@@ -337,6 +337,8 @@ Betriebsarten definieren das erforderliche Sicherheitsniveau.
 ----
 BP > BA > BG
 ----
+
+Eine höhere Betriebsart impliziert stets die Anforderungen der darunterliegenden Betriebsarten.
 
 [IMPORTANT]
 ====
