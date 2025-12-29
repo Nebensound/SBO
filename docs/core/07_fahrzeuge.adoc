@@ -9,24 +9,30 @@ Dieses Kapitel definiert die Anforderungen an Fahrzeuge: Wagen, Lokomotiven, Per
 
 == Allgemeine Fahrzeuganforderungen
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Lichtraumprofil, Spurkranz, Puffer, Sicherheitseinrichtungen_
 
 == Wagen
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Güterwagen, offene/geschlossene Bauarten, Ladungssicherung_
 
 == Lokomotiven / Triebfahrzeuge
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Adhäsionsmasse, Antriebsart, Zugkraft_
 
 == Personenfahrzeuge
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Sitze, Türen, Notausstiege, Sicherheitsgurte_
 
 == Schwerpunkt und Lastverteilung
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Schwerpunkthöhe, Kippstabilität, Lastverteilung auf Achsen_
 
 == Kupplungen und Zug-/Druckkräfte
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Kupplungstyp, maximale Zug-/Druckkraft, Kuppelhöhe_

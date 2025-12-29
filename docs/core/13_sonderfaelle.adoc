@@ -9,16 +9,20 @@ Dieses Kapitel behandelt Sonderfälle, provisorische Gleise, Baustellenbetrieb u
 
 == Provisorische Gleise
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Temporäre Gleisanlagen, reduzierte Anforderungen, zeitliche Begrenzung_
 
 == Baustellenbetrieb
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Betrieb während Baumaßnahmen, Geschwindigkeitslimits, Sicherungsmaßnahmen_
 
 == Temporäre Last- oder Geschwindigkeitsänderungen
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Verfahren zur befristeten Änderung von Betriebsparametern, Dokumentation_
 
 == Betrieb unter eingeschränkten Bedingungen
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Notbetrieb, eingeschränkte Sicht, besondere Witterungsbedingungen_

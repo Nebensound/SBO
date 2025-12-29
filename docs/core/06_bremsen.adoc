@@ -9,20 +9,25 @@ Dieses Kapitel definiert die Bremsanforderungen, Mindestbremsvermögen, Bremsweg
 
 == Bremsarten
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Handbremse, Betriebsbremse, Notbremse, Feststellbremse_
 
 == Mindestbremsvermögen
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Erforderliche Bremskraft in Abhängigkeit von Last, Geschwindigkeit und Gefälle_
 
 == Bremsweg
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Berechnungsformel, Sichtweite, Reaktionszeit_
 
 == Haltefähigkeit im Gefälle
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Feststellbremse, Anforderungen an Halteposition_
 
 == Anforderungen für Personenverkehr (P)
 
+// TODO: Inhalt ausarbeiten
 _Platzhalter: Redundanz, höhere Bremsvermögen, Notbremseinrichtung_
