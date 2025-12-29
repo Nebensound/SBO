@@ -1,0 +1,42 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Betrieb
+
+[abstract]
+Dieses Kapitel definiert die betrieblichen Anforderungen: Streckenklassifizierung, Geschwindigkeitsfestlegung, Betriebszustände, Rangierbetrieb.
+
+== Streckenklassifizierung
+
+_Platzhalter: Kombination aus L × V × B, Klassifizierung von Streckenabschnitten_
+
+== Geschwindigkeitsfestlegung
+
+_Platzhalter: Methodik zur Festlegung der zulässigen Geschwindigkeit (Radien, Gefälle, Oberbau)_
+
+== Betriebszustände
+
+=== Trocken
+
+_Platzhalter: Normalbetrieb bei trockenen Bedingungen_
+
+=== Nass
+
+_Platzhalter: Designfall, reduzierte Haftung_
+
+=== Winter
+
+_Platzhalter: Eis, Schnee, reduzierte Geschwindigkeiten, besondere Vorsichtsmaßnahmen_
+
+=== Baustelle
+
+_Platzhalter: Temporäre Einschränkungen, Geschwindigkeitslimits, Sicherungsmaßnahmen_
+
+== Rangierbetrieb
+
+_Platzhalter: Besondere Anforderungen für Rangierbewegungen, Geschwindigkeitslimits_
+
+== Sonderbetrieb
+
+_Platzhalter: Nachtbetrieb, Schwertransporte, Sonderzüge_

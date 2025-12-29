@@ -1,4 +1,4 @@
-# Copilot Instructions – SBO (Smallspurbahn-Ordnungswerk)
+# Copilot Instructions – SBO (Schmalspurbahn-Ordnungswerk)
 
 ## Ziel
 Du unterstützt beim Schreiben einer technischen Spezifikation („Ordnungswerk") für Schmalspur-Bahnen.
@@ -11,14 +11,21 @@ Der Text ist normativ: klar, prüfbar, nicht narrativ.
   - **SHOULD / SOLLTE** (empfohlen)
   - **MAY / KANN** (optional)
 - Vermeide Storytelling, Anekdoten, Fülltexte.
+- **WICHTIG**: Vermeide Begriffe mit rechtlichem oder amtlichem Charakter (z.B. "Verordnung", "Vorschrift", "Regelwerk" für SBO selbst). SBO ist eine private technische Spezifikation ohne gesetzlichen Charakter und ohne Anspruch, eine offizielle Norm zu sein.
+- Vermeide autoritative Formulierungen wie "SBO regelt", "vorgeschrieben durch SBO", "SBO fordert". Nutze stattdessen neutrale Formulierungen wie:
+  - "Diese Spezifikation definiert..."
+  - "Innerhalb dieser Spezifikation..."
+  - "Nach dieser Spezifikation..."
+  - "Gemäß dieser Spezifikation..."
 
 ## Strukturprinzip
 - `docs/core/` enthält spurweiten-unabhängige Prinzipien, Definitionen, Methoden.
 - `docs/specs/sbo-XXX/` enthält **nur** spurweitenspezifische Parameter und Abweichungen.
+- **WICHTIG**: Core-Dateien werden per `include::` in die jeweilige Spurweiten-Spec eingebunden. Der Leser sieht immer nur die fertige SBO-287 (oder SBO-XXX), nicht Core separat. Es gibt keine separate Core-Dokumentation für Endanwender.
 - Vermeide Dopplungen:
   - Wenn ein Inhalt in mehreren Specs gilt → in `core/` ablegen und in Specs nur verlinken.
-  - Zahlenwerte und Grenzwerte je Spec zentral in `00_parameter.md` pflegen.
-- es soll eine Dokumentation je Spurweite entstehen, jedoch keine eigene für Core. Core solle aber den gesamten Überbau und Kontext liefern.
+  - Zahlenwerte und Grenzwerte je Spec zentral in `attributes.adoc` pflegen.
+- Schreibe Core-Dateien so, dass sie im Kontext der finalen Spurweiten-Spec gelesen werden. Vermeide Formulierungen wie "siehe die Spec-Dokumentation" – der Leser IST bereits in der Spec-Dokumentation.
 
 ## Technische Anforderungen an Inhalte
 Wenn du Regeln vorschlägst, decke (wo sinnvoll) diese Aspekte ab:
@@ -30,7 +37,7 @@ Wenn du Regeln vorschlägst, decke (wo sinnvoll) diese Aspekte ab:
 - Gleisbau: Unterbau, Schwellenabstand, Setzungen, Instandhaltung
 - Personenverkehr (Klasse P): strengere Limits, Redundanzen, Freigabeprozess
 - Prüfung/Wartung: Messgrößen, Toleranzen, Intervalle, Dokumentationspflicht
-Orientier dich an der in Deutschland geltenden EBO/BOA, aber passe an Smallspurbahnen an.
+Orientier dich an der in Deutschland geltenden EBO/BOA, aber passe an Schmalspurbahnen an.
 
 ## Formeln & Parameter
 - Formeln gehören in `core/` oder Anhang; Parameterwerte in `attributes.adoc`.

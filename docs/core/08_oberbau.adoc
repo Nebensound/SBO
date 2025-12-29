@@ -1,0 +1,28 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Oberbau und Unterbau
+
+[abstract]
+Dieses Kapitel behandelt Schienen, Schwellen, Bettung, Untergrund und zulässige Setzungen.
+
+== Schienen
+
+_Platzhalter: Schienenprofile, Materialgüte, Verschleißgrenzen_
+
+== Schwellen
+
+_Platzhalter: Schwellenabstand, Materialien (Holz, Beton, Stahl), Befestigung_
+
+== Bettung
+
+_Platzhalter: Schotter, Sand, feste Fahrbahn, Korngrößen_
+
+== Untergrund
+
+_Platzhalter: Tragfähigkeit, Bodenpressung, Verdichtung_
+
+== Setzungen und Unebenheiten
+
+_Platzhalter: Zulässige Setzungen, Verwindung, Instandhaltungsgrenzen_

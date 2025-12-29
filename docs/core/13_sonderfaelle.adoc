@@ -1,0 +1,24 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Sonderfälle und Abweichungen
+
+[abstract]
+Dieses Kapitel behandelt Sonderfälle, provisorische Gleise, Baustellenbetrieb und temporäre Abweichungen von den Standardanforderungen.
+
+== Provisorische Gleise
+
+_Platzhalter: Temporäre Gleisanlagen, reduzierte Anforderungen, zeitliche Begrenzung_
+
+== Baustellenbetrieb
+
+_Platzhalter: Betrieb während Baumaßnahmen, Geschwindigkeitslimits, Sicherungsmaßnahmen_
+
+== Temporäre Last- oder Geschwindigkeitsänderungen
+
+_Platzhalter: Verfahren zur befristeten Änderung von Betriebsparametern, Dokumentation_
+
+== Betrieb unter eingeschränkten Bedingungen
+
+_Platzhalter: Notbetrieb, eingeschränkte Sicht, besondere Witterungsbedingungen_

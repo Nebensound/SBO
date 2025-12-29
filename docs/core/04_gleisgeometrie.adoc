@@ -1,0 +1,32 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Gleisgeometrie und Trassierung
+
+[abstract]
+Dieses Kapitel definiert die geometrischen Anforderungen an die Gleisführung, Spurweiten, Radien, Überhöhungen und Übergänge.
+
+== Spurweite und Toleranzen
+
+_Platzhalter: Definition der Nenn-Spurweite, zulässige Abweichungen, Messmethodik_
+
+== Fester Achsstand
+
+_Platzhalter: Definition und Bedeutung des festen Achsstands für befahrbare Mindestradien_
+
+== Mindestradien
+
+_Platzhalter: Berechnung und Tabellen der Mindestradien nach Lastklasse, Geschwindigkeit und Achsstand_
+
+== Kurven in Längsneigung
+
+_Platzhalter: Besondere Anforderungen für Kurven in Steigungen/Gefälle_
+
+== Überhöhung (falls angewendet)
+
+_Platzhalter: Berechnung der Überhöhung, Grenzwerte, Anwendungsbereich_
+
+== Übergänge und Gleisverziehungen
+
+_Platzhalter: Übergangsbögen, Verwindung, zulässige Verziehungsrampen_

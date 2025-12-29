@@ -1,12 +1,6 @@
 = SBO-287 – Spezifikation für Spurweite 287 mm
-:doctype: book
-:toc: left
-:toclevels: 3
-:sectnums:
-:sectnumlevels: 3
-:source-highlighter: rouge
-:icons: font
-:stem:
+
+include::../../common-header.adoc[]
 
 // Lade Parameter für diese Spurweite
 include::attributes.adoc[]
@@ -23,22 +17,62 @@ Diese Spezifikation definiert alle technischen Anforderungen für Planung, Bau u
 Analoge Spezifikationen existieren für andere Spurweiten. Eine Übersicht aller verfügbaren SBO-Spezifikationen finden Sie unter: https://nebensound.github.io/SBO/
 ====
 
-// Inhaltliche Kapitel
-include::../../core/01_einleitung.adoc[leveloffset=+1]
+// Kapitel 0: Allgemeines
+include::../../core/00_allgemeines.adoc[leveloffset=+1]
 
-include::../../core/02_begriffe.adoc[leveloffset=+1]
+// Kapitel 1: Systemannahmen
+include::../../core/01_systemannahmen.adoc[leveloffset=+1]
 
-include::../../core/03_klassensysteme.adoc[leveloffset=+1]
+// Kapitel 2: Klassensysteme
+include::../../core/02_klassensysteme.adoc[leveloffset=+1]
 
-include::../../core/04_lastmodell.adoc[leveloffset=+1]
+// Kapitel 3: Lastannahmen und Bemessung
+include::../../core/03_lastannahmen.adoc[leveloffset=+1]
 
-// TODO: Weitere Core-Kapitel
-// include::../../core/05_geometrie.adoc[leveloffset=+1]
-// include::../../core/06_laengsneigung.adoc[leveloffset=+1]
-// include::../../core/07_bremsen.adoc[leveloffset=+1]
-// include::../../core/08_fahrzeuge.adoc[leveloffset=+1]
-// include::../../core/09_oberbau.adoc[leveloffset=+1]
-// include::../../core/10_betrieb.adoc[leveloffset=+1]
+// Kapitel 4: Gleisgeometrie und Trassierung
+include::../../core/04_gleisgeometrie.adoc[leveloffset=+1]
+
+// Kapitel 5: Längsneigung, Haftung und Zugkraft
+include::../../core/05_laengsneigung.adoc[leveloffset=+1]
+
+// Kapitel 6: Bremsen und Verzögerung
+include::../../core/06_bremsen.adoc[leveloffset=+1]
+
+// Kapitel 7: Fahrzeuge
+include::../../core/07_fahrzeuge.adoc[leveloffset=+1]
+
+// Kapitel 8: Oberbau und Unterbau
+include::../../core/08_oberbau.adoc[leveloffset=+1]
+
+// Kapitel 9: Weichen, Kreuzungen und Sonderbauformen
+include::../../core/09_weichen.adoc[leveloffset=+1]
+
+// Kapitel 10: Betrieb
+include::../../core/10_betrieb.adoc[leveloffset=+1]
+
+// Kapitel 11: Personenverkehr (Klasse P)
+include::../../core/11_personenverkehr.adoc[leveloffset=+1]
+
+// Kapitel 12: Prüfung, Wartung und Instandhaltung
+include::../../core/12_pruefung.adoc[leveloffset=+1]
+
+// Kapitel 13: Sonderfälle und Abweichungen
+include::../../core/13_sonderfaelle.adoc[leveloffset=+1]
+
+[appendix]
+== Formeln und Rechenwege
+
+_Platzhalter für mathematische Herleitungen und Berechnungsmethoden_
+
+[appendix]
+== Tabellenübersicht der Klassen
+
+_Platzhalter für Klassenkombinationen und Übersichtstabellen_
+
+[appendix]
+== Beispielrechnungen
+
+_Platzhalter für praktische Rechenbeispiele_
 
 [appendix]
 == Parameter-Übersicht

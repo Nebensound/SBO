@@ -1,0 +1,28 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Weichen, Kreuzungen und Sonderbauformen
+
+[abstract]
+Dieses Kapitel behandelt Weichen, Kreuzungen, Herzstücke, Engstellen und Betriebsbeschränkungen in Sonderbereichen.
+
+== Weichenradien
+
+_Platzhalter: Mindestradien für Weichenbögen, Zusammenhang mit Lastklasse_
+
+== Herzstücke
+
+_Platzhalter: Bauarten, Verschleiß, Wartung_
+
+== Kreuzungen
+
+_Platzhalter: Einfache und doppelte Kreuzungsweichen, Fahrwege_
+
+== Engstellen
+
+_Platzhalter: Lichtraumprofile, temporäre Einschränkungen_
+
+== Betriebsbeschränkungen in Sonderbereichen
+
+_Platzhalter: Geschwindigkeitslimits in Weichen, Rangierfahrten_

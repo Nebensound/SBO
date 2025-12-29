@@ -1,0 +1,28 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Prüfung, Wartung und Instandhaltung
+
+[abstract]
+Dieses Kapitel definiert Prüfintervalle, Prüfmethoden, Verschleißgrenzen und Dokumentationspflichten.
+
+== Prüfintervalle
+
+_Platzhalter: Tägliche, wöchentliche, monatliche, jährliche Prüfungen; Abhängigkeit von Betriebsintensität_
+
+== Sicht- und Maßprüfungen
+
+_Platzhalter: Sichtprüfung auf Schäden, Vermessung von Spurweite, Überhöhung, Verwindung_
+
+== Verschleißgrenzen
+
+_Platzhalter: Schienenverschleiß, Radverschleiß, Schwellenzustand_
+
+== Dokumentation
+
+_Platzhalter: Prüfprotokolle, Wartungsbücher, digitale Erfassung_
+
+== Maßnahmen bei Abweichungen
+
+_Platzhalter: Sofortmaßnahmen, Geschwindigkeitsreduzierung, Streckensperrung, Instandsetzungsfristen_

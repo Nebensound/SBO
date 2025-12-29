@@ -1,7 +1,8 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
 = Klassensysteme
-:toc:
-:sectnums:
-:stem:
 
 == Übersicht
 
@@ -95,44 +96,36 @@ Grundformel zur Berechnung der <<02_begriffe.adoc#bemessungsradlast,Bemessungsra
 
 [stem]
 ++++
-R_(bem) = R_(stat) * phi(V)
+R_"bem" = R_"stat" * phi(V)
 ++++
 
-Die anzusetzenden Faktoren MÜSSEN wie folgt verwendet werden:
+Dabei ist:
 
-[cols="2,1"]
-|===
-| Betriebszustand | φ
+* stem:[R_"bem"] die Bemessungsradlast (dynamisch)
+* stem:[R_"stat"] die statische Radlast
+* stem:[phi(V)] der geschwindigkeitsabhängige Dynamikfaktor
 
-| Rangieren / ≤ {v3-max} km/h
-| {v3-phi}
-
-| Regelbetrieb / ≤ {v2-max} km/h
-| {v2-phi}
-
-| Schnellfahrt / ≤ {v1-max} km/h
-| {v1-phi}
-|===
+Die anzusetzenden Faktoren stem:[phi(V)] sind im Abschnitt <<Geschwindigkeitsklassen (V)>> definiert.
 
 ==== Einrad-Überlast (Unregelmäßigkeiten)
 
 Eine Einrad-Überlast ist eine **kurzzeitige, lokale** Überhöhung der Radlast auf *einem* Rad infolge betrieblicher Unregelmäßigkeiten (z. B. lokale Setzung, Stein/Schmutz, Schienenstoß, Verdichtungsunterschiede).
 
-Für lokale Nachweise (Schiene, Schwelle, Unterbau) MUSS die anzusetzende Radlast stem:[R_(lok)] wie folgt bestimmt werden:
+Für lokale Nachweise (Schiene, Schwelle, Unterbau) MUSS die anzusetzende Radlast stem:[R_"lok"] wie folgt bestimmt werden:
 
 [stem]
 ++++
-R_"lok" = max(R_"bem", R_"single,max")
+R_"lok" = max(R_"bem", R_"single max")
 ++++
 
 Dabei gilt:
 
 * stem:[R_"bem"] ist die Bemessungsradlast aus Dynamikfaktor (siehe Abschnitt Dynamische Zusatzlasten).
-* stem:[R_"single,max"] ist die maximal zulässige Einrad-Überlast als **Einzellast** auf ein Rad.
+* stem:[R_"single max"] ist die maximal zulässige Einrad-Überlast als **Einzellast** auf ein Rad.
 
 [IMPORTANT]
 ====
-stem:[R_("single",max)] MUSS als konzentrierte Einzellast am ungünstigsten Ort angesetzt werden. Eine gleichzeitige Erhöhung der übrigen Räder derselben Achse ist NICHT anzunehmen.
+stem:[R_"single max"] MUSS als konzentrierte Einzellast am ungünstigsten Ort angesetzt werden. Eine gleichzeitige Erhöhung der übrigen Räder derselben Achse ist NICHT anzunehmen.
 ====
 
 === Zuordnung von Strecken und Fahrzeugen
@@ -247,7 +240,7 @@ Typische Anwendung:
 
 * regulärer Güterverkehr
 * Arbeits- und Transportfahrten
-* Standardbetrieb der SBO-287
+* Standardbetrieb der SBO-{spurweite}
 
 Eigenschaften:
 
@@ -354,7 +347,6 @@ Bei Personenverkehr gelten strengere Anforderungen:
 
 * Höhere Bremsverzögerung
 * Geringere Maximalgeschwindigkeit
-* Strengere Gefälle-Limits
 * Redundante Sicherheitseinrichtungen
 * Definierte Freigabeprozesse
 * Regelmäßige Prüfungen
@@ -382,13 +374,13 @@ Ein Fahrzeug ist zulässig, wenn:
 
 [stem]
 ++++
-L_(Fzg) <= L_(Strecke) and V_(Fzg) <= V_(Strecke) and B_(Fzg) <= B_(Strecke)
+L_"Fzg" <= L_"Strecke" and V_"Fzg" <= V_"Strecke" and B_"Fzg" <= B_"Strecke"
 ++++
 
 Dabei gilt:
 
-* stem:[L_(Fzg)], stem:[V_(Fzg)], stem:[B_(Fzg)] sind die Klassen des Fahrzeugs.
-* stem:[L_(Strecke)], stem:[V_(Strecke)], stem:[B_(Strecke)] sind die Klassen des Streckenabschnitts.
+* stem:[L_"Fzg"], stem:[V_"Fzg"], stem:[B_"Fzg"] sind die Klassen des Fahrzeugs.
+* stem:[L_"Strecke"], stem:[V_"Strecke"], stem:[B_"Strecke"] sind die Klassen des Streckenabschnitts.
 
 Ordnungsrelation:
 

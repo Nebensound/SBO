@@ -1,0 +1,28 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Längsneigung, Haftung und Zugkraft
+
+[abstract]
+Dieses Kapitel behandelt Längsneigungen, Steigungswiderstände, Haftreibung zwischen Rad und Schiene sowie Anfahrbedingungen.
+
+== Steigung und Gefälle
+
+_Platzhalter: Maximale Steigungen, Gefälle, Bezeichnungsweise (Prozent, Promille)_
+
+== Steigungswiderstand
+
+_Platzhalter: Berechnung der Steigungskraft, Zusammenhang mit Neigung und Masse_
+
+== Haftreibung Rad/Schiene
+
+_Platzhalter: Haftreibungskoeffizient stem:[\mu], Designwerte für nasse/trockene Schiene_
+
+== Anfahrbedingungen
+
+_Platzhalter: Maximale Steigung zum Anfahren, erforderliche Adhäsionsmasse_
+
+== Schieben vs. Ziehen
+
+_Platzhalter: Anforderungen an Zuglok-Position, Druckkräfte, Kupplung_

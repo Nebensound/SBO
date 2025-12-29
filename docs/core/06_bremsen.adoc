@@ -1,0 +1,28 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Bremsen und Verzögerung
+
+[abstract]
+Dieses Kapitel definiert die Bremsanforderungen, Mindestbremsvermögen, Bremsweg-Berechnungen und Haltefähigkeit im Gefälle.
+
+== Bremsarten
+
+_Platzhalter: Handbremse, Betriebsbremse, Notbremse, Feststellbremse_
+
+== Mindestbremsvermögen
+
+_Platzhalter: Erforderliche Bremskraft in Abhängigkeit von Last, Geschwindigkeit und Gefälle_
+
+== Bremsweg
+
+_Platzhalter: Berechnungsformel, Sichtweite, Reaktionszeit_
+
+== Haltefähigkeit im Gefälle
+
+_Platzhalter: Feststellbremse, Anforderungen an Halteposition_
+
+== Anforderungen für Personenverkehr (P)
+
+_Platzhalter: Redundanz, höhere Bremsvermögen, Notbremseinrichtung_
