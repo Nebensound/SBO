@@ -3,6 +3,8 @@ include::../common-header.adoc[]
 endif::[]
 
 = Lastannahmen und Bemessung
+[abstract]
+Dieses Kapitel definiert das Lastmodell mit statischen und dynamischen Faktoren zur Bemessung von Schiene, Schwellen und Unterbau.
 
 == Grundprinzip
 

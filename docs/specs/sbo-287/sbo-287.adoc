@@ -1,4 +1,4 @@
-= SBO-287 – Spezifikation für Spurweite 287 mm
+= SBO-287 – Spezifikation für Schmalspurbahn mit Spurweite 287 mm
 
 include::../../common-header.adoc[]
 
@@ -75,9 +75,6 @@ _Platzhalter für Klassenkombinationen und Übersichtstabellen_
 _Platzhalter für praktische Rechenbeispiele_
 
 [appendix]
-== Parameter-Übersicht
-
-include::00_parameter.adoc[leveloffset=+2]
 
 [appendix]
 == Änderungshistorie

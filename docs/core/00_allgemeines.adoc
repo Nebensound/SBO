@@ -3,6 +3,8 @@ include::../common-header.adoc[]
 endif::[]
 
 = Allgemeines
+[abstract]
+Dieses Kapitel erläutert Zweck, Status und Struktur dieser Spezifikation sowie die verwendeten Begriffe und Abkürzungen.
 
 == Zweck und Geltungsbereich
 

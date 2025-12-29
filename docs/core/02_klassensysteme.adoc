@@ -3,6 +3,8 @@ include::../common-header.adoc[]
 endif::[]
 
 = Klassensysteme
+[abstract]
+Dieses Kapitel definiert die Lastklassen, Geschwindigkeitsklassen und Betriebsarten, die das modulare Rückgrat dieser Spezifikation bilden.
 
 == Übersicht
 
