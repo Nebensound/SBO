@@ -114,7 +114,7 @@ Personenverkehr (Klasse BP) unterliegt verschärften Anforderungen:
 
 [IMPORTANT]
 ====
-Anlagen und Fahrzeuge, die für Personenverkehr genutzt werden sollen, MÜSSEN explizit dafür freigegeben werden. Eine Freigabe für Güterverkehr ist nicht ausreichend.
+Anlagen und Fahrzeuge, die für Personenverkehr genutzt werden sollen, MÜSSEN explizit dafür ausgelegt und nachgewiesen werden. Eine Auslegung für Güterverkehr ist nicht ausreichend.
 ====
 
 === Kein Optimierungsdruck auf Sicherheit
@@ -126,16 +126,6 @@ Beispiele für *unzulässige* Kompromisse:
 * Verringerung der Bremskraft zur Erhöhung der Nutzlast
 * Vergrößerung der Geschwindigkeit durch Reduktion von Sicherheitsfaktoren
 * Verzicht auf Prüfungen zur Kosteneinsparung
-
-=== Nachweispflicht
-
-Abweichungen von den Grenzwerten dieser Spezifikation MÜSSEN durch:
-
-* Berechnung mit erhöhten Sicherheitsfaktoren, oder
-* Messung unter realistischen Bedingungen, oder
-* Gutachten einer sachkundigen Person
-
-begründet und dokumentiert werden.
 
 === Designfall: Ungünstigste Betriebsbedingung
 
