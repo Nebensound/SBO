@@ -62,7 +62,102 @@ include::../../core/13_sonderfaelle.adoc[leveloffset=+1]
 [appendix]
 == Formeln und Rechenwege
 
-_Platzhalter für mathematische Herleitungen und Berechnungsmethoden_
+Dieser Anhang enthält die Rechenansätze für die Auslegung,
+Bewertung und Klassifizierung von Strecken und Fahrzeugen der SBO-287 Normalspur.
+
+=== A.1 Grundlegende Maße
+
+Nenn-Spurweite:
+
+----
+S_0 = 1 435 mm / 1:5 = 287 mm
+----
+
+=== A.2 Lasten
+
+==== A.2.1 Statische Radlast
+
+----
+R_stat = (m_Fzg + m_Nutz) / n_Räder
+----
+
+mit:
+
+* m_Fzg: Fahrzeugmasse [kg]
+* m_Nutz: Nutzlast [kg]
+* n_Räder: Anzahl der Räder
+
+==== A.2.2 Dynamische Bemessungsradlast
+
+----
+R_bem = R_stat * φ(V)
+----
+
+==== A.2.3 Lokale Einrad-Überlast
+
+----
+R_lok = max(R_bem, R_single_max)
+----
+
+R_single_max ist als konzentrierte Einzellast anzusetzen.
+
+=== A.3 Geschwindigkeitsabhängige Dynamik
+
+----
+φ(V3) = 1,10
+φ(V2) = 1,25
+φ(V1) = 1,45
+----
+
+=== A.4 Mindestradius
+
+Vereinfachter Bemessungsansatz:
+
+----
+R_min = k_L * a_f * φ(V)
+----
+
+mit:
+
+* a_f: fester Achsstand [m]
+* k_L: Lastklassenfaktor
+
+Lastklassenfaktoren:
+
+----
+k_L3 = 6
+k_L2 = 8
+k_L1 = 10
+----
+
+=== A.5 Überhöhung (optional)
+
+----
+h = min(h_erf, h_max)
+----
+
+Für SBO_287 gilt:
+
+----
+h_max,V2 = 6 mm
+h_max,V1 = 10 mm
+----
+
+Überhöhung ist in V3 nicht vorgesehen.
+
+=== A.6 Verwindung
+
+----
+v = Δh / l
+----
+
+mit:
+
+* Δh: Überhöhungsänderung [mm]
+* l: Rampenlänge [m]
+
+Grenzwerte siehe Tabellenanhang.
+
 
 [appendix]
 == Tabellenübersicht der Klassen
@@ -82,6 +177,10 @@ _Platzhalter für praktische Rechenbeispiele_
 [cols="1,2,6"]
 |===
 | Version | Datum | Änderung
+
+| 0.1.2
+| 2026-2-1
+| Inhalt des Appendix A ergänzt
 
 | 0.1.1
 | 2025-12-28
