@@ -1,4 +1,4 @@
-# SBO – Schmallspurbahn-Ordnungswerk
+# SBO – Schmalspurbahn-Ordnungswerk
 
 **Technische Spezifikation für Planung, Bau und Betrieb von Schmalspur-Bahnen**
 
