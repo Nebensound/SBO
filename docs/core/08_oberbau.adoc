@@ -9,25 +9,190 @@ Dieses Kapitel behandelt Schienen, Schwellen, Bettung, Untergrund und zulässige
 
 == Schienen
 
-// TODO: Inhalt ausarbeiten
-_Platzhalter: Schienenprofile, Materialgüte, Verschleißgrenzen_
+=== Zweck
+Schienen führen die Fahrzeuge spurgebunden, übertragen Radlasten auf die Schwellen
+und nehmen Quer- sowie Längskräfte aus dem Betrieb auf.
+
+=== _Schienenprofile_
+
+//wir verwenden keine verschiedenen Profile oder?
+
+_Das Schienenprofil MUSS in Abhängigkeit von der Lastklasse gewählt werden._
+_Maßgeblich sind:_
+
+* _die maximale Radlast_
+* _die zu erwartenden Querkräfte_
+* _der Verschleiß durch Betriebsdauer_
+
+_Grundsatz_
+_Mit steigender Lastklasse MUSS die effektive tragende Profilhöhe zunehmen._
+
+=== Werkstoff
+Schienen MÜSSEN aus einem duktilen, verschleißfesten Werkstoff bestehen.
+Zulässig sind insbesondere:
+
+* Baustähle
+* vergütete Stähle
+* vergleichbare metallische Werkstoffe
+
+Nichtmetallische Werkstoffe sind unzulässig.
+
+=== Verschleiß
+Schienen gelten als verschlissen, wenn:
+
+* die tragende Profilhöhe wesentlich reduziert ist
+* seitlicher Kopfverschleiß die Spurführung beeinträchtigt
+* Risse, Ausbrüche oder plastische Verformungen sichtbar sind
+
+Verschlissene Schienen MÜSSEN instandgesetzt oder ersetzt werden.
+
+---
 
 == Schwellen
 
-// TODO: Inhalt ausarbeiten
-_Platzhalter: Schwellenabstand, Materialien (Holz, Beton, Stahl), Befestigung_
+=== Zweck
+Schwellen verteilen die Radlasten gleichmäßig in die Bettung,
+stellen die Spurweite sicher und verhindern ein seitliches Auswandern der Schienen.
+
+=== Materialien
+Zulässige Schwellenmaterialien sind:
+
+* Holz
+* Stahl
+* Beton oder vergleichbare Verbundwerkstoffe
+
+Die Materialwahl beeinflusst:
+
+* den maximal zulässigen Schwellenabstand
+* die Gleissteifigkeit
+* die Setzungsanfälligkeit
+
+=== Schwellenabstand
+Der Schwellenabstand MUSS an die Lastklasse angepasst sein.
+
+Grundsatz
+Mit steigender Lastklasse MUSS der Schwellenabstand reduziert werden.
+
+In Gleisbögen mit kleinen Radien oder bei erhöhten Querkräften
+MUSS der Schwellenabstand zusätzlich verringert werden.
+
+=== Befestigung
+Schienen MÜSSEN form- und kraftschlüssig mit den Schwellen verbunden sein.
+
+Zulässig sind:
+
+* Schraub- oder Klemmbefestigungen
+* geschweißte Verbindungen bei festem Unterbau
+
+Lose oder nicht definierte Befestigungen sind unzulässig.
+
+---
 
 == Bettung
 
-// TODO: Inhalt ausarbeiten
-_Platzhalter: Schotter, Sand, feste Fahrbahn, Korngrößen_
+=== Zweck
+Die Bettung dient der:
+
+* Lastverteilung
+* Entwässerung
+* Aufnahme von Setzungen
+* Feinjustierung der Gleislage
+
+=== Bettungsarten
+Zulässige Bettungsarten sind:
+
+* ungebundene Bettung (z. B. Schotter)
+* gebundene Bettung
+* feste Fahrbahn
+
+Die Wahl der Bettungsart ist abhängig von:
+
+* Lastklasse
+* Geschwindigkeitsklasse
+* Betriebsumgebung
+
+=== Anforderungen
+Eine Bettung MUSS:
+
+* dauerhaft entwässerungsfähig sein
+* formstabil bleiben
+* Setzungen gleichmäßig aufnehmen
+
+Gebundene oder feste Bettungen MÜSSEN zusätzliche Maßnahmen zur Entwässerung aufweisen.
+
+---
 
 == Untergrund
 
-// TODO: Inhalt ausarbeiten
-_Platzhalter: Tragfähigkeit, Bodenpressung, Verdichtung_
+=== Zweck
+Der Untergrund nimmt die aus der Bettung übertragenen Kräfte auf
+und verhindert unzulässige oder ungleichmäßige Setzungen.
 
-== Setzungen und Unebenheiten
+=== Tragfähigkeit
+Der Untergrund MUSS eine gleichmäßige und ausreichende Tragfähigkeit besitzen.
 
-// TODO: Inhalt ausarbeiten
-_Platzhalter: Zulässige Setzungen, Verwindung, Instandhaltungsgrenzen_
+[NOTE]
+Grundsatz - Mit steigender Lastklasse MUSS die erforderliche Tragfähigkeit des Untergrunds zunehmen.
+
+Bei unzureichender Tragfähigkeit
+MUSS der Untergrund verbessert werden (z. B. Verdichtung, Tragschicht, Fundament).
+
+=== Verdichtung
+Der Untergrund MUSS fachgerecht verdichtet sein.
+Unverdichteter oder inhomogener Boden ist unzulässig.
+
+---
+
+== Setzungen und Gleislage
+
+=== Zulässige Setzungen
+Setzungen sind zulässig, sofern sie:
+
+* gleichmäßig auftreten
+* die Spurhaltung nicht beeinträchtigen
+* keine unzulässigen Zusatzkräfte erzeugen
+
+Differenzsetzungen zwischen den Schienen sind zu minimieren.
+
+=== Grenzwerte
+Für die Gleislage sind Grenzwerte für:
+
+* Längsneigung
+* Querneigung
+* Verwindung
+festzulegen und einzuhalten.
+
+Bei Überschreitung der Grenzwerte MUSS der Betrieb angepasst oder eingestellt werden.
+
+---
+
+== Instandhaltung
+
+Der Ober- und Unterbau MUSS regelmäßig überprüft werden.
+
+Instandhaltungsmaßnahmen umfassen:
+
+* Nachstopfen oder Nachverdichten der Bettung
+* Erneuerung von Schwellen
+* Austausch oder Instandsetzung von Schienen
+
+[IMPORTANT]
+Bei Personenverkehr oder erhöhten Geschwindigkeiten
+sind strengere Instandhaltungsintervalle anzuwenden.
+
+
+---
+
+== Zusammenhang mit Klassensystem
+
+Der Ober- und Unterbau begrenzt unmittelbar:
+
+* die maximal zulässige Lastklasse
+* die zulässige Geschwindigkeit
+* die erlaubte Betriebsart
+
+Die Streckenklassifizierung MUSS sich stets am schwächsten Element
+des Ober- oder Unterbaus orientieren.
+
+[NOTE]
+Grundsatz - Im Zweifel ist immer von der ungünstigeren Annahme auszugehen.
