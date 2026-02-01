@@ -162,7 +162,195 @@ Grenzwerte siehe Tabellenanhang.
 [appendix]
 == Tabellenübersicht der Klassen
 
-_Platzhalter für Klassenkombinationen und Übersichtstabellen_
+=== B.1 Spurweite und Toleranzen
+
+Dieser Anhang enthält die  Tabellenwerte für die Klassifizierung,
+Bemessung und den Betrieb von Strecken und Fahrzeugen der SBO-287 Normalspur.
+
+=== B.1 Spurweite und Toleranzen
+
+[cols="2,1,1", options="header"]
+|===
+| Bereich | min [mm] | max [mm]
+| Allgemein | 285 | 290
+| Gerade / Regelbogen | 285 | 289
+| Enge Bögen | 287 | 291
+| Übergänge | 286 | 290
+| V1 (Schnellbetrieb) | 287 | 288
+|===
+
+
+---
+
+=== B.2 Lastklassen
+
+[cols="1,1,1,1,2", options="header"]
+|===
+| Klasse | R_max [kg] | A_max [kg] | R_single_max [kg] | Typische Nutzung
+| L3 | 150 | 300 | 250 | Leichte Fahrzeuge, Handbetrieb
+| L2 | 250 | 500 | 400 | Regelbetrieb, Güter, begrenzter Personenverkehr
+| L1 | 400 | 800 | 600 | Schwerbetrieb, Reserve
+|===
+[NOTE]
+====
+ R_max – Maximale statische Radlast
+ A_max – Maximale statische Achslast
+====
+
+[IMPORTANT]
+Die Klassen sind aufsteigend restriktiv geordnet: L1 > L2 > L3.
+
+---
+
+=== B.3 Geschwindigkeitsklassen
+
+[cols="1,2,1,1", options="header"]
+|===
+| Klasse | Beschreibung | V_max [km/h] | φ
+| V3 | Rangier / Baustelle | 5 | 1.10
+| V2 | Regelbetrieb | 15 | 1.25
+| V1 | Schnellbetrieb | 30 | 1.50
+|===
+
+
+---
+
+=== B.4 Mindestradien – Achsstand bis 400 mm
+
+[cols="1,1,1,1", options="header"]
+|===
+| Geschwindigkeitsklasse | V3 [mm] | V2 [mm] | V1 [mm]
+| Radius | 3000 | 4000 | 6000
+|===
+
+---
+
+=== B.5 Mindestradien – Achsstand bis 600 mm
+
+[cols="1,1,1,1", options="header"]
+|===
+| Geschwindigkeitsklasse | V3 [mm] | V2 [mm] | V1 [mm]
+| Radius | 4000 | 5500 | 8000
+|===
+
+---
+
+=== B.6 Mindestradien – Achsstand bis 800 mm
+
+[cols="1,1,1,1", options="header"]
+|===
+| Geschwindigkeitsklasse | V3 [mm] | V2 [mm] | V1 [mm]
+| Radius | 5000 | 7000 | 10000
+|===
+
+NOTE: Für größere Achsstände sind die Radien proportional zu erhöhen.
+
+IMPORTANT: Der größte feste Achsstand der zugelassenen Fahrzeuge ist maßgebend.
+
+---
+
+=== B.7 Überhöhung
+
+[cols="2,1", options="header"]
+|===
+| Betriebsart | max Überhöhung [mm]
+| BG | 10
+| BP | 0
+|===
+
+IMPORTANT: Bei Personenverkehr (BP) ist Überhöhung unzulässig.
+
+---
+
+=== B.8 Längsneigungen – Güterverkehr (BG)
+
+[cols="2,1", options="header"]
+|===
+| Situation | max Neigung [‰]
+| Dauerneigung | 50
+| Kurzzeitig | 80
+| Kurve | 30
+|===
+
+---
+
+=== B.9 Längsneigungen – Personenverkehr (BP)
+
+[cols="2,1", options="header"]
+|===
+| Situation | max Neigung [‰]
+| Dauerneigung | 30
+| Kurzzeitig | 50
+| Kurve | 20
+|===
+
+IMPORTANT: In Kurven ist stets der niedrigere Grenzwert anzusetzen.
+
+---
+
+=== B.10 Haftreibungsbeiwerte
+
+[cols="2,1", options="header"]
+|===
+| Zustand | μ
+| Ideal | 0.25
+| Bemessung | 0.12
+| Extrem (Nässe, Schmutz) | 0.08
+|===
+
+NOTE: Für sicherheitsrelevante Nachweise ist mindestens μ = 0.12 anzusetzen.
+
+---
+
+=== B.11 Bremsparameter
+
+[cols="2,1,1", options="header"]
+|===
+| Betriebsart | Verzögerung [m/s²] | Bremsweg bei V2 [m]
+| BG | 0.5 | 15
+| BP | 0.8 | 10
+|===
+
+
+---
+
+=== B.12 Fahrzeug-Mindestanforderungen
+
+[cols="2,1", options="header"]
+|===
+| Parameter | Mindestwert
+| Anzahl Achsen | 2
+| Raddurchmesser | 80 mm
+| Spurkranzhöhe min | 6 mm
+| Spurkranzhöhe max | 8 mm
+|===
+
+---
+
+=== B.13 Oberbau – Mindestanforderungen (L2)
+
+[cols="2,1", options="header"]
+|===
+| Parameter | Mindestwert
+| Schwellenabstand max | 300 mm
+| Schwellenbreite min | 60 mm
+| Schwellendicke min | 20 mm
+|===
+
+---
+
+=== B.14 Prüfintervalle
+
+[cols="2,1", options="header"]
+|===
+| Prüfung | Intervall [Tage]
+| Sichtprüfung (BP) | 30
+| Spurweitenprüfung | 90
+| Schwellenprüfung | 365
+|===
+
+IMPORTANT: Bei Abweichungen sind die Prüfintervalle zu verkürzen.
+
 
 [appendix]
 == Beispielrechnungen
@@ -180,7 +368,7 @@ _Platzhalter für praktische Rechenbeispiele_
 
 | 0.1.2
 | 2026-2-1
-| Inhalt des Appendix A ergänzt
+| Inhalt des Appendix A & Appendix B ergänzt
 
 | 0.1.1
 | 2025-12-28
