@@ -9,30 +9,205 @@ Dieses Kapitel definiert die geometrischen Anforderungen an die Gleisführung, S
 
 == Spurweite und Toleranzen
 
-// TODO: Inhalt ausarbeiten
-_Platzhalter: Definition der Nenn-Spurweite, zulässige Abweichungen, Messmethodik_
+=== Zweck
+Die Spurweite definiert die grundlegende geometrische Kompatibilität zwischen Fahrzeug und Gleis.
+Sie beeinflusst unmittelbar:
+
+* Laufstabilität
+* Rad-Schiene-Kontakt
+* Spurkranzbeanspruchung
+* Entgleisungssicherheit
+
+=== Definition der Nenn-Spurweite
+
+Die Nenn-Spurweite der SBO-{spurweite} ist:
+
+----
+S_0 = {spurweite_nenn} mm
+----
+
+Die Spurweite wird gemessen zwischen den inneren Messpunkten der Schienenköpfe
+gemäß definierter Messhöhe der Radlauffläche.
+// bzw. weiß ich nicht mehr, was wir gesagt hatten wo wir messen, glaube es wich von der EBO ab
+
+=== Zulässige Abweichungen
+
+Die Spurweite DARF nur innerhalb der folgenden Grenzwerte abweichen:
+
+[cols="1,1,1", options="header"]
+|===
+| Bereich | Spurweite min | Spurweite max
+| Gerade / Regelbogen | S_0 - ΔS_reg | S_0 + ΔS_reg
+| Enge Bögen | S_0 | S_0 + ΔS_bogen
+| Übergangsbereiche | S_0 - ΔS_ü | S_0 + ΔS_ü
+|===
+
+IMPORTANT: Eine Unterschreitung der Nenn-Spurweite in Bögen ist unzulässig.
+
+=== Messmethodik
+
+* Messung im unbelasteten Zustand
+* Messpunkte gemäß definierter Schienenkopfhöhe
+* Maßgebend ist stets der ungünstigste gemessene Wert
+
+IMPORTANT: Die Spurweite ist eine harte Grenzgröße.
+Überschreitungen der Grenzwerte sind betrieblich nicht kompensierbar.
 
 == Fester Achsstand
 
-// TODO: Inhalt ausarbeiten
-_Platzhalter: Definition und Bedeutung des festen Achsstands für befahrbare Mindestradien_
+=== Definition
+
+Der feste Achsstand (a_f) ist der Abstand zwischen zwei nicht gegeneinander lenkbaren Radsätzen eines Fahrzeugs.
+
+Er ist maßgebend für:
+
+* befahrbare Mindestradien
+* Seitenkräfte in Bögen
+* Spurkranzverschleiß
+* Schienenkopfabnutzung
+
+=== Bedeutung
+
+Je größer der feste Achsstand, desto:
+
+* größer der erforderliche Mindestradius
+* höher die Querkräfte
+* höher die Anforderungen an Gleisqualität
+
+IMPORTANT: Der größte feste Achsstand aller zugelassenen Fahrzeuge ist für die Auslegung maßgebend.
 
 == Mindestradien
 
-// TODO: Inhalt ausarbeiten
-_Platzhalter: Berechnung und Tabellen der Mindestradien nach Lastklasse, Geschwindigkeit und Achsstand_
+=== Grundsatz
+
+Der Mindestradius (R_min) ist abhängig von:
+
+* Lastklasse (L)
+* Geschwindigkeitsklasse (V)
+* festem Achsstand (a_f)
+* Betriebsart (B)
+
+=== Berechnungsprinzip (vereinfachend)
+
+----
+R_min = k * a_f * φ(V)
+----
+
+Dabei ist:
+
+* a_f der feste Achsstand
+* φ(V) der Dynamikfaktor der Geschwindigkeitsklasse
+* k ein last- und betriebsklassenabhängiger Faktor
+
+=== Klassifizierte Mindestradien (Richtwerte)
+
+[cols="1,1,1,1", options="header"]
+|===
+| Lastklasse | V3 | V2 | V1
+| L3 | {l3-r-v3} m | {l3-r-v2} m | {l3-r-v1} m
+| L2 | {l2-r-v3} m | {l2-r-v2} m | {l2-r-v1} m
+| L1 | {l1-r-v3} m | {l1-r-v2} m | {l1-r-v1} m
+|===
+
+IMPORTANT: Der Mindestradius ist nicht verhandelbar.
+Unterschreitungen sind nur mit Verschärfung der Geschwindigkeitsklasse zulässig.
 
 == Kurven in Längsneigung
 
-// TODO: Inhalt ausarbeiten
-_Platzhalter: Besondere Anforderungen für Kurven in Steigungen/Gefälle_
+=== Grundsatz
+
+Kurven in Steigung oder Gefälle führen zu einer Überlagerung aus:
+
+* Seitenkräften infolge Bogenlauf
+* Längskräften aus Zug- und Bremsvorgängen
+* reduzierter Haftung
+
+=== Anforderungen
+
+In Kurven mit Längsneigung gelten:
+
+* erhöhter Mindestradius
+* reduzierte zulässige Geschwindigkeit
+* erhöhter Nachweis des Bremsvermögens
+
+=== Einschränkungen
+
+[cols="1,1", options="header"]
+|===
+| Kombination | Zulässigkeit
+| enge Kurve + starkes Gefälle | nur V3
+| Regelradius + moderates Gefälle | V2 zulässig
+| große Radien + geringe Neigung | V1 möglich
+|===
+
+IMPORTANT: Bei gleichzeitiger Kurve und Gefälle ist stets der ungünstigste Fall anzusetzen.
 
 == Überhöhung (falls angewendet)
 
-// TODO: Inhalt ausarbeiten
-_Platzhalter: Berechnung der Überhöhung, Grenzwerte, Anwendungsbereich_
+=== Zweck
+
+Die Überhöhung reduziert Seitenkräfte in Bögen durch Anpassung der Querneigung an die Geschwindigkeit.
+
+=== Definition
+
+----
+h = h_max * f(V)
+----
+
+Dabei ist:
+
+* h die Überhöhung
+* h_max die maximal zulässige Überhöhung
+* f(V) ein geschwindigkeitsabhängiger Faktor
+
+=== Grenzwerte
+
+[cols="1,1", options="header"]
+|===
+| Geschwindigkeitsklasse | Maximale Überhöhung
+| V3 | keine 
+| V2 | ≤ {ue-v2} mm
+| V1 | ≤ {ue-v1} mm
+|===
+
+[IMPORTANT]
+====
+Überhöhung ist kein Ersatz für ausreichende Radien.
+
+Bei Personenverkehr (BP) ist Überhöhung unzulässig.
+====
 
 == Übergänge und Gleisverziehungen
 
-// TODO: Inhalt ausarbeiten
-_Platzhalter: Übergangsbögen, Verwindung, zulässige Verziehungsrampen_
+=== Übergangsbögen
+
+Übergangsbögen sind erforderlich bei:
+
+* Übergang von Gerade zu Bogen
+* Wechsel zwischen unterschiedlichen Radien
+* Einsatz von Überhöhung
+
+Der Übergang MUSS eine stetige Änderung der Krümmung gewährleisten.
+
+=== Verwindung
+
+Die Verwindung beschreibt die Änderung der Querneigung entlang der Gleislänge.
+
+[cols="1,1", options="header"]
+|===
+| Betriebsart | Max. Verwindungsrampe
+| BG | {ver-bg}
+| BA | {ver-ba}
+| BP | {ver-bp}
+//keine Ahnung was das bedeutet
+|===
+
+=== Gleisverziehungen
+
+Unzulässig sind:
+
+* sprunghafte Richtungsänderungen
+* abrupte Spurweitenänderungen
+* kombinierte Verziehung und Überhöhung ohne Übergang
+
+IMPORTANT: Übergänge sind sicherheitsrelevant und unterliegen der gleichen Klassifizierung wie das angrenzende Gleis.
