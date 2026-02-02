@@ -70,7 +70,8 @@ Bewertung und Klassifizierung von Strecken und Fahrzeugen der SBO-287 Normalspur
 Nenn-Spurweite:
 
 ----
-S_0 = 1 435 mm / 1:5 = 287 mm
+Normalspur = 1435 mm im Maßstab 1:5
+S_0 = 287 mm
 ----
 
 === A.2 Lasten
