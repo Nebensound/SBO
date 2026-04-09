@@ -20,9 +20,9 @@ jobs:
       - name: Build and Deploy to GitHub Pages
         uses: manoelcampos/asciidoctor-ghpages-action@v2
         with:
-          source_dir: docs/specs/sbo-287/
+          source_dir: docs/
           pdf_build: true
-          ebook_main_adoc_file: sbo-287.adoc
+          ebook_main_adoc_file: specs/sbo-287/sbo-287
 
       - name: Upload PDF to Release (on release only)
         if: github.event_name == 'release'
