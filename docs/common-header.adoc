@@ -8,7 +8,7 @@
 :sectnumlevels: 3
 :source-highlighter: rouge
 :icons: font
-:stem: asciimath
+:stem: asciimath [subs="attributes+"]
 
 // Default: Lade SBO-287 Attribute, falls noch nicht geladen
 ifndef::spurweite[]

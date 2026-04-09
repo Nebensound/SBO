@@ -4,63 +4,26 @@ endif::[]
 
 = Lastannahmen und Bemessung
 [abstract]
-Dieses Kapitel definiert die Lastannahmen und Bemessungsgrundlagen für Gleis, Unterbau und Fahrzeuge. Es beschreibt die anzusetzenden statischen und dynamischen Lasten sowie die maßgebenden Designfälle.
+Dieses Kapitel definiert die maßgebenden Lasten für die Bemessung von Gleis, Unterbau und Fahrzeugen.
 
-== Zweck und Anwendungsbereich
+== Rad- und Achslasten
 
-Die Lastannahmen dienen der einheitlichen und nachvollziehbaren Bemessung von:
+=== Maßgebende Lastgröße
 
-* Gleisanlagen
-* Oberbau und Unterbau
-* Fahrzeugrahmen und Fahrwerken
-* Sonderbauwerken (z. B. Weichen, Übergänge)
+Maßgebend für alle Bemessungen ist die *Radlast* stem:[Q].
 
-Dieses Kapitel gilt für alle Betriebsarten (BG, BA, BP) und alle Lastklassen (L1–L3).
+Die Achslast stem:[A] ergibt sich aus der Summe der Radlasten einer Achse:
 
-== Maßgebende Lastgröße
+[stem]
+++++
+A = 2 * Q
+++++
 
-Maßgebend für alle Bemessungen ist die *Radlast*.
+=== Berechnung der statischen Radlast
 
-Begründung:
+Die statische Radlast MUSS für den ungünstigsten Lastzustand ermittelt werden (maximale Zuladung, ungünstige Schwerpunktlage).
 
-* Lasten werden punktuell über das Rad in die Schiene eingeleitet
-* Lokale Überlasten treten auf Radebene auf
-* Achslast und Fahrzeugmasse sind abgeleitete Größen
-
-Definitionen:
-
-* *Radlast Q*: Vertikale Kraft eines einzelnen Rades auf das Gleis
-* *Achslast A*: Summe der Radlasten einer Achse (normal stem:[A = 2 Q])
-
-== Statische Lastannahmen
-
-=== Fahrzeug- und Nutzlasten
-
-Die statische Radlast ergibt sich aus:
-
-* Eigenmasse des Fahrzeugs
-* Maximale Nutzlast
-* Lastverteilung auf die Achsen
-* Anzahl der Räder
-
-Die Berechnung MUSS für den ungünstigsten Lastzustand erfolgen, einschließlich:
-
-* maximaler Zuladung
-* ungünstiger Schwerpunktlage
-* asymmetrischer Beladung (innerhalb realistischer Grenzen)
-
-=== Gleichmäßige und ungleichmäßige Lastverteilung
-
-Eine gleichmäßige Lastverteilung DARF nur angenommen werden, wenn:
-
-* die Bauart des Fahrzeugs dies erzwingt, oder
-* entsprechende konstruktive Maßnahmen vorhanden sind
-
-In allen anderen Fällen MUSS eine ungleichmäßige Lastverteilung berücksichtigt werden.
-
-==== Berechnung bei gleichmäßiger Lastverteilung
-
-Für ein symmetrisch beladenes Fahrzeug mit gleichmäßiger Achslastverteilung:
+==== Bei gleichmäßiger Lastverteilung
 
 [stem]
 ++++
@@ -69,65 +32,62 @@ Q_"stat" = (m_"Fzg" * g) / n_"Räder"
 
 Wobei:
 
-* stem:[m_"Fzg"] – Fahrzeugmasse [kg]
+* stem:[m_"Fzg"] – Fahrzeugmasse einschließlich maximaler Nutzlast [kg]
 * stem:[g] – Erdbeschleunigung (9,81 m/s²)
 * stem:[n_"Räder"] – Anzahl der Räder
 
-==== Berechnung bei ungleichmäßiger Lastverteilung
+Eine gleichmäßige Lastverteilung DARF nur angenommen werden, wenn die Fahrzeugbauart dies erzwingt.
 
-Bei ungleichmäßiger Lastverteilung (z. B. Tender, Drehgestelle, einseitige Beladung):
+==== Bei ungleichmäßiger Lastverteilung
 
-*Methode 1: Berechnung nach Hebelgesetz*
-
-Bei bekannter Schwerpunktlage und Achsabständen:
+Bei bekannter Schwerpunktlage:
 
 [stem]
 ++++
-Q_"max" = (m_"Fzg" * g * l_"Hebel") / (n_"Achsen" * l_"Achsabstand" * n_"Räder/Achse")
+Q_"max" = (m_"Fzg" * g * l_"Hebel") / (l_"Achsabstand" * n_"Räder/Achse")
 ++++
 
 Wobei:
 
-* stem:[m_"Fzg"] – Fahrzeugmasse [kg]
-* stem:[g] – Erdbeschleunigung (9,81 m/s²)
-* stem:[l_"Hebel"] – Hebelarm des Schwerpunkts zur nächsten Achse [mm]
-* stem:[n_"Achsen"] – Anzahl der Achsen
+* stem:[l_"Hebel"] – Hebelarm des Schwerpunkts zur betrachteten Achse [mm]
 * stem:[l_"Achsabstand"] – Achsabstand [mm]
 * stem:[n_"Räder/Achse"] – Anzahl der Räder pro Achse (typisch 2)
 
-*Methode 2: Worst-Case-Annahme*
-
-Wenn die tatsächliche Lastverteilung unbekannt ist, MUSS angenommen werden:
+Bei unbekannter Lastverteilung MUSS ein Ungleichverteilungsfaktor stem:[f_"Ungl" = {ungleichverteilungsfaktor}] angesetzt werden:
 
 [stem]
 ++++
 Q_"max" = (m_"Fzg" * g * f_"Ungl") / n_"Räder"
 ++++
 
-Wobei:
+=== Zulässige Radlasten nach Lastklasse
 
-* stem:[m_"Fzg"] – Fahrzeugmasse [kg]
-* stem:[g] – Erdbeschleunigung (9,81 m/s²)
-* stem:[f_"Ungl"] – Ungleichverteilungsfaktor (typisch 1,3–1,5)
-* stem:[n_"Räder"] – Anzahl der Räder
+Die zulässige statische Radlast richtet sich nach der Lastklasse:
+
+[cols="1,2"]
+|===
+| Lastklasse | Zulässige Radlast stem:[Q_"stat,zul"]
+
+| L1
+| {l1-radlast-max}
+
+| L2
+| {l2-radlast-max}
+
+| L3
+| {l3-radlast-max}
+|===
+
+[IMPORTANT]
+====
+Die ermittelte statische Radlast stem:[Q_"stat"] MUSS kleiner oder gleich der zulässigen Radlast der Lastklasse sein.
+====
 
 == Dynamische Zusatzlasten
 
-=== Allgemeines
+=== Dynamikfaktor
 
-Im Betrieb treten zusätzliche dynamische Beanspruchungen auf durch:
-
-* Gleisunebenheiten
-* Setzungen des Unterbaus
-* Schienenstöße und Übergänge
-* Anfahr- und Bremsvorgänge
-* Fahrdynamik in Bögen
-
-Diese Effekte werden durch einen geschwindigkeitsabhängigen Dynamikfaktor stem:[phi(V)] pauschal berücksichtigt.
-
-=== Dynamikfaktoren
-
-Für die Ermittlung der dynamischen Radlasten sind folgende Faktoren anzusetzen:
+Im Betrieb treten zusätzliche dynamische Beanspruchungen auf (Gleisunebenheiten, Schienenstöße, Setzungen). Diese werden durch den geschwindigkeitsabhängigen Dynamikfaktor stem:[phi] berücksichtigt.
 
 [cols="2,1"]
 |===
@@ -143,38 +103,29 @@ Für die Ermittlung der dynamischen Radlasten sind folgende Faktoren anzusetzen:
 | {v1-phi}
 |===
 
-Die dynamische Radlast ergibt sich aus:
+=== Berechnung der dynamischen Radlast
 
 [stem]
 ++++
 Q_"dyn" = Q_"stat" * phi
 ++++
 
-== Einrad-Überlast (lokale Unregelmäßigkeiten)
+Die dynamische Radlast ist für die Bemessung von Schiene, Schwelle und Unterbau maßgebend.
 
-Zusätzlich zu den dynamischen Zusatzlasten ist zu berücksichtigen, dass lokale Unregelmäßigkeiten auftreten können, z. B.:
+== Einrad-Überlasten
 
-* Setzungen einzelner Schwellen
-* Steine oder Fremdkörper im Gleis
-* Übergänge zwischen Bauabschnitten
+=== Anwendungsfall
 
-Für diese Fälle ist anzunehmen, dass ein einzelnes Rad kurzzeitig eine erhöhte Last aufnimmt.
+Bei lokalen Unregelmäßigkeiten (Setzungen einzelner Schwellen, Fremdkörper, Übergänge) MUSS angenommen werden, dass ein einzelnes Rad kurzzeitig eine erhöhte Last aufnimmt.
 
-Die maßgebende lokale Radlast ergibt sich aus:
+=== Berechnung
 
 [stem]
 ++++
-Q_"lokal" = max(Q_"dyn", 1.6 * Q_"stat")
+Q_"lokal" = max(Q_"dyn"; 1.6 * Q_"stat")
 ++++
 
-Wobei:
-
-* stem:[Q_"lokal"] – maßgebende Radlast für lokale Nachweise (Schiene, Schwelle, Unterbau)
-* stem:[Q_"dyn"] – dynamische Radlast aus Geschwindigkeitsklasse (siehe oben)
-* stem:[Q_"stat"] – statische Radlast
-* Faktor 1,6 – repräsentiert lokale Überlasten infolge Setzung und Gleisunruhe
-
-Diese Last ist bei der Auslegung von Schiene, Schwelle, Bettung und Untergrund maßgebend zu berücksichtigen.
+Wobei der Faktor 1,6 lokale Überlasten infolge Setzung und Gleisunruhe repräsentiert.
 
 [IMPORTANT]
 ====
@@ -182,193 +133,40 @@ Die Einrad-Überlast ist maßgebend für:
 
 * Schwellendimensionierung
 * Unterbaubemessung
-* Schienenbruchrisiko
+* Nachweis gegen Schienenbruch
 ====
 
-== Designfälle
+== Punktlastige Ladung
 
-=== Allgemeiner Designfall
+=== Definition
 
-Die Bemessung MUSS für die ungünstigste, aber betrieblich zu erwartende Kombination erfolgen:
+Ladungen mit stark konzentrierter Masse (z. B. Maschinen, Motoren, Steinblöcke) gelten als punktlastig, wenn die lokale Schwerpunktlage zu einer signifikanten Erhöhung der Radlast führt.
 
-* Maximale statische Radlast
-* Höchste zulässige Geschwindigkeit
-* Nasser oder verschmutzter Zustand
-* Verschleißbedingter Zustand der Komponenten
+=== Zulässigkeit
 
-=== Designfälle im Personenverkehr (BP)
+Punktlastige Ladung DARF nur transportiert werden, wenn:
 
-Für Personenverkehr sind zusätzliche Designfälle anzusetzen:
+* die resultierende Radlast innerhalb der zulässigen Lastklasse liegt, UND
+* die Ladung gegen Verrutschen gesichert ist
 
-* Vollbesetzung der Fahrzeuge
-* Maximale zulässige Geschwindigkeit
-* Notbremsung im Gefälle
-* Ungünstige Schwerpunktlage
+Die Berechnung MUSS nach Abschnitt 3.1 erfolgen (ungleichmäßige Lastverteilung).
 
-Diese Designfälle sind unabhängig von regulären Güter- oder Arbeitsfahrten zu betrachten.
+== Sondertransporte
 
-== Punktlastige und besondere Lasten
+=== Definition
 
-=== Punktlastige Ladung
+Sondertransporte sind Transporte mit Lasten oberhalb der regulären Lastklasse.
 
-Ladungen mit stark konzentrierter Masse (z. B. Maschinen, Motoren, Steinblöcke) erfordern eine gesonderte Betrachtung.
+=== Anforderungen
 
-Auch bei geringer Gesamtmasse kann eine unzulässig hohe Radlast entstehen.
+Sondertransporte MÜSSEN folgende Bedingungen erfüllen:
 
-Punktlastige Ladung DARF nur transportiert werden, wenn die resultierende Radlast innerhalb der zulässigen Lastklasse liegt.
-
-=== Sondertransporte
-
-Lasten oberhalb der regulären Lastklasse dürfen nur als Sondertransport erfolgen.
-
-Sondertransporte erfordern mindestens:
-
-* Reduzierte Geschwindigkeit (mindestens V3)
-* Definierte Strecke
-* Dokumentation und Nachweisführung
-
-== Seitenkräfte
-
-=== Entstehung
-
-In Kurven wirken Seitenkräfte auf Schiene und Unterbau:
-
-[stem]
-++++
-F_"Seite" = (m * v^2) / r
-++++
-
-Wobei:
-
-* stem:[m] – Fahrzeugmasse
-* stem:[v] – Geschwindigkeit
-* stem:[r] – Kurvenradius
-
-=== Berücksichtigung
-
-Seitenkräfte erhöhen die Belastung der äußeren Schiene und begrenzen:
-
-* Zulässige Geschwindigkeit in Kurven
-* Mindestradius für gegebene Geschwindigkeit
-* Stabilität schmaler Unterbauten
-
-Weitere Anforderungen ergeben sich aus Kapitel <<04_gleisgeometrie.adoc#,Gleisgeometrie und Trassierung>>.
+* Geschwindigkeit: maximal V3 (≤ {v3-max} km/h)
+* Strecke: vorab definiert und geprüft
+* Nachweis: schriftliche Dokumentation der Lastannahmen und Nachweisführung
+* Freigabe: durch verantwortliche Person
 
 [NOTE]
 ====
-Für Personenverkehr (BP) MUSS die Querbeschleunigung begrenzt werden (Komfort, Kippgefahr).
+Sondertransporte dürfen nur auf Streckenabschnitten erfolgen, für die die erhöhte Last nachgewiesen wurde.
 ====
-
-== Längskräfte
-
-=== Anfahren
-
-Beim Anfahren wirken Zugkräfte:
-
-[stem]
-++++
-F_"Zug" = m * a + m * g * s + F_"Roll"
-++++
-
-Wobei:
-
-* stem:[F_"Zug"] – erforderliche Zugkraft [N]
-* stem:[m] – Fahrzeugmasse [kg]
-* stem:[a] – Beschleunigung [m/s²]
-* stem:[g] – Erdbeschleunigung (9,81 m/s²)
-* stem:[s] – Längsneigung [‰]
-* stem:[F_"Roll"] – Rollwiderstand [N]
-
-=== Bremsen
-
-Beim Bremsen wirken Bremskräfte auf Schiene und Schwellen.
-
-[IMPORTANT]
-====
-Die Bremskraft ist durch die Haftreibung begrenzt:
-
-[stem]
-++++
-F_("Brems max") = mu * m * g
-++++
-
-Wobei:
-
-* stem:[F_("Brems max")] – maximal übertragbare Bremskraft [N]
-* stem:[mu] – Haftreibungskoeffizient zwischen Rad und Schiene (siehe Kapitel <<05_laengsneigung.adoc#,Längsneigung und Haftung>>)
-* stem:[m] – Fahrzeugmasse [kg]
-* stem:[g] – Erdbeschleunigung (9,81 m/s²)
-====
-
-Die tatsächlich verfügbare Bremskraft KANN unterhalb dieses Grenzwertes liegen.
-
-== Stoßlasten
-
-=== Kuppelstoß
-
-Beim Rangieren oder Ankuppeln entstehen kurzzeitige Stoßlasten.
-
-[NOTE]
-====
-Kuppelstöße sind für die Gleisbemessung in der Regel nicht maßgebend, wohl aber für Fahrzeugkonstruktion.
-====
-
-=== Entgleisung (Grenzfall)
-
-Im Fall einer Entgleisung KANN ein Rad auf die Schwelle aufsetzen.
-
-[IMPORTANT]
-====
-Schwellen MÜSSEN diese Punktlast ohne Bruch aufnehmen können (Rückfallsicherheit).
-====
-
-== Bemessungsgrundsatz
-
-[IMPORTANT]
-====
-Die Bemessung erfolgt stets auf Basis der *maßgebenden Radlast*.
-
-Wenn mehrere Lastannahmen relevant sind, ist die jeweils ungünstigste anzusetzen.
-====
-
-== Anwendung in der Bemessung
-
-=== Schienenbemessung
-
-[stem]
-++++
-sigma_"Schiene" = f(Q_"dyn", "Schwellenabstand", "Schienenträgheitsmoment")
-++++
-
-=== Schwellenbemessung
-
-[stem]
-++++
-sigma_"Schwelle" = f(Q_"lokal", "Schwellenbreite", "Bettungsmodul")
-++++
-
-=== Unterbaubemessung
-
-[stem]
-++++
-p_"Unterbau" = (Q_"lokal") / (A_"Lastverteilung")
-++++
-
-Wobei:
-
-* stem:[p_"Unterbau"] – Flächenpressung auf den Untergrund [kN/m²]
-* stem:[Q_"lokal"] – maßgebende lokale Radlast [kg]
-* stem:[A_"Lastverteilung"] – Lastverteilungsfläche im Untergrund [mm²]
-
-Die Lastverteilung erfolgt unter 45°-Winkel durch die Bettung.
-
-== Abgrenzung
-
-Dieses Kapitel behandelt ausschließlich Lastannahmen und Bemessungsgrundlagen.
-
-Weitere Einschränkungen ergeben sich insbesondere aus:
-
-* Gleisgeometrie
-* Längsneigung und Haftung
-* Bremsvermögen
-* Betriebsart (insbesondere BP)

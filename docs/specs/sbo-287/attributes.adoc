@@ -27,6 +27,9 @@
 :l1-achslast-max: 800 kg
 :l1-radlast-single: 600 kg
 
+// === Lastverteilung ===
+:ungleichverteilungsfaktor: 1.4
+
 // === Geschwindigkeitsklassen ===
 :v3-max: 5
 :v3-phi: 1.10
