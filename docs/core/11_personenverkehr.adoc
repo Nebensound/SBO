@@ -14,25 +14,25 @@ Anlagen und Fahrzeuge, die für Personenverkehr genutzt werden, MÜSSEN explizit
 
 == Zusätzliche Sicherheitsanforderungen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/13
 _Platzhalter: Redundante Bremssysteme, Notausstiege, Sicherheitsgurte, Brandschutz_
 
 == Zulässige Geschwindigkeiten
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/13
 _Platzhalter: Reduzierte V_max-Werte gegenüber Güterverkehr, Kurven- und Gefälle-Limits_
 
 == Bremsanforderungen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/13
 _Platzhalter: Höhere Bremsvermögen, Redundanz, Notbremseinrichtung für Fahrgäste_
 
 == Fahrzeuge und Einrichtungen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/13
 _Platzhalter: Sitze, Türen, Haltegriffe, Beleuchtung, Kommunikation_
 
 == Streckenfreigabe für Personenverkehr
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/13
 _Platzhalter: Abnahmeverfahren, Dokumentation, regelmäßige Prüfungen, Zuständigkeiten_

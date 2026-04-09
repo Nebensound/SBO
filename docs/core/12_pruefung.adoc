@@ -9,25 +9,25 @@ Dieses Kapitel definiert Prüfintervalle, Prüfmethoden, Verschleißgrenzen und 
 
 == Prüfintervalle
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/11
 _Platzhalter: Tägliche, wöchentliche, monatliche, jährliche Prüfungen; Abhängigkeit von Betriebsintensität_
 
 == Sicht- und Maßprüfungen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/11
 _Platzhalter: Sichtprüfung auf Schäden, Vermessung von Spurweite, Überhöhung, Verwindung_
 
 == Verschleißgrenzen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/11
 _Platzhalter: Schienenverschleiß, Radverschleiß, Schwellenzustand_
 
 == Dokumentation
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/11
 _Platzhalter: Prüfprotokolle, Wartungsbücher, digitale Erfassung_
 
 == Maßnahmen bei Abweichungen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/11
 _Platzhalter: Sofortmaßnahmen, Geschwindigkeitsreduzierung, Streckensperrung, Instandsetzungsfristen_

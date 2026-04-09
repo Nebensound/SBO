@@ -9,42 +9,42 @@ Dieses Kapitel definiert die betrieblichen Anforderungen: Streckenklassifizierun
 
 == Streckenklassifizierung
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/14
 _Platzhalter: Kombination aus L × V × B, Klassifizierung von Streckenabschnitten_
 
 == Geschwindigkeitsfestlegung
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/14
 _Platzhalter: Methodik zur Festlegung der zulässigen Geschwindigkeit (Radien, Gefälle, Oberbau)_
 
 == Betriebszustände
 
 === Trocken
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/14
 _Platzhalter: Normalbetrieb bei trockenen Bedingungen_
 
 === Nass
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/14
 _Platzhalter: Designfall, reduzierte Haftung_
 
 === Winter
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/14
 _Platzhalter: Eis, Schnee, reduzierte Geschwindigkeiten, besondere Vorsichtsmaßnahmen_
 
 === Baustelle
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/14
 _Platzhalter: Temporäre Einschränkungen, Geschwindigkeitslimits, Sicherungsmaßnahmen_
 
 == Rangierbetrieb
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/14
 _Platzhalter: Besondere Anforderungen für Rangierbewegungen, Geschwindigkeitslimits_
 
 == Sonderbetrieb
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/14
 _Platzhalter: Nachtbetrieb, Schwertransporte, Sonderzüge_
