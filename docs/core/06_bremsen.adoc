@@ -9,25 +9,25 @@ Dieses Kapitel definiert die Bremsanforderungen, Mindestbremsvermögen, Bremsweg
 
 == Bremsarten
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/12 – siehe https://github.com/Nebensound/SBO/issues/12
 _Platzhalter: Handbremse, Betriebsbremse, Notbremse, Feststellbremse_
 
 == Mindestbremsvermögen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/12 – siehe https://github.com/Nebensound/SBO/issues/12
 _Platzhalter: Erforderliche Bremskraft in Abhängigkeit von Last, Geschwindigkeit und Gefälle_
 
 == Bremsweg
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/12 – siehe https://github.com/Nebensound/SBO/issues/12
 _Platzhalter: Berechnungsformel, Sichtweite, Reaktionszeit_
 
 == Haltefähigkeit im Gefälle
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/12 – siehe https://github.com/Nebensound/SBO/issues/12
 _Platzhalter: Feststellbremse, Anforderungen an Halteposition_
 
 == Anforderungen für Personenverkehr (P)
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/12 – siehe https://github.com/Nebensound/SBO/issues/12
 _Platzhalter: Redundanz, höhere Bremsvermögen, Notbremseinrichtung_

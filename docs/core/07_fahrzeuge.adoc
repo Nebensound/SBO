@@ -9,30 +9,30 @@ Dieses Kapitel definiert die Anforderungen an Fahrzeuge: Wagen, Lokomotiven, Per
 
 == Allgemeine Fahrzeuganforderungen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/18 – siehe https://github.com/Nebensound/SBO/issues/18
 _Platzhalter: Lichtraumprofil, Spurkranz, Puffer, Sicherheitseinrichtungen_
 
 == Wagen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/18 – siehe https://github.com/Nebensound/SBO/issues/18
 _Platzhalter: Güterwagen, offene/geschlossene Bauarten, Ladungssicherung_
 
 == Lokomotiven / Triebfahrzeuge
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/18 – siehe https://github.com/Nebensound/SBO/issues/18
 _Platzhalter: Adhäsionsmasse, Antriebsart, Zugkraft_
 
 == Personenfahrzeuge
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/18 – siehe https://github.com/Nebensound/SBO/issues/18
 _Platzhalter: Sitze, Türen, Notausstiege, Sicherheitsgurte_
 
 == Schwerpunkt und Lastverteilung
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/18 – siehe https://github.com/Nebensound/SBO/issues/18
 _Platzhalter: Schwerpunkthöhe, Kippstabilität, Lastverteilung auf Achsen_
 
 == Kupplungen und Zug-/Druckkräfte
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/18 – siehe https://github.com/Nebensound/SBO/issues/18
 _Platzhalter: Kupplungstyp, maximale Zug-/Druckkraft, Kuppelhöhe_

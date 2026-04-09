@@ -9,30 +9,30 @@ Dieses Kapitel definiert die geometrischen Anforderungen an die Gleisführung, S
 
 == Spurweite und Toleranzen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/16 – siehe https://github.com/Nebensound/SBO/issues/16
 _Platzhalter: Definition der Nenn-Spurweite, zulässige Abweichungen, Messmethodik_
 
 == Fester Achsstand
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/16 – siehe https://github.com/Nebensound/SBO/issues/16
 _Platzhalter: Definition und Bedeutung des festen Achsstands für befahrbare Mindestradien_
 
 == Mindestradien
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/16 – siehe https://github.com/Nebensound/SBO/issues/16
 _Platzhalter: Berechnung und Tabellen der Mindestradien nach Lastklasse, Geschwindigkeit und Achsstand_
 
 == Kurven in Längsneigung
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/16 – siehe https://github.com/Nebensound/SBO/issues/16
 _Platzhalter: Besondere Anforderungen für Kurven in Steigungen/Gefälle_
 
 == Überhöhung (falls angewendet)
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/16 – siehe https://github.com/Nebensound/SBO/issues/16
 _Platzhalter: Berechnung der Überhöhung, Grenzwerte, Anwendungsbereich_
 
 == Übergänge und Gleisverziehungen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/16 – siehe https://github.com/Nebensound/SBO/issues/16
 _Platzhalter: Übergangsbögen, Verwindung, zulässige Verziehungsrampen_

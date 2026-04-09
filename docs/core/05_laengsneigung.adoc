@@ -9,25 +9,25 @@ Dieses Kapitel behandelt Längsneigungen, Steigungswiderstände, Haftreibung zwi
 
 == Steigung und Gefälle
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/17 – siehe https://github.com/Nebensound/SBO/issues/17
 _Platzhalter: Maximale Steigungen, Gefälle, Bezeichnungsweise (Prozent, Promille)_
 
 == Steigungswiderstand
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/17 – siehe https://github.com/Nebensound/SBO/issues/17
 _Platzhalter: Berechnung der Steigungskraft, Zusammenhang mit Neigung und Masse_
 
 == Haftreibung Rad/Schiene
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/17 – siehe https://github.com/Nebensound/SBO/issues/17
 _Platzhalter: Haftreibungskoeffizient stem:[\mu], Designwerte für nasse/trockene Schiene_
 
 == Anfahrbedingungen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/17 – siehe https://github.com/Nebensound/SBO/issues/17
 _Platzhalter: Maximale Steigung zum Anfahren, erforderliche Adhäsionsmasse_
 
 == Schieben vs. Ziehen
 
-// TODO: Inhalt ausarbeiten
+// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/17 – siehe https://github.com/Nebensound/SBO/issues/17
 _Platzhalter: Anforderungen an Zuglok-Position, Druckkräfte, Kupplung_
