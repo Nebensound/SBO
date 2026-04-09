@@ -9,25 +9,25 @@ Dieses Kapitel behandelt Weichen, Kreuzungen, Herzstücke, Engstellen und Betrie
 
 == Weichenradien
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/15 – siehe https://github.com/Nebensound/SBO/issues/15
+// TODO(#15): Inhalt ausarbeiten
 _Platzhalter: Mindestradien für Weichenbögen, Zusammenhang mit Lastklasse_
 
 == Herzstücke
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/15 – siehe https://github.com/Nebensound/SBO/issues/15
+// TODO(#15): Inhalt ausarbeiten
 _Platzhalter: Bauarten, Verschleiß, Wartung_
 
 == Kreuzungen
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/15 – siehe https://github.com/Nebensound/SBO/issues/15
+// TODO(#15): Inhalt ausarbeiten
 _Platzhalter: Einfache und doppelte Kreuzungsweichen, Fahrwege_
 
 == Engstellen
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/15 – siehe https://github.com/Nebensound/SBO/issues/15
+// TODO(#15): Inhalt ausarbeiten
 _Platzhalter: Lichtraumprofile, temporäre Einschränkungen_
 
 == Betriebsbeschränkungen in Sonderbereichen
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/15 – siehe https://github.com/Nebensound/SBO/issues/15
+// TODO(#15): Inhalt ausarbeiten
 _Platzhalter: Geschwindigkeitslimits in Weichen, Rangierfahrten_

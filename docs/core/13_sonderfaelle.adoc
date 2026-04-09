@@ -9,20 +9,20 @@ Dieses Kapitel behandelt Sonderfälle, provisorische Gleise, Baustellenbetrieb u
 
 == Provisorische Gleise
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/10
+// TODO(#10): Inhalt ausarbeiten
 _Platzhalter: Temporäre Gleisanlagen, reduzierte Anforderungen, zeitliche Begrenzung_
 
 == Baustellenbetrieb
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/10
+// TODO(#10): Inhalt ausarbeiten
 _Platzhalter: Betrieb während Baumaßnahmen, Geschwindigkeitslimits, Sicherungsmaßnahmen_
 
 == Temporäre Last- oder Geschwindigkeitsänderungen
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/10
+// TODO(#10): Inhalt ausarbeiten
 _Platzhalter: Verfahren zur befristeten Änderung von Betriebsparametern, Dokumentation_
 
 == Betrieb unter eingeschränkten Bedingungen
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/10
+// TODO(#10): Inhalt ausarbeiten
 _Platzhalter: Notbetrieb, eingeschränkte Sicht, besondere Witterungsbedingungen_

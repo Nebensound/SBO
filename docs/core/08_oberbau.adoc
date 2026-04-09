@@ -9,25 +9,25 @@ Dieses Kapitel behandelt Schienen, Schwellen, Bettung, Untergrund und zulässige
 
 == Schienen
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/19 – siehe https://github.com/Nebensound/SBO/issues/19
+// TODO(#19): Inhalt ausarbeiten
 _Platzhalter: Schienenprofile, Materialgüte, Verschleißgrenzen_
 
 == Schwellen
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/19 – siehe https://github.com/Nebensound/SBO/issues/19
+// TODO(#19): Inhalt ausarbeiten
 _Platzhalter: Schwellenabstand, Materialien (Holz, Beton, Stahl), Befestigung_
 
 == Bettung
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/19 – siehe https://github.com/Nebensound/SBO/issues/19
+// TODO(#19): Inhalt ausarbeiten
 _Platzhalter: Schotter, Sand, feste Fahrbahn, Korngrößen_
 
 == Untergrund
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/19 – siehe https://github.com/Nebensound/SBO/issues/19
+// TODO(#19): Inhalt ausarbeiten
 _Platzhalter: Tragfähigkeit, Bodenpressung, Verdichtung_
 
 == Setzungen und Unebenheiten
 
-// TODO: Inhalt ausarbeiten - siehe https://github.com/Nebensound/SBO/issues/19 – siehe https://github.com/Nebensound/SBO/issues/19
+// TODO(#19): Inhalt ausarbeiten
 _Platzhalter: Zulässige Setzungen, Verwindung, Instandhaltungsgrenzen_
