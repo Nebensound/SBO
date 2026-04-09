@@ -1,0 +1,141 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Systemannahmen
+[abstract]
+Dieses Kapitel definiert die grundlegenden Annahmen und Randbedingungen, auf denen das SBO-Ordnungswerk aufbaut.
+
+== Spurweite und Grundparameter
+
+Diese Spezifikation gilt für die Spurweite *{spurweite}*.
+
+Die Spurweite ist die Leitgröße der Spezifikation und beeinflusst direkt:
+
+* Zulässige Rad- und Achslasten
+* Geometrische Freiräume
+* Mindestradien
+* Kippstabilität
+
+Alle weiteren Parameter (Toleranzen, Lichtraumprofil, Fahrzeugabmessungen) leiten sich aus der Spurweite ab und werden in den nachfolgenden Kapiteln definiert.
+
+== Einsatzarten
+
+Das SBO-Ordnungswerk unterscheidet drei Einsatzarten, die unterschiedliche Sicherheits- und Komfortanforderungen stellen:
+
+=== Güterverkehr
+
+* Transport von Gütern, Materialien, Werkstücken
+* Keine Personenbeförderung (außer gegebenenfalls Begleitpersonal im Führerstand)
+* Geschwindigkeiten typischerweise niedrig bis moderat
+* Fokus: Robustheit, Tragfähigkeit, Wirtschaftlichkeit
+
+[NOTE]
+====
+Betriebsart: *BG* (Güterverkehr)
+====
+
+=== Arbeits-/Betriebsfahrten
+
+* Betriebsinterne Fahrten für Instandhaltung, Montage, Material-Transport
+* Begleitpersonal auf Fahrzeugen (nicht als Fahrgäste)
+* Eingeschränkte Sicherheitsvorkehrungen zulässig
+* Fokus: Flexibilität, pragmatische Lösungen
+
+[NOTE]
+====
+Betriebsart: *BA* (Arbeitsfahrt)
+====
+
+=== Personenverkehr (Klasse P)
+
+* Transport von Fahrgästen ohne Fachkenntnisse
+* Höchste Sicherheits- und Komfortanforderungen
+* Verschärfte Grenzwerte für Geschwindigkeit, Bremsen, Stabilität
+* Zulassung und Freigabeprozess erforderlich
+
+[IMPORTANT]
+====
+Betriebsart: *BP* (Personenverkehr)
+
+Personenverkehr unterliegt zusätzlichen Anforderungen, die im Kapitel <<11_personenverkehr.adoc#,Personenverkehr (Klasse P)>> detailliert definiert sind.
+====
+
+== Betriebsphilosophie
+
+Die SBO-Spezifikation basiert auf folgenden Grundprinzipien:
+
+=== Pragmatismus
+
+* Lösungen sollen technisch fundiert, aber praktisch umsetzbar sein
+* Überdimensionierung wird vermieden
+* Proportionalität zwischen Aufwand und Risiko
+
+=== Deterministisches Design
+
+* Alle Grenzwerte und Berechnungen basieren auf physikalischen Modellen
+* Sicherheitsfaktoren sind explizit und nachvollziehbar
+* Keine impliziten oder nicht nachvollziehbaren Annahmen („Black Box“-Modelle)
+
+=== Modularität
+
+* Lastklassen, Geschwindigkeitsklassen und Betriebsarten sind kombinierbar
+* Streckenabschnitte können unterschiedliche Klassen haben
+* Fahrzeuge können für mehrere Klassen ausgelegt werden
+
+=== Anpassbarkeit
+
+* Spurweiten-spezifische Anpassungen sind explizit vorgesehen
+* Projektspezifische Abweichungen sind dokumentierbar
+* Nachweise können durch Messung oder Berechnung erbracht werden
+
+== Sicherheitsgrundsätze
+
+Bei der Auslegung von Anlagen und Fahrzeugen nach diesem Ordnungswerk gelten folgende Grundsätze:
+
+=== Konservative Auslegung
+
+Im Zweifel oder bei fehlenden Daten MUSS die konservative (sicherheitsseitige) Annahme gewählt werden.
+
+Beispiele:
+
+* Haftreibung: Designfall ist *nasse* Schiene (stem:[mu_"design" = 0.10])
+* Dynamikfaktoren: Ungünstigste Kombination aus Last und Geschwindigkeit
+* Bremswege: Verschleißzustand, nicht Neuzustand
+
+=== Personenschutz
+
+Personenverkehr (Klasse BP) unterliegt verschärften Anforderungen:
+
+* Redundante Bremssysteme
+* Strengere Geschwindigkeitslimits in Kurven und Gefälle
+* Zusätzliche Stabilität gegen Kippen
+* Regelmäßige Prüfungen und Dokumentation
+
+[IMPORTANT]
+====
+Anlagen und Fahrzeuge, die für Personenverkehr genutzt werden sollen, MÜSSEN explizit dafür ausgelegt und nachgewiesen werden. Eine Auslegung für Güterverkehr ist nicht ausreichend.
+====
+
+=== Kein Optimierungsdruck auf Sicherheit
+
+Sicherheitsrelevante Parameter DÜRFEN NICHT durch Optimierung anderer Faktoren geschwächt werden.
+
+Beispiele für *unzulässige* Kompromisse:
+
+* Verringerung der Bremskraft zur Erhöhung der Nutzlast
+* Vergrößerung der Geschwindigkeit durch Reduktion von Sicherheitsfaktoren
+* Verzicht auf Prüfungen zur Kosteneinsparung
+
+=== Designfall: Ungünstigste Betriebsbedingung
+
+Die Auslegung MUSS für die *ungünstigste, aber betrieblich zu erwartende* Kombination erfolgen:
+
+* Maximale Last + maximale Geschwindigkeit + nasse Schiene + Verschleiß
+* Vollbesetzung + maximales Gefälle + Notbremsung
+* Winterbetrieb ist kein Designfall, sondern ein Betriebszustand mit reduzierten Parametern
+
+[NOTE]
+====
+Extremszenarien wie Sabotage, Erdbeben oder absichtliches Fehlverhalten sind nicht Teil des Designfalls, können aber in Risikoanalysen betrachtet werden.
+====

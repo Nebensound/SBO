@@ -1,0 +1,137 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Allgemeines
+[abstract]
+Dieses Kapitel erläutert Zweck, Status und Struktur dieser Spezifikation sowie die verwendeten Begriffe und Abkürzungen.
+
+== Zweck und Geltungsbereich
+
+Das SBO (Schmalspurbahn-Ordnungswerk) ist eine private, technische Spezifikation für Planung, Bau und Betrieb von Schmalspur-Bahnen.
+
+Dieses Ordnungswerk definiert technische Anforderungen für Schmalspur-Bahnen, einschließlich:
+
+* Grenzwerte für Gleisbau, Fahrzeuge und Betrieb
+* Berechnungsmethoden für Lasten, Radien und Bremsen
+* Sicherheitsanforderungen für Personen- und Gütertransport
+* Praktische Auslegungsrichtlinien
+
+Die Zulässigkeit einer Konfiguration ergibt sich immer aus dem *Minimum aller relevanten Begrenzungen*:
+
+[source]
+----
+Zulässigkeit = min(Last, Geometrie, Geschwindigkeit, Betrieb, Sicherheit)
+----
+
+Kein einzelner Parameter kann isoliert betrachtet werden.
+
+== Nicht-amtlicher Status der SBO
+
+[IMPORTANT]
+====
+SBO ist kein Gesetz, keine amtliche Norm, sondern eine strukturierte Engineering-Spezifikation. Die Anwendung erfolgt auf eigene Verantwortung.
+====
+
+Die SBO-Spezifikationen dienen als:
+
+* Planungsgrundlage für private Schmalspurbahnen
+* Technisches Referenzwerk für Anlagenbauer
+* Dokumentationsrahmen für bestehende Anlagen
+* Basis für projektspezifische Anpassungen
+
+== Abgrenzung zu Normen und Gesetzen
+
+Die SBO ist eine private Spezifikation ohne rechtlichen Charakter. Sie ist inspiriert von folgenden Regelwerken:
+
+* *EBO* – Eisenbahn-Bau- und Betriebsordnung (Deutschland)
+* *BOA* – Bau- und Betriebsordnung für Anschlussbahnen (Deutschland)
+* *EN 13803* – Railway applications – Track – Track alignment design parameters
+* *EN 13848* – Railway applications – Track – Track geometry quality
+
+[IMPORTANT]
+====
+Wo öffentliche Verkehrsflächen berührt werden oder gewerblicher Personenverkehr stattfindet, MÜSSEN die geltenden gesetzlichen Vorschriften beachtet werden. SBO ersetzt keine Gesetze, Verordnungen oder amtlichen Normen.
+====
+
+== Begriffe und Abkürzungen
+
+=== Normativer Sprachgebrauch
+
+Dieses Ordnungswerk nutzt folgende Schlüsselwörter nach RFC 2119:
+
+MUSS:: Verpflichtende Anforderung. Abweichung führt zur Nichtkonformität.
+SOLLTE:: Empfohlene Anforderung. Abweichung nur mit fundierter Begründung.
+KANN:: Optionale Möglichkeit. Frei wählbar ohne Konformitätsverlust.
+
+=== Grundbegriffe
+
+Spurweite:: Der minimale lichte Abstand zwischen den Innenkanten der Schienenköpfe.
+
+Radlast:: Die auf ein einzelnes Rad wirkende statische Vertikalkraft (Leitgröße für Klassifizierung).
+
+Achslast:: Die Summe der Radlasten der Räder einer Achse.
+
+Bemessungsradlast:: Die dynamisch erhöhte Radlast zur Auslegung von Gleis und Fahrzeug.
+
+Fester Achsstand:: Der Abstand zwischen dem äußersten Radsatz am vorderen und hinteren Ende eines starren Fahrwerks (begrenzt befahrbaren Mindestradius).
+
+Adhäsionsmasse:: Jener Teil der Lokomotivmasse, der auf angetriebenen Achsen lastet und für die Kraftübertragung verfügbar ist.
+
+Mindestradius:: Der kleinste zulässige Gleisbogenradius, gemessen als Gleisachsradius (Mitte zwischen den Schienen).
+
+Überhöhung:: Die vertikale Differenz zwischen äußerer und innerer Schiene im Gleisbogen.
+
+Längsneigung:: Die Steigung oder das Gefälle der Gleistrasse in Fahrtrichtung, angegeben in Prozent (%).
+
+Streckenklasse:: Die Kombination aus Lastklasse (L), Geschwindigkeitsklasse (V) und Betriebsart (B).
+
+Designfall:: Das ungünstigste, aber betrieblich zu erwartende Szenario (z.B. nasse Schienen, maximale Last, volle Geschwindigkeit).
+
+=== Abkürzungen
+
+[cols="1,3"]
+|===
+| Abkürzung | Bedeutung
+
+| SBO
+| Schmalspurbahn-Ordnungswerk
+
+| L
+| Lastklasse (Last/Load)
+
+| V
+| Geschwindigkeitsklasse (Velocity)
+
+| B
+| Betriebsart (Güter / Arbeits-/Betriebsfahrt / Personen)
+
+| P
+| Personenverkehr (als Betriebsart BP)
+
+| Q
+| Radlast
+
+| A
+| Achslast
+
+| stem:[phi]
+| Dynamikfaktor (geschwindigkeitsabhängig)
+
+| stem:[mu]
+| Haftreibungskoeffizient Rad/Schiene
+|===
+
+== Dokumentstruktur und Änderungsprinzip
+
+=== Versionierung
+
+Das SBO-Ordnungswerk folgt https://semver.org/lang/de/[Semantic Versioning] (MAJOR.MINOR.PATCH):
+
+* *MAJOR*: Inkompatible Änderungen (z.B. Verschärfung von Grenzwerten)
+* *MINOR*: Abwärtskompatible neue Funktionalität (z.B. neue Kapitel)
+* *PATCH*: Abwärtskompatible Korrekturen
+
+=== Änderungshistorie
+
+Alle Änderungen MÜSSEN in der Änderungshistorie-Tabelle im Appendix dokumentiert werden.

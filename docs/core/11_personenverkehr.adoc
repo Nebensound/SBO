@@ -1,0 +1,38 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Personenverkehr (Klasse P)
+
+[abstract]
+Dieses Kapitel definiert die verschärften Anforderungen für Personenverkehr (Betriebsart BP).
+
+[IMPORTANT]
+====
+Anlagen und Fahrzeuge, die für Personenverkehr genutzt werden, MÜSSEN explizit dafür zugelassen werden. Eine Zulassung für Güterverkehr ist nicht ausreichend.
+====
+
+== Zusätzliche Sicherheitsanforderungen
+
+// TODO: Inhalt ausarbeiten
+_Platzhalter: Redundante Bremssysteme, Notausstiege, Sicherheitsgurte, Brandschutz_
+
+== Zulässige Geschwindigkeiten
+
+// TODO: Inhalt ausarbeiten
+_Platzhalter: Reduzierte V_max-Werte gegenüber Güterverkehr, Kurven- und Gefälle-Limits_
+
+== Bremsanforderungen
+
+// TODO: Inhalt ausarbeiten
+_Platzhalter: Höhere Bremsvermögen, Redundanz, Notbremseinrichtung für Fahrgäste_
+
+== Fahrzeuge und Einrichtungen
+
+// TODO: Inhalt ausarbeiten
+_Platzhalter: Sitze, Türen, Haltegriffe, Beleuchtung, Kommunikation_
+
+== Streckenfreigabe für Personenverkehr
+
+// TODO: Inhalt ausarbeiten
+_Platzhalter: Abnahmeverfahren, Dokumentation, regelmäßige Prüfungen, Zuständigkeiten_

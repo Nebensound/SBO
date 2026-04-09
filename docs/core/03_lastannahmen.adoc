@@ -1,0 +1,172 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Lastannahmen und Bemessung
+[abstract]
+Dieses Kapitel definiert die maßgebenden Lasten für die Bemessung von Gleis, Unterbau und Fahrzeugen.
+
+== Rad- und Achslasten
+
+=== Maßgebende Lastgröße
+
+Maßgebend für alle Bemessungen ist die *Radlast* stem:[Q].
+
+Die Achslast stem:[A] ergibt sich aus der Summe der Radlasten einer Achse:
+
+[stem]
+++++
+A = 2 * Q
+++++
+
+=== Berechnung der statischen Radlast
+
+Die statische Radlast MUSS für den ungünstigsten Lastzustand ermittelt werden (maximale Zuladung, ungünstige Schwerpunktlage).
+
+==== Bei gleichmäßiger Lastverteilung
+
+[stem]
+++++
+Q_"stat" = (m_"Fzg" * g) / n_"Räder"
+++++
+
+Wobei:
+
+* stem:[m_"Fzg"] – Fahrzeugmasse einschließlich maximaler Nutzlast [kg]
+* stem:[g] – Erdbeschleunigung (9,81 m/s²)
+* stem:[n_"Räder"] – Anzahl der Räder
+
+Eine gleichmäßige Lastverteilung DARF nur angenommen werden, wenn die Fahrzeugbauart dies erzwingt.
+
+==== Bei ungleichmäßiger Lastverteilung
+
+Bei bekannter Schwerpunktlage:
+
+[stem]
+++++
+Q_"max" = (m_"Fzg" * g * l_"Hebel") / (l_"Achsabstand" * n_"Räder/Achse")
+++++
+
+Wobei:
+
+* stem:[l_"Hebel"] – Hebelarm des Schwerpunkts zur betrachteten Achse [mm]
+* stem:[l_"Achsabstand"] – Achsabstand [mm]
+* stem:[n_"Räder/Achse"] – Anzahl der Räder pro Achse (typisch 2)
+
+Bei unbekannter Lastverteilung MUSS ein Ungleichverteilungsfaktor stem:[f_"Ungl" = {ungleichverteilungsfaktor}] angesetzt werden:
+
+[stem]
+++++
+Q_"max" = (m_"Fzg" * g * f_"Ungl") / n_"Räder"
+++++
+
+=== Zulässige Radlasten nach Lastklasse
+
+Die zulässige statische Radlast richtet sich nach der Lastklasse:
+
+[cols="1,2"]
+|===
+| Lastklasse | Zulässige Radlast stem:[Q_"stat,zul"]
+
+| L1
+| {l1-radlast-max}
+
+| L2
+| {l2-radlast-max}
+
+| L3
+| {l3-radlast-max}
+|===
+
+[IMPORTANT]
+====
+Die ermittelte statische Radlast stem:[Q_"stat"] MUSS kleiner oder gleich der zulässigen Radlast der Lastklasse sein.
+====
+
+== Dynamische Zusatzlasten
+
+=== Dynamikfaktor
+
+Im Betrieb treten zusätzliche dynamische Beanspruchungen auf (Gleisunebenheiten, Schienenstöße, Setzungen). Diese werden durch den geschwindigkeitsabhängigen Dynamikfaktor stem:[phi] berücksichtigt.
+
+[cols="2,1"]
+|===
+| Geschwindigkeitsklasse | Dynamikfaktor φ
+
+| V3 (≤ {v3-max} km/h)
+| {v3-phi}
+
+| V2 (≤ {v2-max} km/h)
+| {v2-phi}
+
+| V1 (≤ {v1-max} km/h)
+| {v1-phi}
+|===
+
+=== Berechnung der dynamischen Radlast
+
+[stem]
+++++
+Q_"dyn" = Q_"stat" * phi
+++++
+
+Die dynamische Radlast ist für die Bemessung von Schiene, Schwelle und Unterbau maßgebend.
+
+== Einrad-Überlasten
+
+=== Anwendungsfall
+
+Bei lokalen Unregelmäßigkeiten (Setzungen einzelner Schwellen, Fremdkörper, Übergänge) MUSS angenommen werden, dass ein einzelnes Rad kurzzeitig eine erhöhte Last aufnimmt.
+
+=== Berechnung
+
+[stem]
+++++
+Q_"lokal" = max(Q_"dyn"; 1.6 * Q_"stat")
+++++
+
+Wobei der Faktor 1,6 lokale Überlasten infolge Setzung und Gleisunruhe repräsentiert.
+
+[IMPORTANT]
+====
+Die Einrad-Überlast ist maßgebend für:
+
+* Schwellendimensionierung
+* Unterbaubemessung
+* Nachweis gegen Schienenbruch
+====
+
+== Punktlastige Ladung
+
+=== Definition
+
+Ladungen mit stark konzentrierter Masse (z. B. Maschinen, Motoren, Steinblöcke) gelten als punktlastig, wenn die lokale Schwerpunktlage zu einer signifikanten Erhöhung der Radlast führt.
+
+=== Zulässigkeit
+
+Punktlastige Ladung DARF nur transportiert werden, wenn:
+
+* die resultierende Radlast innerhalb der zulässigen Lastklasse liegt, UND
+* die Ladung gegen Verrutschen gesichert ist
+
+Die Berechnung MUSS nach Abschnitt 3.1 erfolgen (ungleichmäßige Lastverteilung).
+
+== Sondertransporte
+
+=== Definition
+
+Sondertransporte sind Transporte mit Lasten oberhalb der regulären Lastklasse.
+
+=== Anforderungen
+
+Sondertransporte MÜSSEN folgende Bedingungen erfüllen:
+
+* Geschwindigkeit: maximal V3 (≤ {v3-max} km/h)
+* Strecke: vorab definiert und geprüft
+* Nachweis: schriftliche Dokumentation der Lastannahmen und Nachweisführung
+* Freigabe: durch verantwortliche Person
+
+[NOTE]
+====
+Sondertransporte dürfen nur auf Streckenabschnitten erfolgen, für die die erhöhte Last nachgewiesen wurde.
+====

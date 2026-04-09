@@ -1,0 +1,426 @@
+ifndef::sbo-header-loaded[]
+include::../common-header.adoc[]
+endif::[]
+
+= Klassensysteme
+[abstract]
+Dieses Kapitel definiert die Lastklassen, Geschwindigkeitsklassen und Betriebsarten, die das modulare Rückgrat dieser Spezifikation bilden.
+
+== Übersicht
+
+Das SBO-Klassensystem ist das zentrale Rückgrat der Spezifikation. Jede Strecke und jedes Fahrzeug wird durch Kombination dreier Klassen charakterisiert:
+
+----
+Streckenklasse = Lx/Vx/Bx
+----
+
+Beispiel: `L2/V2/BG`
+
+== Lastklassen (L)
+
+=== Zweck und Anwendungsbereich
+
+Die Lastklassen (L) definieren die **zulässige mechanische Beanspruchung** von Gleis, Unterbau und Fahrzeugen durch <<02_begriffe.adoc#radlast,Rad>>- und <<02_begriffe.adoc#achslast,Achslasten>>.
+
+Die Lastklasse ist die **zentrale Bemessungsgröße** der SBO-{spurweite}. Alle weiteren Anforderungen (Geometrie, Geschwindigkeit, Betrieb) leiten sich daraus ab oder werden dadurch begrenzt.
+
+=== Leitgröße: Radlast
+
+Maßgebend für die Auslegung ist die <<02_begriffe.adoc#radlast,Radlast>>, nicht die Fahrzeugmasse, da:
+
+* Radlast wirkt direkt auf Schiene, Schwelle und Unterbau
+* Punktuelle Überlasten entstehen immer auf Radebene
+* Fahrzeugmassen sind ohne Aussagekraft über Lastverteilung
+
+=== Klassifizierung
+
+Die SBO-{spurweite} definiert drei Lastklassen mit folgenden Grenzwerten:
+
+* stem:[R_"max"] – Maximale statische <<02_begriffe.adoc#radlast,Radlast>>
+* stem:[A_"max"] – Maximale statische <<02_begriffe.adoc#achslast,Achslast>>
+* stem:[R_("single max")] – Maximale Einrad-Überlast (lokale Unregelmäßigkeiten)
+
+[cols="1,2,2,2,3"]
+|===
+| Klasse | stem:[R_max] | stem:[A_max] | stem:[R_("single max")] | Typische Nutzung
+| *L3*
+| {l3-radlast-max}
+| {l3-achslast-max}
+| {l3-radlast-single}
+| Leichte Loren, Handbetrieb, Schau-/Parkverkehr
+
+| *L2*
+| {l2-radlast-max}
+| {l2-achslast-max}
+| {l2-radlast-single}
+| Standard-Güterbetrieb, regulärer Personenverkehr
+
+| *L1*
+| {l1-radlast-max}
+| {l1-achslast-max}
+| {l1-radlast-single}
+| Schwerbetrieb, Reservekapazität
+|===
+
+[IMPORTANT]
+====
+Die Klassen sind **aufsteigend** geordnet: L1 stellt höhere Anforderungen als L2, L2 höhere als L3.
+====
+
+Jede Strecke, jedes Fahrzeug und jeder Betriebsvorgang MUSS mindestens einer Lastklasse zugeordnet sein.
+
+=== Statische und dynamische Lasten
+
+==== Statische Radlast
+
+Die statische Radlast ergibt sich aus:
+
+* Fahrzeugmasse
+* Nutzlast
+* Lastverteilung
+* Anzahl der Räder
+
+Die statische Radlast ist die **Ausgangsgröße** für alle weiteren Nachweise.
+
+==== Dynamische Zusatzlasten
+
+Im Betrieb treten zusätzliche Lasten auf durch:
+
+* Unebenheiten der Gleislage
+* Schienenstöße
+* Setzungen des Unterbaus
+* Unrundlauf der Räder
+* Brems- und Anfahrvorgänge
+
+Zur Berücksichtigung dieser Effekte wird ein **geschwindigkeitsabhängiger Dynamikfaktor** stem:[phi(V)] angewendet.
+
+Grundformel zur Berechnung der <<02_begriffe.adoc#bemessungsradlast,Bemessungsradlast>>:
+
+[stem]
+++++
+R_"bem" = R_"stat" * phi(V)
+++++
+
+Dabei ist:
+
+* stem:[R_"bem"] die Bemessungsradlast (dynamisch)
+* stem:[R_"stat"] die statische Radlast
+* stem:[phi(V)] der geschwindigkeitsabhängige Dynamikfaktor
+
+Die anzusetzenden Faktoren stem:[phi(V)] sind im Abschnitt <<geschwindigkeitsklassen_v,Geschwindigkeitsklassen (V)>> definiert.
+
+==== Einrad-Überlast (Unregelmäßigkeiten)
+
+Eine Einrad-Überlast ist eine **kurzzeitige, lokale** Überhöhung der Radlast auf *einem* Rad infolge betrieblicher Unregelmäßigkeiten (z. B. lokale Setzung, Stein/Schmutz, Schienenstoß, Verdichtungsunterschiede).
+
+Für lokale Nachweise (Schiene, Schwelle, Unterbau) MUSS die anzusetzende Radlast stem:[R_"lok"] wie folgt bestimmt werden:
+
+[stem]
+++++
+R_"lok" = max(R_"bem", R_"single max")
+++++
+
+Dabei gilt:
+
+* stem:[R_"bem"] ist die Bemessungsradlast aus Dynamikfaktor (siehe Abschnitt Dynamische Zusatzlasten).
+* stem:[R_"single max"] ist die maximal zulässige Einrad-Überlast als **Einzellast** auf ein Rad.
+
+[IMPORTANT]
+====
+stem:[R_"single max"] MUSS als konzentrierte Einzellast am ungünstigsten Ort angesetzt werden. Eine gleichzeitige Erhöhung der übrigen Räder derselben Achse ist NICHT anzunehmen.
+====
+
+=== Zuordnung von Strecken und Fahrzeugen
+
+==== Strecke
+
+Jeder Streckenabschnitt ist einer Lastklasse zuzuordnen.
+
+Die Zuordnung erfolgt nach der **schwächsten Komponente**:
+
+* Unterbau
+* Schwellen
+* Schiene
+* Bauzustand
+
+Die Lastklasse der Strecke begrenzt:
+
+* zulässige Fahrzeuge
+* zulässige Nutzlast
+* ggf. zulässige Geschwindigkeit
+
+==== Fahrzeuge
+
+Jedes Fahrzeug ist einer Lastklasse zuzuordnen, basierend auf seiner **maximalen statischen Radlast**.
+
+Die Fahrzeug-Lastklasse DARF die Strecken-Lastklasse nicht überschreiten.
+
+=== Lastklassen und Betrieb
+
+Die Lastklasse beeinflusst:
+
+* zulässige Geschwindigkeit
+* zulässige Beschleunigung und Verzögerung
+* Mindestanforderungen an Gleisqualität
+
+Für Personenverkehr gelten zusätzliche Einschränkungen, unabhängig von der Lastklasse (siehe <<betriebsart,Betriebsart BP>>).
+
+=== Grundsatz
+
+[IMPORTANT]
+====
+Die Lastklasse ist nicht verhandelbar im Betrieb.
+
+Wenn Zweifel bestehen, ist stets die **höhere Lastklasse** oder eine **niedrigere Geschwindigkeit** anzusetzen.
+====
+
+== Geschwindigkeitsklassen (V)
+
+=== Zweck
+
+Geschwindigkeitsklassen (V) definieren die zulässige Fahrgeschwindigkeit und die daraus abgeleiteten dynamischen Zusatzlasten.
+
+Die Geschwindigkeitsklasse MUSS gleichrangig zur Lastklasse angewendet werden.
+Eine niedrigere Lastklasse DARF NICHT als Begründung für eine höhere Geschwindigkeit verwendet werden und umgekehrt.
+
+=== Grundsatz
+
+Die zulässige Geschwindigkeit ist eine abgeleitete Betriebsgrenze.
+Sie MUSS als Minimum mehrerer Begrenzungen bestimmt werden (siehe <<streckenklassifizierung,Streckenklassifizierung>>).
+
+`V_zulässig` MUSS als kleinster der folgenden Grenzwerte festgelegt werden:
+
+* `V_Strecke` – obere Grenze des Streckenabschnitts aus Geschwindigkeitsklasse
+* `V_Kurve` – Begrenzung aus Gleisgeometrie (z. B. Kurvenradius, Übergang)
+* `V_Gefälle` – Begrenzung aus Längsneigung und Bremsnachweis
+* `V_Fahrzeug` – fahrzeugseitige Höchstgeschwindigkeit (Bauart, Laufwerk, Bremsen)
+* `V_Betrieb` – Begrenzung aus Betriebsart (BG/BA/BP) und betrieblicher Regelung
+* `V_Zustand` – zustandsabhängige Begrenzung (z. B. Nässe, Baustelle, unbekannter Gleiszustand)
+
+Die Geschwindigkeitsklasse definiert ausschließlich die obere Grenze `V_Strecke` für einen Streckenabschnitt.
+
+=== Klassifizierung
+
+[cols="1,3,2"]
+|===
+| Klasse | Beschreibung | Maximale Geschwindigkeit
+
+| *V3*
+| Rangier / Baustelle
+| ≤ {v3-max} km/h
+
+| *V2*
+| Regelbetrieb
+| ≤ {v2-max} km/h
+
+| *V1*
+| Schnellfahrt
+| ≤ {v1-max} km/h
+|===
+
+==== *V3* (Rangier-/Baustellenbetrieb)
+* maximale Geschwindigkeit: *≤ {v3-max} km/h*
+
+Typische Anwendung:
+
+* Rangieren
+* Baustellenbetrieb
+* provisorische Gleise
+* enge Radien
+* unsicherer oder wechselnder Untergrund
+
+Eigenschaften:
+
+* geringe dynamische Zusatzlasten
+* geringe Anforderungen an die Gleisgeometrie
+* jederzeit zulässig, sofern keine weiteren Einschränkungen bestehen
+
+==== *V2* (Regelbetrieb)
+* maximale Geschwindigkeit: *≤ {v2-max} km/h*
+
+Typische Anwendung:
+
+* regulärer Güterverkehr
+* Arbeits- und Transportfahrten
+* Standardbetrieb der SBO-{spurweite}
+
+Eigenschaften:
+
+* moderate dynamische Zusatzlasten
+* definierte Mindestanforderungen an:
+** Gleislage
+** Radien
+** Unterbau
+* begrenzte Eignung für Personenverkehr (siehe Klasse P)
+
+V2 stellt die *Regel-Geschwindigkeitsklasse* der SBO-{spurweite} dar.
+==== *V1* (Schnellbetrieb)
+* maximale Geschwindigkeit: *≤ {v1-max} km/h*
+
+Typische Anwendung:
+
+* kurze, gut ausgebaute Streckenabschnitte
+* gleichmäßiger und tragfähiger Unterbau
+* große Kurvenradien
+* sehr gute Gleislage
+
+Eigenschaften:
+
+* hohe dynamische Zusatzlasten
+* erhöhte Anforderungen an:
+** Gleisgeometrie
+** Radprofile
+** Bremsvermögen
+** Wartungszustand
+
+V1 ist nicht automatisch zulässig und erfordert eine
+bewusste Festlegung und Nachweis der Eignung des Streckenabschnitts.
+
+=== Auswirkungen höherer Geschwindigkeit
+
+Mit steigender Geschwindigkeit erhöhen sich:
+
+* Dynamischer Radlastfaktor stem:[phi(V)]
+* Seitenkräfte in Kurven
+* Bremsanforderungen
+* Anforderungen an Gleisqualität
+
+=== Dynamische Zusatzlasten
+
+Mit steigender Geschwindigkeit nehmen die dynamischen Beanspruchungen
+von Gleis, Unterbau und Fahrzeugen zu.
+
+Für die Ermittlung der dynamischen Radlasten sind folgende Faktoren
+anzusetzen:
+
+[cols="2,1"]
+|===
+| Geschwindigkeitsklasse | Dynamikfaktor φ
+
+| V3 (≤ {v3-max} km/h)
+| {v3-phi}
+
+| V2 (≤ {v2-max} km/h)
+| {v2-phi}
+
+| V1 (≤ {v1-max} km/h)
+| {v1-phi}
+|===
+
+== Betriebsarten (B)
+
+=== Zweck
+
+Betriebsarten definieren das erforderliche Sicherheitsniveau.
+
+=== Klassifizierung
+
+[cols="1,3,2"]
+|===
+| Klasse | Beschreibung | Personen
+
+| *BG*
+| Güterverkehr
+| Keine
+
+| *BA*
+| Arbeits-/Betriebsfahrten
+| Geschultes Personal
+
+| *BP*
+| Personenverkehr
+| Fahrgäste
+|===
+
+=== Hierarchie
+
+----
+BP > BA > BG
+----
+
+Eine höhere Betriebsart impliziert stets die Anforderungen der darunterliegenden Betriebsarten.
+
+[IMPORTANT]
+====
+BP ist immer die restriktivste Betriebsart. Eine für BP zugelassene Strecke erfüllt automatisch BG und BA.
+====
+
+=== Zusatzanforderungen für BP
+
+Bei Personenverkehr gelten strengere Anforderungen:
+
+* Höhere Bremsverzögerung
+* Geringere Maximalgeschwindigkeit
+* Redundante Sicherheitseinrichtungen
+* Definierte Freigabeprozesse
+* Regelmäßige Prüfungen
+
+== Streckenklassifizierung
+
+=== Definition
+
+Jeder Streckenabschnitt MUSS klassifiziert werden:
+
+[source]
+----
+Beispiel: L2 / V2 / BG
+----
+
+Diese Klassifizierung definiert:
+
+* Welche Fahrzeuge zugelassen sind
+* Welche Geschwindigkeit zulässig ist
+* Welche Betriebsart erlaubt ist
+
+=== Fahrzeugzulassung
+
+Ein Fahrzeug ist zulässig, wenn:
+
+[stem]
+++++
+L_"Fzg" <= L_"Strecke" and V_"Fzg" <= V_"Strecke" and B_"Fzg" <= B_"Strecke"
+++++
+
+Dabei gilt:
+
+* stem:[L_"Fzg"], stem:[V_"Fzg"], stem:[B_"Fzg"] sind die Klassen des Fahrzeugs.
+* stem:[L_"Strecke"], stem:[V_"Strecke"], stem:[B_"Strecke"] sind die Klassen des Streckenabschnitts.
+
+Ordnungsrelation:
+
+* Für Lastklassen gilt: L1 ist restriktiver als L2, L2 restriktiver als L3.
+* Für Geschwindigkeitsklassen gilt: V1 ist restriktiver als V2, V2 restriktiver als V3.
+* Für Betriebsarten gilt: BP ist restriktiver als BA, BA restriktiver als BG.
+
+Ein Fahrzeug ist nur zulässig, wenn es in allen drei Dimensionen die Anforderungen der Strecke erfüllt.
+
+=== Verschärfung
+
+Eine Strecke KANN abschnittsweise verschärft werden (z. B. Kurve, Gefälle, Bauwerk).
+
+Die zulässige Geschwindigkeit ergibt sich immer aus:
+
+`V_zulässig` MUSS nach dem Grundsatz in Abschnitt "Geschwindigkeitsklassen (V)" bestimmt werden.
+
+== Anwendung
+
+=== Neubau
+
+Bei Planung einer neuen Anlage:
+
+1. Betriebsart festlegen (BG/BA/BP)
+2. Erwartete Lasten ermitteln → Lastklasse
+3. Gewünschte Geschwindigkeit → V-Klasse
+4. Streckenparameter entsprechend auslegen
+
+=== Bestand
+
+Bei Übernahme einer bestehenden Anlage:
+
+1. Vermessung und Bewertung
+2. Klassifizierung auf Basis der Ist-Zustände
+3. Fahrzeuge entsprechend zulassen oder anpassen
+
+=== Änderungen
+
+Änderungen einer Klassifizierung MÜSSEN dokumentiert und begründet werden.

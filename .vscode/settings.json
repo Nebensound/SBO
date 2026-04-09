@@ -1,0 +1,13 @@
+{
+  // Auto Save: Dateien werden automatisch nach einer Verzögerung gespeichert
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 1000,
+  // Format on Save: Dateien werden beim Speichern automatisch formatiert
+  "editor.formatOnSave": true,
+  // AsciiDoc-spezifische Einstellungen
+  "[asciidoc]": {
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on"
+  },
+  "editor.formatOnPaste": true
+}
