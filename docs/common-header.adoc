@@ -8,6 +8,7 @@
 :sectnumlevels: 3
 :source-highlighter: rouge
 :icons: font
+:iconfont-cdn: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
 :stem: asciimath [subs="attributes+"]
 
 // Default: Lade SBO-287 Attribute, falls noch nicht geladen
