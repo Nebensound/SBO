@@ -1,0 +1,40 @@
+= SBO – Schmalspur-Bahn-Ordnungswerk
+:lang: de
+:doctype: article
+:toc: left
+:toclevels: 2
+:icons: font
+:iconfont-cdn: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css
+
+Technische Spezifikation für Planung, Bau und Betrieb von Schmalspur-Bahnen.
+
+SBO ist ein privates, offenes Engineering-Ordnungswerk für Schmalspur-Bahnen (Garten- und Parkbahnen).
+Es definiert Klassensysteme, technische Anforderungen, Berechnungsmethoden und Sicherheitsrichtlinien.
+
+== Verfügbare Spezifikationen
+
+[cols="1,2,1,1", options="header"]
+|===
+| Bezeichnung | Spurweite | Status | Dokument
+
+| SBO-287
+| 287 mm
+| Draft
+| link:specs/sbo-287/sbo-287.html[HTML] / link:specs/sbo-287/sbo-287.pdf[PDF]
+|===
+
+== Aufbau des Ordnungswerks
+
+Das Ordnungswerk ist modular aufgebaut:
+
+* `core/` – Spurweitenunabhängige Prinzipien, Definitionen und Berechnungsmethoden
+* `specs/sbo-XXX/` – Spurweitenspezifische Parameter und Grenzwerte
+
+Die Core-Kapitel werden per `include::` in die jeweilige Spurweiten-Spezifikation eingebunden.
+Endanwender lesen immer die fertige Spurweiten-Spec (z. B. SBO-287), nicht die Core-Dateien separat.
+
+== Rechtliches
+
+Privates Ordnungswerk ohne rechtliche Bindung.
+Nutzung auf eigenes Risiko.
+Keine Gewährleistung, keine Haftung.
