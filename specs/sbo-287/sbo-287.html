@@ -1,0 +1,2800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.26">
+<title>SBO-287 – Spezifikation für Schmalspurbahn mit Spurweite 287 mm</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment the following line when using as a custom stylesheet */
+/* @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700"; */
+html{font-family:sans-serif;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+b,strong{font-weight:bold}
+abbr{font-size:.9em}
+abbr[title]{cursor:help;border-bottom:1px dotted #dddddf;text-decoration:none}
+dfn{font-style:italic}
+hr{height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type=checkbox],input[type=radio]{padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,::before,::after{box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;line-height:1;position:relative;cursor:auto;-moz-tab-size:4;-o-tab-size:4;tab-size:4;word-wrap:anywhere;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:1px solid #dedede;word-wrap:normal}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre).nobreak{word-wrap:normal}
+:not(pre).nowrap{white-space:nowrap}
+:not(pre).pre-wrap{white-space:pre-wrap}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;border-radius:3px;box-shadow:0 1px 0 rgba(0,0,0,.2),inset 0 0 0 .1em #fff;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin:0 auto;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border:1px solid #e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:none;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:hsla(0,0%,100%,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details{margin-left:1.25rem}
+details>summary{cursor:pointer;display:block;position:relative;line-height:1.6;margin-bottom:.625rem;outline:none;-webkit-tap-highlight-color:transparent}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"";border:solid transparent;border-left:solid;border-width:.3em 0 .3em .5em;position:absolute;top:.5em;left:-1.25rem;transform:translateX(15%)}
+details[open]>summary::before{border:solid transparent;border-top:solid;border-width:.5em .3em 0;transform:translateY(15%)}
+details>summary::after{content:"";width:1.25rem;height:1em;position:absolute;top:.3em;left:-1.25rem}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class=paragraph]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
+.sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class=highlight],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock pre>code{display:block}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos,pre.pygments .linenos{border-right:1px solid;opacity:.35;padding-right:.5em;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+pre.pygments span.linenos{display:inline-block;margin-right:.75em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans-serif;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>*>tr>*{border-width:1px}
+table.grid-cols>*>tr>*{border-width:0 1px}
+table.grid-rows>*>tr>*{border-width:1px 0}
+table.frame-all{border-width:1px}
+table.frame-ends{border-width:1px 0}
+table.frame-sides{border-width:0 1px}
+table.frame-none>colgroup+*>:first-child>*,table.frame-sides>colgroup+*>:first-child>*{border-top-width:0}
+table.frame-none>:last-child>:last-child>*,table.frame-sides>:last-child>:last-child>*{border-bottom-width:0}
+table.frame-none>*>tr>:first-child,table.frame-ends>*>tr>:first-child{border-left-width:0}
+table.frame-none>*>tr>:last-child,table.frame-ends>*>tr>:last-child{border-right-width:0}
+table.stripes-all>*>tr,table.stripes-odd>*>tr:nth-of-type(odd),table.stripes-even>*>tr:nth-of-type(even),table.stripes-hover>*>tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+li>p:empty:only-child::before{content:"";display:inline-block}
+ul.checklist>li>p:first-child{margin-left:-1em}
+ul.checklist>li>p:first-child>.fa-square-o:first-child,ul.checklist>li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist>li>p:first-child>input[type=checkbox]:first-child{margin-right:.25em}
+ul.inline{display:flex;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+td.hdlist2{word-wrap:anywhere}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:4px solid #fff;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);border-radius:50%;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]{border-bottom:1px dotted}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#header,#content,#footnotes,#footer{max-width:none}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media amzn-kf8,print{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>SBO-287 – Spezifikation für Schmalspurbahn mit Spurweite 287 mm</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<script>
+window.MathJax = {
+  asciimath: {
+    decimalsign: ","
+  }
+};
+</script>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_zusammenfassung">Zusammenfassung</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Diese Spezifikation definiert alle technischen Anforderungen für Planung, Bau und Betrieb von Schmalspur-Bahnen der Nennspur <strong>287 mm</strong>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Version:</strong> 0.1.1 | <strong>Status:</strong> Draft | <strong>Stand:</strong> 2025-12-28</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Analoge Spezifikationen existieren für andere Spurweiten. Eine Übersicht aller verfügbaren SBO-Spezifikationen finden Sie unter: <a href="https://nebensound.github.io/SBO/" class="bare">https://nebensound.github.io/SBO/</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_allgemeines">1. Allgemeines</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel erläutert Zweck, Status und Struktur dieser Spezifikation sowie die verwendeten Begriffe und Abkürzungen.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_zweck_und_geltungsbereich">1.1. Zweck und Geltungsbereich</h3>
+<div class="paragraph">
+<p>Das SBO (Schmalspurbahn-Ordnungswerk) ist eine private, technische Spezifikation für Planung, Bau und Betrieb von Schmalspur-Bahnen.</p>
+</div>
+<div class="paragraph">
+<p>Dieses Ordnungswerk definiert technische Anforderungen für Schmalspur-Bahnen, einschließlich:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Grenzwerte für Gleisbau, Fahrzeuge und Betrieb</p>
+</li>
+<li>
+<p>Berechnungsmethoden für Lasten, Radien und Bremsen</p>
+</li>
+<li>
+<p>Sicherheitsanforderungen für Personen- und Gütertransport</p>
+</li>
+<li>
+<p>Praktische Auslegungsrichtlinien</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die Zulässigkeit einer Konfiguration ergibt sich immer aus dem <strong>Minimum aller relevanten Begrenzungen</strong>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Zulässigkeit = min(Last, Geometrie, Geschwindigkeit, Betrieb, Sicherheit)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Kein einzelner Parameter kann isoliert betrachtet werden.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nicht_amtlicher_status_der_sbo">1.2. Nicht-amtlicher Status der SBO</h3>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>SBO ist kein Gesetz, keine amtliche Norm, sondern eine strukturierte Engineering-Spezifikation. Die Anwendung erfolgt auf eigene Verantwortung.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Die SBO-Spezifikationen dienen als:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Planungsgrundlage für private Schmalspurbahnen</p>
+</li>
+<li>
+<p>Technisches Referenzwerk für Anlagenbauer</p>
+</li>
+<li>
+<p>Dokumentationsrahmen für bestehende Anlagen</p>
+</li>
+<li>
+<p>Basis für projektspezifische Anpassungen</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_abgrenzung_zu_normen_und_gesetzen">1.3. Abgrenzung zu Normen und Gesetzen</h3>
+<div class="paragraph">
+<p>Die SBO ist eine private Spezifikation ohne rechtlichen Charakter. Sie ist inspiriert von folgenden Regelwerken:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>EBO</strong> – Eisenbahn-Bau- und Betriebsordnung (Deutschland)</p>
+</li>
+<li>
+<p><strong>BOA</strong> – Bau- und Betriebsordnung für Anschlussbahnen (Deutschland)</p>
+</li>
+<li>
+<p><strong>EN 13803</strong> – Railway applications – Track – Track alignment design parameters</p>
+</li>
+<li>
+<p><strong>EN 13848</strong> – Railway applications – Track – Track geometry quality</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Wo öffentliche Verkehrsflächen berührt werden oder gewerblicher Personenverkehr stattfindet, MÜSSEN die geltenden gesetzlichen Vorschriften beachtet werden. SBO ersetzt keine Gesetze, Verordnungen oder amtlichen Normen.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_begriffe_und_abkürzungen">1.4. Begriffe und Abkürzungen</h3>
+<div class="sect3">
+<h4 id="_normativer_sprachgebrauch">1.4.1. Normativer Sprachgebrauch</h4>
+<div class="paragraph">
+<p>Dieses Ordnungswerk nutzt folgende Schlüsselwörter nach RFC 2119:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">MUSS</dt>
+<dd>
+<p>Verpflichtende Anforderung. Abweichung führt zur Nichtkonformität.</p>
+</dd>
+<dt class="hdlist1">SOLLTE</dt>
+<dd>
+<p>Empfohlene Anforderung. Abweichung nur mit fundierter Begründung.</p>
+</dd>
+<dt class="hdlist1">KANN</dt>
+<dd>
+<p>Optionale Möglichkeit. Frei wählbar ohne Konformitätsverlust.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_grundbegriffe">1.4.2. Grundbegriffe</h4>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Spurweite</dt>
+<dd>
+<p>Der minimale lichte Abstand zwischen den Innenkanten der Schienenköpfe.</p>
+</dd>
+<dt class="hdlist1">Radlast</dt>
+<dd>
+<p>Die auf ein einzelnes Rad wirkende statische Vertikalkraft (Leitgröße für Klassifizierung).</p>
+</dd>
+<dt class="hdlist1">Achslast</dt>
+<dd>
+<p>Die Summe der Radlasten der Räder einer Achse.</p>
+</dd>
+<dt class="hdlist1">Bemessungsradlast</dt>
+<dd>
+<p>Die dynamisch erhöhte Radlast zur Auslegung von Gleis und Fahrzeug.</p>
+</dd>
+<dt class="hdlist1">Fester Achsstand</dt>
+<dd>
+<p>Der Abstand zwischen dem äußersten Radsatz am vorderen und hinteren Ende eines starren Fahrwerks (begrenzt befahrbaren Mindestradius).</p>
+</dd>
+<dt class="hdlist1">Adhäsionsmasse</dt>
+<dd>
+<p>Jener Teil der Lokomotivmasse, der auf angetriebenen Achsen lastet und für die Kraftübertragung verfügbar ist.</p>
+</dd>
+<dt class="hdlist1">Mindestradius</dt>
+<dd>
+<p>Der kleinste zulässige Gleisbogenradius, gemessen als Gleisachsradius (Mitte zwischen den Schienen).</p>
+</dd>
+<dt class="hdlist1">Überhöhung</dt>
+<dd>
+<p>Die vertikale Differenz zwischen äußerer und innerer Schiene im Gleisbogen.</p>
+</dd>
+<dt class="hdlist1">Längsneigung</dt>
+<dd>
+<p>Die Steigung oder das Gefälle der Gleistrasse in Fahrtrichtung, angegeben in Prozent (%).</p>
+</dd>
+<dt class="hdlist1">Streckenklasse</dt>
+<dd>
+<p>Die Kombination aus Lastklasse (L), Geschwindigkeitsklasse (V) und Betriebsart (B).</p>
+</dd>
+<dt class="hdlist1">Designfall</dt>
+<dd>
+<p>Das ungünstigste, aber betrieblich zu erwartende Szenario (z.B. nasse Schienen, maximale Last, volle Geschwindigkeit).</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_abkürzungen">1.4.3. Abkürzungen</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Abkürzung</th>
+<th class="tableblock halign-left valign-top">Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SBO</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schmalspurbahn-Ordnungswerk</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lastklasse (Last/Load)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geschwindigkeitsklasse (Velocity)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Betriebsart (Güter / Arbeits-/Betriebsfahrt / Personen)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">P</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Personenverkehr (als Betriebsart BP)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Q</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Radlast</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Achslast</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$phi\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dynamikfaktor (geschwindigkeitsabhängig)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$mu\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Haftreibungskoeffizient Rad/Schiene</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dokumentstruktur_und_änderungsprinzip">1.5. Dokumentstruktur und Änderungsprinzip</h3>
+<div class="sect3">
+<h4 id="_versionierung">1.5.1. Versionierung</h4>
+<div class="paragraph">
+<p>Das SBO-Ordnungswerk folgt <a href="https://semver.org/lang/de/">Semantic Versioning</a> (MAJOR.MINOR.PATCH):</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>MAJOR</strong>: Inkompatible Änderungen (z.B. Verschärfung von Grenzwerten)</p>
+</li>
+<li>
+<p><strong>MINOR</strong>: Abwärtskompatible neue Funktionalität (z.B. neue Kapitel)</p>
+</li>
+<li>
+<p><strong>PATCH</strong>: Abwärtskompatible Korrekturen</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_änderungshistorie">1.5.2. Änderungshistorie</h4>
+<div class="paragraph">
+<p>Alle Änderungen MÜSSEN in der Änderungshistorie-Tabelle im Appendix dokumentiert werden.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_systemannahmen">2. Systemannahmen</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel definiert die grundlegenden Annahmen und Randbedingungen, auf denen das SBO-Ordnungswerk aufbaut.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_spurweite_und_grundparameter">2.1. Spurweite und Grundparameter</h3>
+<div class="paragraph">
+<p>Diese Spezifikation gilt für die Spurweite <strong>287</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Die Spurweite ist die Leitgröße der Spezifikation und beeinflusst direkt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Zulässige Rad- und Achslasten</p>
+</li>
+<li>
+<p>Geometrische Freiräume</p>
+</li>
+<li>
+<p>Mindestradien</p>
+</li>
+<li>
+<p>Kippstabilität</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Alle weiteren Parameter (Toleranzen, Lichtraumprofil, Fahrzeugabmessungen) leiten sich aus der Spurweite ab und werden in den nachfolgenden Kapiteln definiert.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_einsatzarten">2.2. Einsatzarten</h3>
+<div class="paragraph">
+<p>Das SBO-Ordnungswerk unterscheidet drei Einsatzarten, die unterschiedliche Sicherheits- und Komfortanforderungen stellen:</p>
+</div>
+<div class="sect3">
+<h4 id="_güterverkehr">2.2.1. Güterverkehr</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Transport von Gütern, Materialien, Werkstücken</p>
+</li>
+<li>
+<p>Keine Personenbeförderung (außer gegebenenfalls Begleitpersonal im Führerstand)</p>
+</li>
+<li>
+<p>Geschwindigkeiten typischerweise niedrig bis moderat</p>
+</li>
+<li>
+<p>Fokus: Robustheit, Tragfähigkeit, Wirtschaftlichkeit</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Betriebsart: <strong>BG</strong> (Güterverkehr)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_arbeits_betriebsfahrten">2.2.2. Arbeits-/Betriebsfahrten</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Betriebsinterne Fahrten für Instandhaltung, Montage, Material-Transport</p>
+</li>
+<li>
+<p>Begleitpersonal auf Fahrzeugen (nicht als Fahrgäste)</p>
+</li>
+<li>
+<p>Eingeschränkte Sicherheitsvorkehrungen zulässig</p>
+</li>
+<li>
+<p>Fokus: Flexibilität, pragmatische Lösungen</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Betriebsart: <strong>BA</strong> (Arbeitsfahrt)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_personenverkehr_klasse_p">2.2.3. Personenverkehr (Klasse P)</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Transport von Fahrgästen ohne Fachkenntnisse</p>
+</li>
+<li>
+<p>Höchste Sicherheits- und Komfortanforderungen</p>
+</li>
+<li>
+<p>Verschärfte Grenzwerte für Geschwindigkeit, Bremsen, Stabilität</p>
+</li>
+<li>
+<p>Zulassung und Freigabeprozess erforderlich</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Betriebsart: <strong>BP</strong> (Personenverkehr)</p>
+</div>
+<div class="paragraph">
+<p>Personenverkehr unterliegt zusätzlichen Anforderungen, die im Kapitel <a href="11_personenverkehr.html">Personenverkehr (Klasse P)</a> detailliert definiert sind.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_betriebsphilosophie">2.3. Betriebsphilosophie</h3>
+<div class="paragraph">
+<p>Die SBO-Spezifikation basiert auf folgenden Grundprinzipien:</p>
+</div>
+<div class="sect3">
+<h4 id="_pragmatismus">2.3.1. Pragmatismus</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Lösungen sollen technisch fundiert, aber praktisch umsetzbar sein</p>
+</li>
+<li>
+<p>Überdimensionierung wird vermieden</p>
+</li>
+<li>
+<p>Proportionalität zwischen Aufwand und Risiko</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_deterministisches_design">2.3.2. Deterministisches Design</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Alle Grenzwerte und Berechnungen basieren auf physikalischen Modellen</p>
+</li>
+<li>
+<p>Sicherheitsfaktoren sind explizit und nachvollziehbar</p>
+</li>
+<li>
+<p>Keine impliziten oder nicht nachvollziehbaren Annahmen („Black Box“-Modelle)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_modularität">2.3.3. Modularität</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Lastklassen, Geschwindigkeitsklassen und Betriebsarten sind kombinierbar</p>
+</li>
+<li>
+<p>Streckenabschnitte können unterschiedliche Klassen haben</p>
+</li>
+<li>
+<p>Fahrzeuge können für mehrere Klassen ausgelegt werden</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_anpassbarkeit">2.3.4. Anpassbarkeit</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Spurweiten-spezifische Anpassungen sind explizit vorgesehen</p>
+</li>
+<li>
+<p>Projektspezifische Abweichungen sind dokumentierbar</p>
+</li>
+<li>
+<p>Nachweise können durch Messung oder Berechnung erbracht werden</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sicherheitsgrundsätze">2.4. Sicherheitsgrundsätze</h3>
+<div class="paragraph">
+<p>Bei der Auslegung von Anlagen und Fahrzeugen nach diesem Ordnungswerk gelten folgende Grundsätze:</p>
+</div>
+<div class="sect3">
+<h4 id="_konservative_auslegung">2.4.1. Konservative Auslegung</h4>
+<div class="paragraph">
+<p>Im Zweifel oder bei fehlenden Daten MUSS die konservative (sicherheitsseitige) Annahme gewählt werden.</p>
+</div>
+<div class="paragraph">
+<p>Beispiele:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Haftreibung: Designfall ist <strong>nasse</strong> Schiene (\$mu_"design" = 0.10\$)</p>
+</li>
+<li>
+<p>Dynamikfaktoren: Ungünstigste Kombination aus Last und Geschwindigkeit</p>
+</li>
+<li>
+<p>Bremswege: Verschleißzustand, nicht Neuzustand</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_personenschutz">2.4.2. Personenschutz</h4>
+<div class="paragraph">
+<p>Personenverkehr (Klasse BP) unterliegt verschärften Anforderungen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Redundante Bremssysteme</p>
+</li>
+<li>
+<p>Strengere Geschwindigkeitslimits in Kurven und Gefälle</p>
+</li>
+<li>
+<p>Zusätzliche Stabilität gegen Kippen</p>
+</li>
+<li>
+<p>Regelmäßige Prüfungen und Dokumentation</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Anlagen und Fahrzeuge, die für Personenverkehr genutzt werden sollen, MÜSSEN explizit dafür ausgelegt und nachgewiesen werden. Eine Auslegung für Güterverkehr ist nicht ausreichend.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_kein_optimierungsdruck_auf_sicherheit">2.4.3. Kein Optimierungsdruck auf Sicherheit</h4>
+<div class="paragraph">
+<p>Sicherheitsrelevante Parameter DÜRFEN NICHT durch Optimierung anderer Faktoren geschwächt werden.</p>
+</div>
+<div class="paragraph">
+<p>Beispiele für <strong>unzulässige</strong> Kompromisse:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Verringerung der Bremskraft zur Erhöhung der Nutzlast</p>
+</li>
+<li>
+<p>Vergrößerung der Geschwindigkeit durch Reduktion von Sicherheitsfaktoren</p>
+</li>
+<li>
+<p>Verzicht auf Prüfungen zur Kosteneinsparung</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_designfall_ungünstigste_betriebsbedingung">2.4.4. Designfall: Ungünstigste Betriebsbedingung</h4>
+<div class="paragraph">
+<p>Die Auslegung MUSS für die <strong>ungünstigste, aber betrieblich zu erwartende</strong> Kombination erfolgen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Maximale Last + maximale Geschwindigkeit + nasse Schiene + Verschleiß</p>
+</li>
+<li>
+<p>Vollbesetzung + maximales Gefälle + Notbremsung</p>
+</li>
+<li>
+<p>Winterbetrieb ist kein Designfall, sondern ein Betriebszustand mit reduzierten Parametern</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Extremszenarien wie Sabotage, Erdbeben oder absichtliches Fehlverhalten sind nicht Teil des Designfalls, können aber in Risikoanalysen betrachtet werden.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_klassensysteme">3. Klassensysteme</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel definiert die Lastklassen, Geschwindigkeitsklassen und Betriebsarten, die das modulare Rückgrat dieser Spezifikation bilden.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_übersicht">3.1. Übersicht</h3>
+<div class="paragraph">
+<p>Das SBO-Klassensystem ist das zentrale Rückgrat der Spezifikation. Jede Strecke und jedes Fahrzeug wird durch Kombination dreier Klassen charakterisiert:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Streckenklasse = Lx/Vx/Bx</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Beispiel: <code>L2/V2/BG</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lastklassen_l">3.2. Lastklassen (L)</h3>
+<div class="sect3">
+<h4 id="_zweck_und_anwendungsbereich">3.2.1. Zweck und Anwendungsbereich</h4>
+<div class="paragraph">
+<p>Die Lastklassen (L) definieren die <strong>zulässige mechanische Beanspruchung</strong> von Gleis, Unterbau und Fahrzeugen durch <a href="02_begriffe.html#radlast">Rad</a>- und <a href="02_begriffe.html#achslast">Achslasten</a>.</p>
+</div>
+<div class="paragraph">
+<p>Die Lastklasse ist die <strong>zentrale Bemessungsgröße</strong> der SBO-287. Alle weiteren Anforderungen (Geometrie, Geschwindigkeit, Betrieb) leiten sich daraus ab oder werden dadurch begrenzt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_leitgröße_radlast">3.2.2. Leitgröße: Radlast</h4>
+<div class="paragraph">
+<p>Maßgebend für die Auslegung ist die <a href="02_begriffe.html#radlast">Radlast</a>, nicht die Fahrzeugmasse, da:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Radlast wirkt direkt auf Schiene, Schwelle und Unterbau</p>
+</li>
+<li>
+<p>Punktuelle Überlasten entstehen immer auf Radebene</p>
+</li>
+<li>
+<p>Fahrzeugmassen sind ohne Aussagekraft über Lastverteilung</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_klassifizierung">3.2.3. Klassifizierung</h4>
+<div class="paragraph">
+<p>Die SBO-287 definiert drei Lastklassen mit folgenden Grenzwerten:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$R_"max"\$ – Maximale statische <a href="02_begriffe.html#radlast">Radlast</a></p>
+</li>
+<li>
+<p>\$A_"max"\$ – Maximale statische <a href="02_begriffe.html#achslast">Achslast</a></p>
+</li>
+<li>
+<p>\$R_("single max")\$ – Maximale Einrad-Überlast (lokale Unregelmäßigkeiten)</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 30%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Klasse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$R_max\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$A_max\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">\$R_("single max")\$</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Typische Nutzung</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>L3</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150 kg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">300 kg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">250 kg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Leichte Loren, Handbetrieb, Schau-/Parkverkehr</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>L2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">250 kg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500 kg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400 kg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Standard-Güterbetrieb, regulärer Personenverkehr</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>L1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400 kg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">800 kg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">600 kg</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schwerbetrieb, Reservekapazität</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Die Klassen sind <strong>aufsteigend</strong> geordnet: L1 stellt höhere Anforderungen als L2, L2 höhere als L3.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Jede Strecke, jedes Fahrzeug und jeder Betriebsvorgang MUSS mindestens einer Lastklasse zugeordnet sein.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_statische_und_dynamische_lasten">3.2.4. Statische und dynamische Lasten</h4>
+<div class="sect4">
+<h5 id="_statische_radlast">Statische Radlast</h5>
+<div class="paragraph">
+<p>Die statische Radlast ergibt sich aus:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fahrzeugmasse</p>
+</li>
+<li>
+<p>Nutzlast</p>
+</li>
+<li>
+<p>Lastverteilung</p>
+</li>
+<li>
+<p>Anzahl der Räder</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die statische Radlast ist die <strong>Ausgangsgröße</strong> für alle weiteren Nachweise.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_dynamische_zusatzlasten">Dynamische Zusatzlasten</h5>
+<div class="paragraph">
+<p>Im Betrieb treten zusätzliche Lasten auf durch:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unebenheiten der Gleislage</p>
+</li>
+<li>
+<p>Schienenstöße</p>
+</li>
+<li>
+<p>Setzungen des Unterbaus</p>
+</li>
+<li>
+<p>Unrundlauf der Räder</p>
+</li>
+<li>
+<p>Brems- und Anfahrvorgänge</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Zur Berücksichtigung dieser Effekte wird ein <strong>geschwindigkeitsabhängiger Dynamikfaktor</strong> \$phi(V)\$ angewendet.</p>
+</div>
+<div class="paragraph">
+<p>Grundformel zur Berechnung der <a href="02_begriffe.html#bemessungsradlast">Bemessungsradlast</a>:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$R_"bem" = R_"stat" * phi(V)\$
+</div>
+</div>
+<div class="paragraph">
+<p>Dabei ist:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$R_"bem"\$ die Bemessungsradlast (dynamisch)</p>
+</li>
+<li>
+<p>\$R_"stat"\$ die statische Radlast</p>
+</li>
+<li>
+<p>\$phi(V)\$ der geschwindigkeitsabhängige Dynamikfaktor</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die anzusetzenden Faktoren \$phi(V)\$ sind im Abschnitt <a href="#geschwindigkeitsklassen_v">Geschwindigkeitsklassen (V)</a> definiert.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_einrad_überlast_unregelmäßigkeiten">Einrad-Überlast (Unregelmäßigkeiten)</h5>
+<div class="paragraph">
+<p>Eine Einrad-Überlast ist eine <strong>kurzzeitige, lokale</strong> Überhöhung der Radlast auf <strong>einem</strong> Rad infolge betrieblicher Unregelmäßigkeiten (z. B. lokale Setzung, Stein/Schmutz, Schienenstoß, Verdichtungsunterschiede).</p>
+</div>
+<div class="paragraph">
+<p>Für lokale Nachweise (Schiene, Schwelle, Unterbau) MUSS die anzusetzende Radlast \$R_"lok"\$ wie folgt bestimmt werden:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$R_"lok" = max(R_"bem", R_"single max")\$
+</div>
+</div>
+<div class="paragraph">
+<p>Dabei gilt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$R_"bem"\$ ist die Bemessungsradlast aus Dynamikfaktor (siehe Abschnitt Dynamische Zusatzlasten).</p>
+</li>
+<li>
+<p>\$R_"single max"\$ ist die maximal zulässige Einrad-Überlast als <strong>Einzellast</strong> auf ein Rad.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>\$R_"single max"\$ MUSS als konzentrierte Einzellast am ungünstigsten Ort angesetzt werden. Eine gleichzeitige Erhöhung der übrigen Räder derselben Achse ist NICHT anzunehmen.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_zuordnung_von_strecken_und_fahrzeugen">3.2.5. Zuordnung von Strecken und Fahrzeugen</h4>
+<div class="sect4">
+<h5 id="_strecke">Strecke</h5>
+<div class="paragraph">
+<p>Jeder Streckenabschnitt ist einer Lastklasse zuzuordnen.</p>
+</div>
+<div class="paragraph">
+<p>Die Zuordnung erfolgt nach der <strong>schwächsten Komponente</strong>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unterbau</p>
+</li>
+<li>
+<p>Schwellen</p>
+</li>
+<li>
+<p>Schiene</p>
+</li>
+<li>
+<p>Bauzustand</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die Lastklasse der Strecke begrenzt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>zulässige Fahrzeuge</p>
+</li>
+<li>
+<p>zulässige Nutzlast</p>
+</li>
+<li>
+<p>ggf. zulässige Geschwindigkeit</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_fahrzeuge">Fahrzeuge</h5>
+<div class="paragraph">
+<p>Jedes Fahrzeug ist einer Lastklasse zuzuordnen, basierend auf seiner <strong>maximalen statischen Radlast</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Die Fahrzeug-Lastklasse DARF die Strecken-Lastklasse nicht überschreiten.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_lastklassen_und_betrieb">3.2.6. Lastklassen und Betrieb</h4>
+<div class="paragraph">
+<p>Die Lastklasse beeinflusst:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>zulässige Geschwindigkeit</p>
+</li>
+<li>
+<p>zulässige Beschleunigung und Verzögerung</p>
+</li>
+<li>
+<p>Mindestanforderungen an Gleisqualität</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Für Personenverkehr gelten zusätzliche Einschränkungen, unabhängig von der Lastklasse (siehe <a href="#betriebsart">Betriebsart BP</a>).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_grundsatz">3.2.7. Grundsatz</h4>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Die Lastklasse ist nicht verhandelbar im Betrieb.</p>
+</div>
+<div class="paragraph">
+<p>Wenn Zweifel bestehen, ist stets die <strong>höhere Lastklasse</strong> oder eine <strong>niedrigere Geschwindigkeit</strong> anzusetzen.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_geschwindigkeitsklassen_v">3.3. Geschwindigkeitsklassen (V)</h3>
+<div class="sect3">
+<h4 id="_zweck">3.3.1. Zweck</h4>
+<div class="paragraph">
+<p>Geschwindigkeitsklassen (V) definieren die zulässige Fahrgeschwindigkeit und die daraus abgeleiteten dynamischen Zusatzlasten.</p>
+</div>
+<div class="paragraph">
+<p>Die Geschwindigkeitsklasse MUSS gleichrangig zur Lastklasse angewendet werden.
+Eine niedrigere Lastklasse DARF NICHT als Begründung für eine höhere Geschwindigkeit verwendet werden und umgekehrt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_grundsatz_2">3.3.2. Grundsatz</h4>
+<div class="paragraph">
+<p>Die zulässige Geschwindigkeit ist eine abgeleitete Betriebsgrenze.
+Sie MUSS als Minimum mehrerer Begrenzungen bestimmt werden (siehe <a href="#streckenklassifizierung">Streckenklassifizierung</a>).</p>
+</div>
+<div class="paragraph">
+<p><code>V_zulässig</code> MUSS als kleinster der folgenden Grenzwerte festgelegt werden:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>V_Strecke</code> – obere Grenze des Streckenabschnitts aus Geschwindigkeitsklasse</p>
+</li>
+<li>
+<p><code>V_Kurve</code> – Begrenzung aus Gleisgeometrie (z. B. Kurvenradius, Übergang)</p>
+</li>
+<li>
+<p><code>V_Gefälle</code> – Begrenzung aus Längsneigung und Bremsnachweis</p>
+</li>
+<li>
+<p><code>V_Fahrzeug</code> – fahrzeugseitige Höchstgeschwindigkeit (Bauart, Laufwerk, Bremsen)</p>
+</li>
+<li>
+<p><code>V_Betrieb</code> – Begrenzung aus Betriebsart (BG/BA/BP) und betrieblicher Regelung</p>
+</li>
+<li>
+<p><code>V_Zustand</code> – zustandsabhängige Begrenzung (z. B. Nässe, Baustelle, unbekannter Gleiszustand)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die Geschwindigkeitsklasse definiert ausschließlich die obere Grenze <code>V_Strecke</code> für einen Streckenabschnitt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_klassifizierung_2">3.3.3. Klassifizierung</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Klasse</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Maximale Geschwindigkeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>V3</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rangier / Baustelle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">≤ 5 km/h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>V2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Regelbetrieb</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">≤ 15 km/h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>V1</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Schnellfahrt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">≤ 30 km/h</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_v3_rangier_baustellenbetrieb"><strong>V3</strong> (Rangier-/Baustellenbetrieb)</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>maximale Geschwindigkeit: <strong>≤ 5 km/h</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Typische Anwendung:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Rangieren</p>
+</li>
+<li>
+<p>Baustellenbetrieb</p>
+</li>
+<li>
+<p>provisorische Gleise</p>
+</li>
+<li>
+<p>enge Radien</p>
+</li>
+<li>
+<p>unsicherer oder wechselnder Untergrund</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Eigenschaften:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>geringe dynamische Zusatzlasten</p>
+</li>
+<li>
+<p>geringe Anforderungen an die Gleisgeometrie</p>
+</li>
+<li>
+<p>jederzeit zulässig, sofern keine weiteren Einschränkungen bestehen</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_v2_regelbetrieb"><strong>V2</strong> (Regelbetrieb)</h5>
+<div class="ulist">
+<ul>
+<li>
+<p>maximale Geschwindigkeit: <strong>≤ 15 km/h</strong></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Typische Anwendung:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>regulärer Güterverkehr</p>
+</li>
+<li>
+<p>Arbeits- und Transportfahrten</p>
+</li>
+<li>
+<p>Standardbetrieb der SBO-287</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Eigenschaften:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>moderate dynamische Zusatzlasten</p>
+</li>
+<li>
+<p>definierte Mindestanforderungen an:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Gleislage</p>
+</li>
+<li>
+<p>Radien</p>
+</li>
+<li>
+<p>Unterbau</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>begrenzte Eignung für Personenverkehr (siehe Klasse P)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>V2 stellt die <strong>Regel-Geschwindigkeitsklasse</strong> der SBO-287 dar.
+==== <strong>V1</strong> (Schnellbetrieb)
+* maximale Geschwindigkeit: <strong>≤ 30 km/h</strong></p>
+</div>
+<div class="paragraph">
+<p>Typische Anwendung:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>kurze, gut ausgebaute Streckenabschnitte</p>
+</li>
+<li>
+<p>gleichmäßiger und tragfähiger Unterbau</p>
+</li>
+<li>
+<p>große Kurvenradien</p>
+</li>
+<li>
+<p>sehr gute Gleislage</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Eigenschaften:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>hohe dynamische Zusatzlasten</p>
+</li>
+<li>
+<p>erhöhte Anforderungen an:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Gleisgeometrie</p>
+</li>
+<li>
+<p>Radprofile</p>
+</li>
+<li>
+<p>Bremsvermögen</p>
+</li>
+<li>
+<p>Wartungszustand</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>V1 ist nicht automatisch zulässig und erfordert eine
+bewusste Festlegung und Nachweis der Eignung des Streckenabschnitts.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_auswirkungen_höherer_geschwindigkeit">3.3.4. Auswirkungen höherer Geschwindigkeit</h4>
+<div class="paragraph">
+<p>Mit steigender Geschwindigkeit erhöhen sich:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dynamischer Radlastfaktor \$phi(V)\$</p>
+</li>
+<li>
+<p>Seitenkräfte in Kurven</p>
+</li>
+<li>
+<p>Bremsanforderungen</p>
+</li>
+<li>
+<p>Anforderungen an Gleisqualität</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_dynamische_zusatzlasten_2">3.3.5. Dynamische Zusatzlasten</h4>
+<div class="paragraph">
+<p>Mit steigender Geschwindigkeit nehmen die dynamischen Beanspruchungen
+von Gleis, Unterbau und Fahrzeugen zu.</p>
+</div>
+<div class="paragraph">
+<p>Für die Ermittlung der dynamischen Radlasten sind folgende Faktoren
+anzusetzen:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 66.6666%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Geschwindigkeitsklasse</th>
+<th class="tableblock halign-left valign-top">Dynamikfaktor φ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V3 (≤ 5 km/h)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V2 (≤ 15 km/h)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.25</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V1 (≤ 30 km/h)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.50</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_betriebsarten_b">3.4. Betriebsarten (B)</h3>
+<div class="sect3">
+<h4 id="_zweck_2">3.4.1. Zweck</h4>
+<div class="paragraph">
+<p>Betriebsarten definieren das erforderliche Sicherheitsniveau.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_klassifizierung_3">3.4.2. Klassifizierung</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 50%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Klasse</th>
+<th class="tableblock halign-left valign-top">Beschreibung</th>
+<th class="tableblock halign-left valign-top">Personen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>BG</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Güterverkehr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Keine</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>BA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Arbeits-/Betriebsfahrten</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Geschultes Personal</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>BP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Personenverkehr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Fahrgäste</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_hierarchie">3.4.3. Hierarchie</h4>
+<div class="listingblock">
+<div class="content">
+<pre>BP &gt; BA &gt; BG</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Eine höhere Betriebsart impliziert stets die Anforderungen der darunterliegenden Betriebsarten.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>BP ist immer die restriktivste Betriebsart. Eine für BP zugelassene Strecke erfüllt automatisch BG und BA.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_zusatzanforderungen_für_bp">3.4.4. Zusatzanforderungen für BP</h4>
+<div class="paragraph">
+<p>Bei Personenverkehr gelten strengere Anforderungen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Höhere Bremsverzögerung</p>
+</li>
+<li>
+<p>Geringere Maximalgeschwindigkeit</p>
+</li>
+<li>
+<p>Redundante Sicherheitseinrichtungen</p>
+</li>
+<li>
+<p>Definierte Freigabeprozesse</p>
+</li>
+<li>
+<p>Regelmäßige Prüfungen</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_streckenklassifizierung">3.5. Streckenklassifizierung</h3>
+<div class="sect3">
+<h4 id="_definition">3.5.1. Definition</h4>
+<div class="paragraph">
+<p>Jeder Streckenabschnitt MUSS klassifiziert werden:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Beispiel: L2 / V2 / BG</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Diese Klassifizierung definiert:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Welche Fahrzeuge zugelassen sind</p>
+</li>
+<li>
+<p>Welche Geschwindigkeit zulässig ist</p>
+</li>
+<li>
+<p>Welche Betriebsart erlaubt ist</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_fahrzeugzulassung">3.5.2. Fahrzeugzulassung</h4>
+<div class="paragraph">
+<p>Ein Fahrzeug ist zulässig, wenn:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$L_"Fzg" &lt;= L_"Strecke" and V_"Fzg" &lt;= V_"Strecke" and B_"Fzg" &lt;= B_"Strecke"\$
+</div>
+</div>
+<div class="paragraph">
+<p>Dabei gilt:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$L_"Fzg"\$, \$V_"Fzg"\$, \$B_"Fzg"\$ sind die Klassen des Fahrzeugs.</p>
+</li>
+<li>
+<p>\$L_"Strecke"\$, \$V_"Strecke"\$, \$B_"Strecke"\$ sind die Klassen des Streckenabschnitts.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ordnungsrelation:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Für Lastklassen gilt: L1 ist restriktiver als L2, L2 restriktiver als L3.</p>
+</li>
+<li>
+<p>Für Geschwindigkeitsklassen gilt: V1 ist restriktiver als V2, V2 restriktiver als V3.</p>
+</li>
+<li>
+<p>Für Betriebsarten gilt: BP ist restriktiver als BA, BA restriktiver als BG.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ein Fahrzeug ist nur zulässig, wenn es in allen drei Dimensionen die Anforderungen der Strecke erfüllt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_verschärfung">3.5.3. Verschärfung</h4>
+<div class="paragraph">
+<p>Eine Strecke KANN abschnittsweise verschärft werden (z. B. Kurve, Gefälle, Bauwerk).</p>
+</div>
+<div class="paragraph">
+<p>Die zulässige Geschwindigkeit ergibt sich immer aus:</p>
+</div>
+<div class="paragraph">
+<p><code>V_zulässig</code> MUSS nach dem Grundsatz in Abschnitt "Geschwindigkeitsklassen (V)" bestimmt werden.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_anwendung">3.6. Anwendung</h3>
+<div class="sect3">
+<h4 id="_neubau">3.6.1. Neubau</h4>
+<div class="paragraph">
+<p>Bei Planung einer neuen Anlage:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Betriebsart festlegen (BG/BA/BP)</p>
+</li>
+<li>
+<p>Erwartete Lasten ermitteln → Lastklasse</p>
+</li>
+<li>
+<p>Gewünschte Geschwindigkeit → V-Klasse</p>
+</li>
+<li>
+<p>Streckenparameter entsprechend auslegen</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_bestand">3.6.2. Bestand</h4>
+<div class="paragraph">
+<p>Bei Übernahme einer bestehenden Anlage:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Vermessung und Bewertung</p>
+</li>
+<li>
+<p>Klassifizierung auf Basis der Ist-Zustände</p>
+</li>
+<li>
+<p>Fahrzeuge entsprechend zulassen oder anpassen</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_änderungen">3.6.3. Änderungen</h4>
+<div class="paragraph">
+<p>Änderungen einer Klassifizierung MÜSSEN dokumentiert und begründet werden.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_lastannahmen_und_bemessung">4. Lastannahmen und Bemessung</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel definiert die maßgebenden Lasten für die Bemessung von Gleis, Unterbau und Fahrzeugen.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_rad_und_achslasten">4.1. Rad- und Achslasten</h3>
+<div class="sect3">
+<h4 id="_maßgebende_lastgröße">4.1.1. Maßgebende Lastgröße</h4>
+<div class="paragraph">
+<p>Maßgebend für alle Bemessungen ist die <strong>Radlast</strong> \$Q\$.</p>
+</div>
+<div class="paragraph">
+<p>Die Achslast \$A\$ ergibt sich aus der Summe der Radlasten einer Achse:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$A = 2 * Q\$
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_berechnung_der_statischen_radlast">4.1.2. Berechnung der statischen Radlast</h4>
+<div class="paragraph">
+<p>Die statische Radlast MUSS für den ungünstigsten Lastzustand ermittelt werden (maximale Zuladung, ungünstige Schwerpunktlage).</p>
+</div>
+<div class="sect4">
+<h5 id="_bei_gleichmäßiger_lastverteilung">Bei gleichmäßiger Lastverteilung</h5>
+<div class="stemblock">
+<div class="content">
+\$Q_"stat" = (m_"Fzg" * g) / n_"Räder"\$
+</div>
+</div>
+<div class="paragraph">
+<p>Wobei:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$m_"Fzg"\$ – Fahrzeugmasse einschließlich maximaler Nutzlast [kg]</p>
+</li>
+<li>
+<p>\$g\$ – Erdbeschleunigung (9,81 m/s²)</p>
+</li>
+<li>
+<p>\$n_"Räder"\$ – Anzahl der Räder</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Eine gleichmäßige Lastverteilung DARF nur angenommen werden, wenn die Fahrzeugbauart dies erzwingt.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_bei_ungleichmäßiger_lastverteilung">Bei ungleichmäßiger Lastverteilung</h5>
+<div class="paragraph">
+<p>Bei bekannter Schwerpunktlage:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$Q_"max" = (m_"Fzg" * g * l_"Hebel") / (l_"Achsabstand" * n_"Räder/Achse")\$
+</div>
+</div>
+<div class="paragraph">
+<p>Wobei:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>\$l_"Hebel"\$ – Hebelarm des Schwerpunkts zur betrachteten Achse [mm]</p>
+</li>
+<li>
+<p>\$l_"Achsabstand"\$ – Achsabstand [mm]</p>
+</li>
+<li>
+<p>\$n_"Räder/Achse"\$ – Anzahl der Räder pro Achse (typisch 2)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Bei unbekannter Lastverteilung MUSS ein Ungleichverteilungsfaktor \$f_"Ungl" = {ungleichverteilungsfaktor}\$ angesetzt werden:</p>
+</div>
+<div class="stemblock">
+<div class="content">
+\$Q_"max" = (m_"Fzg" * g * f_"Ungl") / n_"Räder"\$
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_zulässige_radlasten_nach_lastklasse">4.1.3. Zulässige Radlasten nach Lastklasse</h4>
+<div class="paragraph">
+<p>Die zulässige statische Radlast richtet sich nach der Lastklasse:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Lastklasse</th>
+<th class="tableblock halign-left valign-top">Zulässige Radlast \$Q_"stat,zul"\$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">400 kg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">250 kg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150 kg</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Die ermittelte statische Radlast \$Q_"stat"\$ MUSS kleiner oder gleich der zulässigen Radlast der Lastklasse sein.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dynamische_zusatzlasten_3">4.2. Dynamische Zusatzlasten</h3>
+<div class="sect3">
+<h4 id="_dynamikfaktor">4.2.1. Dynamikfaktor</h4>
+<div class="paragraph">
+<p>Im Betrieb treten zusätzliche dynamische Beanspruchungen auf (Gleisunebenheiten, Schienenstöße, Setzungen). Diese werden durch den geschwindigkeitsabhängigen Dynamikfaktor \$phi\$ berücksichtigt.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 66.6666%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Geschwindigkeitsklasse</th>
+<th class="tableblock halign-left valign-top">Dynamikfaktor φ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V3 (≤ 5 km/h)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V2 (≤ 15 km/h)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.25</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">V1 (≤ 30 km/h)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.50</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_berechnung_der_dynamischen_radlast">4.2.2. Berechnung der dynamischen Radlast</h4>
+<div class="stemblock">
+<div class="content">
+\$Q_"dyn" = Q_"stat" * phi\$
+</div>
+</div>
+<div class="paragraph">
+<p>Die dynamische Radlast ist für die Bemessung von Schiene, Schwelle und Unterbau maßgebend.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_einrad_überlasten">4.3. Einrad-Überlasten</h3>
+<div class="sect3">
+<h4 id="_anwendungsfall">4.3.1. Anwendungsfall</h4>
+<div class="paragraph">
+<p>Bei lokalen Unregelmäßigkeiten (Setzungen einzelner Schwellen, Fremdkörper, Übergänge) MUSS angenommen werden, dass ein einzelnes Rad kurzzeitig eine erhöhte Last aufnimmt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_berechnung">4.3.2. Berechnung</h4>
+<div class="stemblock">
+<div class="content">
+\$Q_"lokal" = max(Q_"dyn"; 1.6 * Q_"stat")\$
+</div>
+</div>
+<div class="paragraph">
+<p>Wobei der Faktor 1,6 lokale Überlasten infolge Setzung und Gleisunruhe repräsentiert.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Die Einrad-Überlast ist maßgebend für:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Schwellendimensionierung</p>
+</li>
+<li>
+<p>Unterbaubemessung</p>
+</li>
+<li>
+<p>Nachweis gegen Schienenbruch</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_punktlastige_ladung">4.4. Punktlastige Ladung</h3>
+<div class="sect3">
+<h4 id="_definition_2">4.4.1. Definition</h4>
+<div class="paragraph">
+<p>Ladungen mit stark konzentrierter Masse (z. B. Maschinen, Motoren, Steinblöcke) gelten als punktlastig, wenn die lokale Schwerpunktlage zu einer signifikanten Erhöhung der Radlast führt.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_zulässigkeit">4.4.2. Zulässigkeit</h4>
+<div class="paragraph">
+<p>Punktlastige Ladung DARF nur transportiert werden, wenn:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>die resultierende Radlast innerhalb der zulässigen Lastklasse liegt, UND</p>
+</li>
+<li>
+<p>die Ladung gegen Verrutschen gesichert ist</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Die Berechnung MUSS nach Abschnitt 3.1 erfolgen (ungleichmäßige Lastverteilung).</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sondertransporte">4.5. Sondertransporte</h3>
+<div class="sect3">
+<h4 id="_definition_3">4.5.1. Definition</h4>
+<div class="paragraph">
+<p>Sondertransporte sind Transporte mit Lasten oberhalb der regulären Lastklasse.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_anforderungen">4.5.2. Anforderungen</h4>
+<div class="paragraph">
+<p>Sondertransporte MÜSSEN folgende Bedingungen erfüllen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Geschwindigkeit: maximal V3 (≤ 5 km/h)</p>
+</li>
+<li>
+<p>Strecke: vorab definiert und geprüft</p>
+</li>
+<li>
+<p>Nachweis: schriftliche Dokumentation der Lastannahmen und Nachweisführung</p>
+</li>
+<li>
+<p>Freigabe: durch verantwortliche Person</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Sondertransporte dürfen nur auf Streckenabschnitten erfolgen, für die die erhöhte Last nachgewiesen wurde.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_gleisgeometrie_und_trassierung">5. Gleisgeometrie und Trassierung</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel definiert die geometrischen Anforderungen an die Gleisführung, Spurweiten, Radien, Überhöhungen und Übergänge.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_spurweite_und_toleranzen">5.1. Spurweite und Toleranzen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Definition der Nenn-Spurweite, zulässige Abweichungen, Messmethodik</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fester_achsstand">5.2. Fester Achsstand</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Definition und Bedeutung des festen Achsstands für befahrbare Mindestradien</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mindestradien">5.3. Mindestradien</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Berechnung und Tabellen der Mindestradien nach Lastklasse, Geschwindigkeit und Achsstand</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kurven_in_längsneigung">5.4. Kurven in Längsneigung</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Besondere Anforderungen für Kurven in Steigungen/Gefälle</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_überhöhung_falls_angewendet">5.5. Überhöhung (falls angewendet)</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Berechnung der Überhöhung, Grenzwerte, Anwendungsbereich</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_übergänge_und_gleisverziehungen">5.6. Übergänge und Gleisverziehungen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Übergangsbögen, Verwindung, zulässige Verziehungsrampen</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_längsneigung_haftung_und_zugkraft">6. Längsneigung, Haftung und Zugkraft</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel behandelt Längsneigungen, Steigungswiderstände, Haftreibung zwischen Rad und Schiene sowie Anfahrbedingungen.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_steigung_und_gefälle">6.1. Steigung und Gefälle</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Maximale Steigungen, Gefälle, Bezeichnungsweise (Prozent, Promille)</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_steigungswiderstand">6.2. Steigungswiderstand</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Berechnung der Steigungskraft, Zusammenhang mit Neigung und Masse</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_haftreibung_radschiene">6.3. Haftreibung Rad/Schiene</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Haftreibungskoeffizient \$\mu\$, Designwerte für nasse/trockene Schiene</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_anfahrbedingungen">6.4. Anfahrbedingungen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Maximale Steigung zum Anfahren, erforderliche Adhäsionsmasse</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_schieben_vs_ziehen">6.5. Schieben vs. Ziehen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Anforderungen an Zuglok-Position, Druckkräfte, Kupplung</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bremsen_und_verzögerung">7. Bremsen und Verzögerung</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel definiert die Bremsanforderungen, Mindestbremsvermögen, Bremsweg-Berechnungen und Haltefähigkeit im Gefälle.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_bremsarten">7.1. Bremsarten</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Handbremse, Betriebsbremse, Notbremse, Feststellbremse</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mindestbremsvermögen">7.2. Mindestbremsvermögen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Erforderliche Bremskraft in Abhängigkeit von Last, Geschwindigkeit und Gefälle</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bremsweg">7.3. Bremsweg</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Berechnungsformel, Sichtweite, Reaktionszeit</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_haltefähigkeit_im_gefälle">7.4. Haltefähigkeit im Gefälle</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Feststellbremse, Anforderungen an Halteposition</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_anforderungen_für_personenverkehr_p">7.5. Anforderungen für Personenverkehr (P)</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Redundanz, höhere Bremsvermögen, Notbremseinrichtung</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fahrzeuge_2">8. Fahrzeuge</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel definiert die Anforderungen an Fahrzeuge: Wagen, Lokomotiven, Personenfahrzeuge, Schwerpunkt, Kupplungen.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_allgemeine_fahrzeuganforderungen">8.1. Allgemeine Fahrzeuganforderungen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Lichtraumprofil, Spurkranz, Puffer, Sicherheitseinrichtungen</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_wagen">8.2. Wagen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Güterwagen, offene/geschlossene Bauarten, Ladungssicherung</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_lokomotiven_triebfahrzeuge">8.3. Lokomotiven / Triebfahrzeuge</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Adhäsionsmasse, Antriebsart, Zugkraft</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_personenfahrzeuge">8.4. Personenfahrzeuge</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Sitze, Türen, Notausstiege, Sicherheitsgurte</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_schwerpunkt_und_lastverteilung">8.5. Schwerpunkt und Lastverteilung</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Schwerpunkthöhe, Kippstabilität, Lastverteilung auf Achsen</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kupplungen_und_zug_druckkräfte">8.6. Kupplungen und Zug-/Druckkräfte</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Kupplungstyp, maximale Zug-/Druckkraft, Kuppelhöhe</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_oberbau_und_unterbau">9. Oberbau und Unterbau</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel behandelt Schienen, Schwellen, Bettung, Untergrund und zulässige Setzungen.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_schienen">9.1. Schienen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Schienenprofile, Materialgüte, Verschleißgrenzen</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_schwellen">9.2. Schwellen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Schwellenabstand, Materialien (Holz, Beton, Stahl), Befestigung</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bettung">9.3. Bettung</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Schotter, Sand, feste Fahrbahn, Korngrößen</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_untergrund">9.4. Untergrund</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Tragfähigkeit, Bodenpressung, Verdichtung</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_setzungen_und_unebenheiten">9.5. Setzungen und Unebenheiten</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Zulässige Setzungen, Verwindung, Instandhaltungsgrenzen</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_weichen_kreuzungen_und_sonderbauformen">10. Weichen, Kreuzungen und Sonderbauformen</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel behandelt Weichen, Kreuzungen, Herzstücke, Engstellen und Betriebsbeschränkungen in Sonderbereichen.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_weichenradien">10.1. Weichenradien</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Mindestradien für Weichenbögen, Zusammenhang mit Lastklasse</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_herzstücke">10.2. Herzstücke</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Bauarten, Verschleiß, Wartung</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kreuzungen">10.3. Kreuzungen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Einfache und doppelte Kreuzungsweichen, Fahrwege</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_engstellen">10.4. Engstellen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Lichtraumprofile, temporäre Einschränkungen</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_betriebsbeschränkungen_in_sonderbereichen">10.5. Betriebsbeschränkungen in Sonderbereichen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Geschwindigkeitslimits in Weichen, Rangierfahrten</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_betrieb">11. Betrieb</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel definiert die betrieblichen Anforderungen: Streckenklassifizierung, Geschwindigkeitsfestlegung, Betriebszustände, Rangierbetrieb.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_streckenklassifizierung_2">11.1. Streckenklassifizierung</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Kombination aus L × V × B, Klassifizierung von Streckenabschnitten</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_geschwindigkeitsfestlegung">11.2. Geschwindigkeitsfestlegung</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Methodik zur Festlegung der zulässigen Geschwindigkeit (Radien, Gefälle, Oberbau)</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_betriebszustände">11.3. Betriebszustände</h3>
+<div class="sect3">
+<h4 id="_trocken">11.3.1. Trocken</h4>
+<div class="paragraph">
+<p><em>Platzhalter: Normalbetrieb bei trockenen Bedingungen</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_nass">11.3.2. Nass</h4>
+<div class="paragraph">
+<p><em>Platzhalter: Designfall, reduzierte Haftung</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_winter">11.3.3. Winter</h4>
+<div class="paragraph">
+<p><em>Platzhalter: Eis, Schnee, reduzierte Geschwindigkeiten, besondere Vorsichtsmaßnahmen</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_baustelle">11.3.4. Baustelle</h4>
+<div class="paragraph">
+<p><em>Platzhalter: Temporäre Einschränkungen, Geschwindigkeitslimits, Sicherungsmaßnahmen</em></p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_rangierbetrieb">11.4. Rangierbetrieb</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Besondere Anforderungen für Rangierbewegungen, Geschwindigkeitslimits</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sonderbetrieb">11.5. Sonderbetrieb</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Nachtbetrieb, Schwertransporte, Sonderzüge</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_personenverkehr_klasse_p_2">12. Personenverkehr (Klasse P)</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel definiert die verschärften Anforderungen für Personenverkehr (Betriebsart BP).
+</blockquote>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Anlagen und Fahrzeuge, die für Personenverkehr genutzt werden, MÜSSEN explizit dafür zugelassen werden. Eine Zulassung für Güterverkehr ist nicht ausreichend.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_zusätzliche_sicherheitsanforderungen">12.1. Zusätzliche Sicherheitsanforderungen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Redundante Bremssysteme, Notausstiege, Sicherheitsgurte, Brandschutz</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_zulässige_geschwindigkeiten">12.2. Zulässige Geschwindigkeiten</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Reduzierte V_max-Werte gegenüber Güterverkehr, Kurven- und Gefälle-Limits</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bremsanforderungen">12.3. Bremsanforderungen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Höhere Bremsvermögen, Redundanz, Notbremseinrichtung für Fahrgäste</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fahrzeuge_und_einrichtungen">12.4. Fahrzeuge und Einrichtungen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Sitze, Türen, Haltegriffe, Beleuchtung, Kommunikation</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_streckenfreigabe_für_personenverkehr">12.5. Streckenfreigabe für Personenverkehr</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Abnahmeverfahren, Dokumentation, regelmäßige Prüfungen, Zuständigkeiten</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prüfung_wartung_und_instandhaltung">13. Prüfung, Wartung und Instandhaltung</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel definiert Prüfintervalle, Prüfmethoden, Verschleißgrenzen und Dokumentationspflichten.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_prüfintervalle">13.1. Prüfintervalle</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Tägliche, wöchentliche, monatliche, jährliche Prüfungen; Abhängigkeit von Betriebsintensität</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sicht_und_maßprüfungen">13.2. Sicht- und Maßprüfungen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Sichtprüfung auf Schäden, Vermessung von Spurweite, Überhöhung, Verwindung</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verschleißgrenzen">13.3. Verschleißgrenzen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Schienenverschleiß, Radverschleiß, Schwellenzustand</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_dokumentation">13.4. Dokumentation</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Prüfprotokolle, Wartungsbücher, digitale Erfassung</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_maßnahmen_bei_abweichungen">13.5. Maßnahmen bei Abweichungen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Sofortmaßnahmen, Geschwindigkeitsreduzierung, Streckensperrung, Instandsetzungsfristen</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sonderfälle_und_abweichungen">14. Sonderfälle und Abweichungen</h2>
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+Dieses Kapitel behandelt Sonderfälle, provisorische Gleise, Baustellenbetrieb und temporäre Abweichungen von den Standardanforderungen.
+</blockquote>
+</div>
+<div class="sect2">
+<h3 id="_provisorische_gleise">14.1. Provisorische Gleise</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Temporäre Gleisanlagen, reduzierte Anforderungen, zeitliche Begrenzung</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_baustellenbetrieb">14.2. Baustellenbetrieb</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Betrieb während Baumaßnahmen, Geschwindigkeitslimits, Sicherungsmaßnahmen</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_temporäre_last_oder_geschwindigkeitsänderungen">14.3. Temporäre Last- oder Geschwindigkeitsänderungen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Verfahren zur befristeten Änderung von Betriebsparametern, Dokumentation</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_betrieb_unter_eingeschränkten_bedingungen">14.4. Betrieb unter eingeschränkten Bedingungen</h3>
+<div class="paragraph">
+<p><em>Platzhalter: Notbetrieb, eingeschränkte Sicht, besondere Witterungsbedingungen</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_formeln_und_rechenwege">Appendix A: Formeln und Rechenwege</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Platzhalter für mathematische Herleitungen und Berechnungsmethoden</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tabellenübersicht_der_klassen">Appendix B: Tabellenübersicht der Klassen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Platzhalter für Klassenkombinationen und Übersichtstabellen</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_beispielrechnungen">Appendix C: Beispielrechnungen</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Platzhalter für praktische Rechenbeispiele</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_änderungshistorie_2">Appendix D: Änderungshistorie</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 11.1111%;">
+<col style="width: 22.2222%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Version</th>
+<th class="tableblock halign-left valign-top">Datum</th>
+<th class="tableblock halign-left valign-top">Änderung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025-12-28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aktualisierung der Geschwindigkeitsklassen-Parameter (V_max, φ) und Ergänzung der Parameter-Übersicht</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.1.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2025-12-28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initiale Version mit Parametern für Lastklassen, Geschwindigkeitsklassen und Mindestradien</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2026-04-09 09:45:49 UTC
+</div>
+</div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+})
+MathJax.Hub.Register.StartupHook("AsciiMath Jax Ready", function () {
+  MathJax.InputJax.AsciiMath.postfilterHooks.Add(function (data, node) {
+    if ((node = data.script.parentNode) && (node = node.parentNode) && node.classList.contains("stemblock")) {
+      data.math.root.display = "block"
+    }
+    return data
+  })
+})
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</body>
+</html>
