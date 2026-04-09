@@ -9,30 +9,30 @@ Dieses Kapitel definiert die geometrischen Anforderungen an die Gleisführung, S
 
 == Spurweite und Toleranzen
 
-// TODO(#16): Inhalt ausarbeiten
+// TODO(#27): Inhalt ausarbeiten
 _Platzhalter: Definition der Nenn-Spurweite, zulässige Abweichungen, Messmethodik_
 
 == Fester Achsstand
 
-// TODO(#16): Inhalt ausarbeiten
+// TODO(#26): Inhalt ausarbeiten
 _Platzhalter: Definition und Bedeutung des festen Achsstands für befahrbare Mindestradien_
 
 == Mindestradien
 
-// TODO(#16): Inhalt ausarbeiten
+// TODO(#25): Inhalt ausarbeiten
 _Platzhalter: Berechnung und Tabellen der Mindestradien nach Lastklasse, Geschwindigkeit und Achsstand_
 
 == Kurven in Längsneigung
 
-// TODO(#16): Inhalt ausarbeiten
+// TODO(#24): Inhalt ausarbeiten
 _Platzhalter: Besondere Anforderungen für Kurven in Steigungen/Gefälle_
 
 == Überhöhung (falls angewendet)
 
-// TODO(#16): Inhalt ausarbeiten
+// TODO(#28): Inhalt ausarbeiten
 _Platzhalter: Berechnung der Überhöhung, Grenzwerte, Anwendungsbereich_
 
 == Übergänge und Gleisverziehungen
 
-// TODO(#16): Inhalt ausarbeiten
+// TODO(#23): Inhalt ausarbeiten
 _Platzhalter: Übergangsbögen, Verwindung, zulässige Verziehungsrampen_

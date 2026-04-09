@@ -9,25 +9,25 @@ Dieses Kapitel behandelt Weichen, Kreuzungen, Herzstücke, Engstellen und Betrie
 
 == Weichenradien
 
-// TODO(#15): Inhalt ausarbeiten
+// TODO(#51): Inhalt ausarbeiten
 _Platzhalter: Mindestradien für Weichenbögen, Zusammenhang mit Lastklasse_
 
 == Herzstücke
 
-// TODO(#15): Inhalt ausarbeiten
+// TODO(#52): Inhalt ausarbeiten
 _Platzhalter: Bauarten, Verschleiß, Wartung_
 
 == Kreuzungen
 
-// TODO(#15): Inhalt ausarbeiten
+// TODO(#53): Inhalt ausarbeiten
 _Platzhalter: Einfache und doppelte Kreuzungsweichen, Fahrwege_
 
 == Engstellen
 
-// TODO(#15): Inhalt ausarbeiten
+// TODO(#54): Inhalt ausarbeiten
 _Platzhalter: Lichtraumprofile, temporäre Einschränkungen_
 
 == Betriebsbeschränkungen in Sonderbereichen
 
-// TODO(#15): Inhalt ausarbeiten
+// TODO(#50): Inhalt ausarbeiten
 _Platzhalter: Geschwindigkeitslimits in Weichen, Rangierfahrten_

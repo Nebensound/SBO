@@ -9,25 +9,25 @@ Dieses Kapitel definiert Prüfintervalle, Prüfmethoden, Verschleißgrenzen und 
 
 == Prüfintervalle
 
-// TODO(#11): Inhalt ausarbeiten
+// TODO(#64): Inhalt ausarbeiten
 _Platzhalter: Tägliche, wöchentliche, monatliche, jährliche Prüfungen; Abhängigkeit von Betriebsintensität_
 
 == Sicht- und Maßprüfungen
 
-// TODO(#11): Inhalt ausarbeiten
+// TODO(#68): Inhalt ausarbeiten
 _Platzhalter: Sichtprüfung auf Schäden, Vermessung von Spurweite, Überhöhung, Verwindung_
 
 == Verschleißgrenzen
 
-// TODO(#11): Inhalt ausarbeiten
+// TODO(#69): Inhalt ausarbeiten
 _Platzhalter: Schienenverschleiß, Radverschleiß, Schwellenzustand_
 
 == Dokumentation
 
-// TODO(#11): Inhalt ausarbeiten
+// TODO(#70): Inhalt ausarbeiten
 _Platzhalter: Prüfprotokolle, Wartungsbücher, digitale Erfassung_
 
 == Maßnahmen bei Abweichungen
 
-// TODO(#11): Inhalt ausarbeiten
+// TODO(#71): Inhalt ausarbeiten
 _Platzhalter: Sofortmaßnahmen, Geschwindigkeitsreduzierung, Streckensperrung, Instandsetzungsfristen_

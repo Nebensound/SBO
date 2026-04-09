@@ -9,42 +9,42 @@ Dieses Kapitel definiert die betrieblichen Anforderungen: Streckenklassifizierun
 
 == Streckenklassifizierung
 
-// TODO(#14): Inhalt ausarbeiten
+// TODO(#56): Inhalt ausarbeiten
 _Platzhalter: Kombination aus L × V × B, Klassifizierung von Streckenabschnitten_
 
 == Geschwindigkeitsfestlegung
 
-// TODO(#14): Inhalt ausarbeiten
+// TODO(#61): Inhalt ausarbeiten
 _Platzhalter: Methodik zur Festlegung der zulässigen Geschwindigkeit (Radien, Gefälle, Oberbau)_
 
 == Betriebszustände
 
 === Trocken
 
-// TODO(#14): Inhalt ausarbeiten
+// TODO(#58): Inhalt ausarbeiten
 _Platzhalter: Normalbetrieb bei trockenen Bedingungen_
 
 === Nass
 
-// TODO(#14): Inhalt ausarbeiten
+// TODO(#60): Inhalt ausarbeiten
 _Platzhalter: Designfall, reduzierte Haftung_
 
 === Winter
 
-// TODO(#14): Inhalt ausarbeiten
+// TODO(#59): Inhalt ausarbeiten
 _Platzhalter: Eis, Schnee, reduzierte Geschwindigkeiten, besondere Vorsichtsmaßnahmen_
 
 === Baustelle
 
-// TODO(#14): Inhalt ausarbeiten
+// TODO(#55): Inhalt ausarbeiten
 _Platzhalter: Temporäre Einschränkungen, Geschwindigkeitslimits, Sicherungsmaßnahmen_
 
 == Rangierbetrieb
 
-// TODO(#14): Inhalt ausarbeiten
+// TODO(#62): Inhalt ausarbeiten
 _Platzhalter: Besondere Anforderungen für Rangierbewegungen, Geschwindigkeitslimits_
 
 == Sonderbetrieb
 
-// TODO(#14): Inhalt ausarbeiten
+// TODO(#57): Inhalt ausarbeiten
 _Platzhalter: Nachtbetrieb, Schwertransporte, Sonderzüge_

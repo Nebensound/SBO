@@ -9,25 +9,25 @@ Dieses Kapitel behandelt Längsneigungen, Steigungswiderstände, Haftreibung zwi
 
 == Steigung und Gefälle
 
-// TODO(#17): Inhalt ausarbeiten
+// TODO(#30): Inhalt ausarbeiten
 _Platzhalter: Maximale Steigungen, Gefälle, Bezeichnungsweise (Prozent, Promille)_
 
 == Steigungswiderstand
 
-// TODO(#17): Inhalt ausarbeiten
+// TODO(#33): Inhalt ausarbeiten
 _Platzhalter: Berechnung der Steigungskraft, Zusammenhang mit Neigung und Masse_
 
 == Haftreibung Rad/Schiene
 
-// TODO(#17): Inhalt ausarbeiten
+// TODO(#29): Inhalt ausarbeiten
 _Platzhalter: Haftreibungskoeffizient stem:[\mu], Designwerte für nasse/trockene Schiene_
 
 == Anfahrbedingungen
 
-// TODO(#17): Inhalt ausarbeiten
+// TODO(#32): Inhalt ausarbeiten
 _Platzhalter: Maximale Steigung zum Anfahren, erforderliche Adhäsionsmasse_
 
 == Schieben vs. Ziehen
 
-// TODO(#17): Inhalt ausarbeiten
+// TODO(#31): Inhalt ausarbeiten
 _Platzhalter: Anforderungen an Zuglok-Position, Druckkräfte, Kupplung_
