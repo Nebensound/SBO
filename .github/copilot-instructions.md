@@ -73,6 +73,7 @@ Orientier dich an der in Deutschland geltenden EBO/BOA, aber passe an Schmalspur
 - Die GitHub Action `alstr/todo-to-issue-action@v5` synchronisiert TODOs automatisch mit Issues.
 - Beim Hinzufügen neuer TODOs: erst Sub-Issue anlegen, dann `TODO(#Nr)` im Code setzen.
 - Beim Entfernen eines TODOs: Issue wird automatisch geschlossen (CLOSE_ISSUES ist aktiv).
+- In der Beschreibung der Issue sollte auch ein Link zu der Stelle im Code enthalten sein, damit die Nachverfolgung einfach ist.
 
 ## Sicherheitsleitlinie
 - Im Zweifel konservativ auslegen.
