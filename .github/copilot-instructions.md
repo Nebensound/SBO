@@ -69,7 +69,7 @@ Orientier dich an der in Deutschland geltenden EBO/BOA, aber passe an Schmalspur
 ## TODOs
 - Format: `// TODO(#<Issue-Nr>): <Kurzbeschreibung>` (AsciiDoc-Zeilenkommentar).
 - Jeder TODO-Kommentar verweist auf genau **ein** GitHub Sub-Issue (1:1-Zuordnung).
-- Sub-Issues sind an Parent-Issues pro Kapitel verlinkt (#10–#19).
+- Sub-Issues sind wo sinnvoll an Parent-Issues verlinkt (#10–#19).
 - Die GitHub Action `alstr/todo-to-issue-action@v5` synchronisiert TODOs automatisch mit Issues.
 - Beim Hinzufügen neuer TODOs: erst Sub-Issue anlegen, dann `TODO(#Nr)` im Code setzen.
 - Beim Entfernen eines TODOs: Issue wird automatisch geschlossen (CLOSE_ISSUES ist aktiv).
